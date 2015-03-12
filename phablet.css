@@ -59,8 +59,7 @@ main
   color: rgb(255, 255, 255);
   font-family: "Arial", Sans-serif;
   font-size: 25px;
-  padding-top: 10px;
-  position: relative;
+  padding-top: 20px;
   z-index: 23;
 }
 #video
