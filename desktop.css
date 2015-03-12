@@ -87,8 +87,8 @@ main
   color: rgb(255, 255, 255);
   font-family: "Arial", Sans-serif;
   font-size: 15px;
-  position:relative; 
-  top:-15px;
+  position: relative; 
+  top: -15px;
   z-index: 23;
 }
 footer
