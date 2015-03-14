@@ -1,36 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <div itemscope itemtype="http://schema.org/Product">
-    <span itemprop="name">HovyTech</span><br />
-    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-        Rating: <span itemprop="ratingValue">4</span><br />
-        Reviews: <span itemprop="reviewCount">27</span>
-    </div>
-  </div>
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Seattle",
-    "addressRegion": "WA",
-    "postalCode": "98052",
-    "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
-  },
-  "colleague": [
-    "http://www.xyz.edu/students/alicejones.html",
-    "http://www.xyz.edu/students/bobsmith.html"
-  ],
-  "email": "mailto:jane-doe@xyz.edu",
-  "image": "janedoe.jpg",
-  "jobTitle": "Professor",
-  "name": "Jane Doe",
-  "telephone": "(425) 123-4567",
-  "url": "http://www.janedoe.com"
-}
-</script>
+    <div itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+      <span itemprop="itemreviewed">L’Amourita Pizza</span>
+      <img itemprop="photo" src="pizza.jpg" />
+      <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+        <span itemprop="average">9</span>
+        out of <span itemprop="best">10</span>
+      </span>
+      based on <span itemprop="votes">24</span> ratings.
+      <span itemprop="count">5</span> user reviews.
+    </div> 
     <title>HovyTech</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Detailed how to videos about technology, web development, programming, software, iPhone hacks. Everything useful to know." />
