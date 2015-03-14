@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <div itemscope itemtype="http://schema.org/Product">
-  <h2 class="product_name" itemprop="name"><span>Bengali</span></h2>
-    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <meta content="50" itemprop="ratingValue" />
-    <meta content="100" itemprop="reviewCount" />
-    <meta content="100" itemprop="bestRating" />
-    <meta content="0" itemprop="worstRating" />
-</div>
     <div itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
       <span itemprop="itemreviewed">L’Amourita Pizza</span>
       <img itemprop="photo" src="pizza.jpg" />
@@ -72,5 +64,10 @@
     </script>
   </head>
   <body>
+  <div itemscope="itemscope" itemtype="http://schema.org/Product">
+		<div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+		<meta itemprop="ratingValue" content="4.9">
+		<meta itemprop="reviewCount" content="11">
+	</div>
   </body>
 </html>
