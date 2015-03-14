@@ -13,6 +13,10 @@
     <meta name="google-site-verification" content="FFG84IO5zVrRpU64TEV5fusuVuGc21KIiIaQR4Earps" />
     <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
     <!--<meta name="apple-mobile-web-app-status-bar-style" content="black" />-->
+    <link rel='stylesheet' media='screen and (max-width: 480px)' href='mobile.css' />
+    <link rel='stylesheet' media='screen and (min-width: 481px) and (max-width: 720px)' href='phablet.css' />
+    <link rel='stylesheet' media='screen and (min-width: 721px) and (max-width: 1024px)' href='tablet.css' />
+    <link rel='stylesheet' media='screen and (min-width: 1025px)' href='desktop.css' />
     <link rel="shortcut icon" href="Images/favicon.ico" />
     <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
     <!--<link rel="apple-touch-startup-image" href="Images/startup.png" />-->
@@ -30,23 +34,23 @@
     <script type="text/javascript">
       if (screen.width < 480) {
         $('body').load('mobile.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="mobile.css" />');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="mobile.css" />');
         getMobile();
         headerLoad();
       }
       if ((screen.width >= 480) && (screen.width < 720)) {
         $('body').load('phablet.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="phablet.css" />');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="phablet.css" />');
         getPhablet();
       }
       if ((screen.width >= 720) && (screen.width < 1024)) {
         $('body').load('tablet.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="tablet.css" />');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="tablet.css" />');
         getTablet();
       }
       if (screen.width >= 1024) {
         $('body').load('desktop.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="desktop.css" />');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="desktop.css" />');
         getDesktop();
       }
       getFacebookCount();
