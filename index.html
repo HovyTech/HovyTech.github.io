@@ -54,13 +54,15 @@
     </script>
   </head>
   <body>
-    <div itemscope itemtype="http://schema.org/Review">
-<div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
-<span itemprop="name">Website Rating:</span></div>
-<div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-<meta itemprop="worstRating" content="1"><span itemprop="ratingValue">4.5</span> / <span itemprop="bestRating">5</span> stars</div>
-</div>
-
-
+    <div itemscope itemtype="http://schema.org/Product">
+      <a itemprop="url" href="mailto:hovytech@gmail.com">
+        <div itemprop="name">
+          <strong>Email</strong>
+        </div>
+      </a>
+      <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+        <span itemprop="ratingValue">4.5</span> based on <span itemprop="reviewCount">37</span> reviews
+      </div>
+    </div>
   </body>
 </html>
