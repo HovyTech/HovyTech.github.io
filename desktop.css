@@ -114,10 +114,12 @@ footer
 {
   color: rgb(255, 255, 255);
   font-family: "Arial", Sans-serif;
-  font-size: 10px;
+  font-size: 13px;
+  height: auto;
   position: relative; 
   text-align: center;
   top: 0px;
+  width: 100%;
   z-index: 23;
 }
 #share_count
