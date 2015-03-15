@@ -116,7 +116,7 @@ footer
   font-family: "Arial", Sans-serif;
   font-size: 13px;
   height: auto;
-  position: absolute;
+  position: relative;
   text-align: center;
   width: auto;
   z-index: 23;
