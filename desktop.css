@@ -116,10 +116,7 @@ footer
   font-family: "Arial", Sans-serif;
   font-size: 13px;
   height: auto;
-  position: relative; 
-  text-align: center;
-  top: 0px;
-  width: 100%;
+  width: auto;
   z-index: 23;
 }
 #share_count
