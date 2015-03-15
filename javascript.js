@@ -112,6 +112,11 @@ var getMobile = function() {
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json', function(data) {
     var html = '';
     var strDescription = '';
+//Get screen dimensions
+    var width = screen.width;
+//var height = screen.height;
+    var rWidth = 16 / 16 * width;
+    var rHeight = 9 / 16 * width;
 //Get total amount of videos
     var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
