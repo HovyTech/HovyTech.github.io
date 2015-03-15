@@ -1,6 +1,17 @@
-<div itemscope>
-      <span itemprop="name">Jane Doe</span>
-    </div>
+<div itemscope itemtype="http://schema.org/Review">
+  <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Book">
+    <span itemprop="name">The Catcher in the Rye</span> (
+    <a itemprop="sameAs" href="http://en.wikipedia.org/wiki/The_Catcher_in_the_Rye">wikipedia</a>)
+  </div>
+  <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+    <span itemprop="ratingValue">4</span>
+  </span> stars -
+  <b>"<span itemprop="name">A good read.</span>" </b>
+  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span itemprop="name">Bob Smith</span>
+  </span>
+  <span itemprop="reviewBody">Catcher in the Rye is a fun book. It's a good book to read.</span>
+</div>
 <header class="show">
   <img id="logo" src="Images/HovyTech M&P.png"></img>
 </header>
