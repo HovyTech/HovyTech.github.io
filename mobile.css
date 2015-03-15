@@ -111,6 +111,13 @@ footer
   width: 100%;
   z-index: 22;
 }
+#rating
+{
+  color: rgb(255, 255, 255);
+  font-family: "Arial", Sans-serif;
+  font-size: 25px;
+  z-index: 23;
+}
 #share_count
 {
   color: rgb(255, 255, 255);
