@@ -54,8 +54,13 @@
     </script>
   </head>
   <body>
-    <span class="rating-foreground" style="width:90%"> 
-      <meta itemprop="rating" content="4.5" /> 
-    </span> 
+    <div itemscope itemtype="http://schema.org/Review">
+<div itemprop="itemReviewed" itemscope itemtype="http://schema.org/Thing">
+<span itemprop="name">Website Rating:</span></div>
+<div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+<meta itemprop="worstRating" content="1"><span itemprop="ratingValue">4.5</span> / <span itemprop="bestRating">5</span> stars</div>
+</div>
+
+
   </body>
 </html>
