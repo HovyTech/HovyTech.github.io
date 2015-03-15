@@ -120,6 +120,10 @@ var getMobile = function() {
     var rWidth = (((16 / 16 * width) / width) - remWidth) * 100;
     var rHeight = (((9 / 16 * width) / height) - remHeight) * 100;
     var middle = rHeight / 2;
+alert(width)
+alert(height)
+alert(remWidth)
+alert(remHeight)
 alert(rWidth)
 alert(rHeight)
 alert(middle)
