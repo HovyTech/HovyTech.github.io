@@ -132,7 +132,7 @@ var getMobile = function() {
       var description = data.feed.entry[i].media$group.media$description.$t;
       var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
       var strImage = '<tr><th><img style="height:60px; position:relative; top:165px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
-      var strIframe = '<div id="video' + i + '" style="height:270px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:' + rHeight + 'px; position:relative; top:-25px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
+      var strIframe = '<div id="video' + i + '" style="height:270px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:' + rHeight + '%; position:relative; top:-25px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
       if (description.match('http')) {
         var beginPos = description.search('http');
         var descLink = description.substring(beginPos);
