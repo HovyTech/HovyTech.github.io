@@ -120,6 +120,9 @@ var getMobile = function() {
     var rWidth = (((16 / 16 * width) / width) - remWidth) * 100;
     var rHeight = (((9 / 16 * width) / height) - remHeight) * 100;
     var middle = rHeight / 2;
+alert(rWidth)
+alert(rHeight)
+alert(middle)
 //Get total amount of videos
     var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
