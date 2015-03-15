@@ -115,16 +115,13 @@ var getMobile = function() {
 //Get screen dimensions
     var width = screen.width;
     var height = screen.height;
-    var remWidth = (16 / 16 * width) % width;
-    var remHeight = (9 / 16 * width) % height;
-    var rWidth = (((16 / 16 * width) / width) - remWidth) * 100;
-    var rHeight = (((9 / 16 * width) / height) - remHeight) * 100;
+//var remWidth = (16 / 16 * width) % width;
+//var remHeight = (9 / 16 * width) % height;
+//var rWidth = (((16 / 16 * width) / width) - remWidth) * 100;
+    var rHeight = ((9 / 16 * width) % height) * 100;
     var middle = rHeight / 2;
 alert(width)
 alert(height)
-alert(remWidth)
-alert(remHeight)
-alert(rWidth)
 alert(rHeight)
 alert(middle)
 //Get total amount of videos
