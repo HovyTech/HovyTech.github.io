@@ -75,7 +75,7 @@ main
 }
 footer
 {
-  height: 150px;
+  height: auto;
   left: 0px;
   position: relative;
   right: 0px;
