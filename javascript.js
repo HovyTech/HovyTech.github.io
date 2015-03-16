@@ -145,11 +145,11 @@ var getMobile = function() {
       html = html.concat(strTitle, strImage, strIframe, strDescription);
     }
 //Load information into table
-    $('#box').html(html);
+    $('#mbox').html(html);
   });
 };
-var headerLoad = function() {
 //--------------------------------------------------HIDE SHOW HEADER
+var headerLoad = function() {
 //Header Show Hide
   var didScroll;
   var oldScroll = 0;
