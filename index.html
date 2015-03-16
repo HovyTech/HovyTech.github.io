@@ -262,40 +262,6 @@ var getYouTubeCount = function() {
   });
 };
     </script>
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-60758503-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script type="text/javascript">
-      if (screen.width < 480) {
-        $('body').load('mobile.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
-        getMobile();
-        headerLoad();
-      }
-      if ((screen.width >= 480) && (screen.width < 720)) {
-        $('body').load('phablet.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="phablet.css">');
-        getPhablet();
-      }
-      if ((screen.width >= 720) && (screen.width < 1024)) {
-        $('body').load('tablet.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="tablet.css">');
-        getTablet();
-      }
-      if (screen.width >= 1024) {
-        $('body').load('desktop.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="desktop.css">');
-        getDesktop();
-      }
-      getFacebookCount();
-      getTwitterCount();
-      getYouTubeCount();
-    </script>
   </head>
   <body>
   </body>
