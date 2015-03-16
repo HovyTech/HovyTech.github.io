@@ -29,6 +29,22 @@ var getDesktop = function() {
       var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
       var strImage = '<tr><th><img style="height:60px; position:relative; top:' + middle + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
       var strIframe = '<div id="video' + i + '" style="height:' + rHeight + 'px; position:relative; top:-25px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + 'px; position:relative; top:-25px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
+      if (description.match('http')) {
+        var beginPos = description.search('http');
+        var descLink = description.substring(beginPos);
+        var descText = description.substring(0, beginPos - 1);
+        var strDescStitch = descText + '<br /><a href="' + descLink + '" target="_blank">Link</a>';
+        strDescription = '<tr><th><pre id="description">' + strDescStitch + '</pre></th></tr></table></td></tr>';
+      } else {
+        strDescription = '<tr><th><pre id="description">' + description + '</pre></th></tr></table></td></tr>';
+      }
+//Check if there is a description
+      html = html.concat(strTitle, strImage, strIframe, strDescription);
+    }
+//Load information into table
+    $('#box').html(html);
+  });
+};
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
 //Get video image
 var getTablet = function() {
