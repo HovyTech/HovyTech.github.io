@@ -145,7 +145,7 @@ var getMobile = function() {
       html = html.concat(strTitle, strImage, strIframe, strDescription);
     }
 //Load information into table
-    $('#mbox').html(html);
+    $('#box').html(html);
   });
 };
 //--------------------------------------------------HIDE SHOW HEADER
