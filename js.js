@@ -185,9 +185,6 @@ var headerLoad = function() {
     oldScroll = newScroll;
   }
 };
-getFacebookCount();
-getTwitterCount();
-getYouTubeCount();
 //--------------------------------------------------GET SOCIAL COUNTS  
 //Facebook count
 var getFacebookCount = function() {
