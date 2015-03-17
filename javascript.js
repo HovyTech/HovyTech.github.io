@@ -134,6 +134,48 @@ var getMobile = function() {
       var url = 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1';
       var iframe = '<iframe id=replace' + i + ' height=' + rHeight + 'px width=' + rWidth + '% src=' + url + ' frameborder=0 allowfullscreen></iframe>';
       var description = data.feed.entry[i].media$group.media$description.$t;
+      var strTitle = '<div id="video"><div id="items"><text id="title">' + title + '</text></div>';
+      var strImage = '<div id="items"><img style="height:60px; position:absolute; top:' + middle + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
+      var strIframe = '<div id="video' + i + '" style="height:' + rHeight + 'px; position:absolute; top:0px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + 'px; width:' + rWidth + '%;" src="' + image + '"></img></div></div>';
+      if (description.match('http')) {
+        var beginPos = description.search('http');
+        var descLink = description.substring(beginPos);
+        var descText = description.substring(0, beginPos - 1);
+        var strDescStitch = descText + '<br /><a href="' + descLink + '" target="_blank">Link</a>';
+        strDescription = '<div id="items"><pre id="description">' + strDescStitch + '</pre></div></div>';
+      } else {
+        strDescription = '<div id="items"><pre id="description">' + description + '</pre></div></div>';
+      }
+//Check if there is a description
+      html = html.concat(strTitle, strImage, strIframe, strDescription);
+    }
+//Load information into table
+    $('#box').html(html);
+  });
+};
+//--------------------------------------------------LOADING MOBILE VIDEOS AND INFO
+//Get video image
+var getMobile = function() {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json', function(data) {
+    var html = '';
+    var strDescription = '';
+//Get screen dimensions
+    var width = screen.width;
+    var height = screen.height;
+    var rWidth = ((16 / 16 * width) / width) * 100;
+    var rHeight = 9 / 16 * width;
+    var middle = (rHeight / 2) - 15;
+//Get total amount of videos
+    var numVid = data.feed.openSearch$totalResults.$t;
+//Get needed information
+    for (i = 0; i < numVid; i++) {
+      var title = data.feed.entry[i].title.$t;
+      var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
+      var link = data.feed.entry[i].link[2].href;
+      var id = link.substring(31);
+      var url = 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1';
+      var iframe = '<iframe id=replace' + i + ' height=' + rHeight + 'px width=' + rWidth + '% src=' + url + ' frameborder=0 allowfullscreen></iframe>';
+      var description = data.feed.entry[i].media$group.media$description.$t;
       var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
       var strImage = '<tr><th><img style="height:60px; position:relative; top:' + middle + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
       var strIframe = '<div id="video' + i + '" style="height:' + rHeight + 'px; position:relative; top:-25px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + 'px; position:relative; top:-25px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
@@ -147,10 +189,10 @@ var getMobile = function() {
         strDescription = '<tr><th><pre id="description">' + description + '</pre></th></tr></table></td></tr>';
       }
 //Check if there is a description
-      html = html.concat(strTitle, strImage, strIframe, strDescription);
+      //html = html.concat(strTitle, strImage, strIframe, strDescription);
     }
 //Load information into table
-    $('#box').html(html);
+    //$('#box').html(html);
   });
 };
 //--------------------------------------------------HIDE SHOW HEADER
