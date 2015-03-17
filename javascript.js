@@ -14,7 +14,7 @@ var getDesktop = function() {
     var height = screen.height;
     var rWidth = ((16 / 16 * width) / width) * 100;
     var rHeight = ((9 / 16 * width) / height) * 175;
-    var middle = ((9 / 16 * width) / 2) - 145;
+    var middle = ((9 / 16 * width) / 2) - 148;
 //Get total amount of videos
     var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
@@ -55,8 +55,8 @@ var getTablet = function() {
     var width = screen.width;
     var height = screen.height;
     var rWidth = ((16 / 16 * width) / width) * 100;
-    var rHeight = ((9 / 16 * width) / height) * 313;
-    var middle = ((9 / 16 * width) / 2) - 145;
+    var rHeight = ((9 / 16 * width) / height) * 315;
+    var middle = ((9 / 16 * width) / 2) - 300;
 //Get total amount of videos
     var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
