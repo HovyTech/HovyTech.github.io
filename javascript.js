@@ -28,7 +28,7 @@ var getDesktop = function() {
       var description = data.feed.entry[i].media$group.media$description.$t;
       var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
       var strImage = '<tr><th><img style="height:60px; position:relative; top:' + middle + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
-      var strIframe = '<div id="video' + i + '" style="height:' + rHeight + '%; position:relative; top:-25px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + '%; position:relative; top:-25px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
+      var strIframe = '<div id="video' + i + '" style="height:' + rHeight + '%; position:relative; top:-20px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + '%; position:relative; top:-20px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
       if (description.match('http')) {
         var beginPos = description.search('http');
         var descLink = description.substring(beginPos);
@@ -56,7 +56,7 @@ var getTablet = function() {
     var height = screen.height;
     var rWidth = ((16 / 16 * width) / width) * 100;
     var rHeight = ((9 / 16 * width) / height) * 315;
-    var middle = ((9 / 16 * width) / 2) - 0;
+    var middle = ((9 / 16 * width) / 2) + 5;
 //Get total amount of videos
     var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
@@ -70,7 +70,7 @@ var getTablet = function() {
       var description = data.feed.entry[i].media$group.media$description.$t;
       var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
       var strImage = '<tr><th><img style="height:60px; position:relative; top:' + middle + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
-      var strIframe = '<div id="video' + i + '" style="height:' + rHeight + '%; position:relative; top:-25px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + '%; position:relative; top:-25px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
+      var strIframe = '<div id="video' + i + '" style="height:' + rHeight + '%; position:relative; top:-20px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + '%; position:relative; top:-20px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
       if (description.match('http')) {
         var beginPos = description.search('http');
         var descLink = description.substring(beginPos);
@@ -148,7 +148,7 @@ var getMobile = function() {
       var description = data.feed.entry[i].media$group.media$description.$t;
       var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
       var strImage = '<tr><th><img style="height:60px; position:relative; top:' + middle + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
-      var strIframe = '<div id="video' + i + '" style="height:' + rHeight + '%; position:relative; top:-25px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + '%; position:relative; top:-25px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
+      var strIframe = '<div id="video' + i + '" style="height:' + rHeight + '%; position:relative; top:-20px; width:' + rWidth + '%; z-index:24;"><img style="height:' + rHeight + '%; position:relative; top:-20px; width:' + rWidth + '%;" src="' + image + '"></img></div></th></tr>';
       if (description.match('http')) {
         var beginPos = description.search('http');
         var descLink = description.substring(beginPos);
