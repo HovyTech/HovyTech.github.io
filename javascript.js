@@ -55,7 +55,7 @@ var getTablet = function() {
     var width = screen.width;
     var height = screen.height;
     var rWidth = ((16 / 16 * width) / width) * 100;
-    var rHeight = ((9 / 16 * width) / height) * 250;
+    var rHeight = ((9 / 16 * width) / height) * 300;
     var middle = ((9 / 16 * width) / 2) - 145;
 //Get total amount of videos
     var numVid = data.feed.openSearch$totalResults.$t;
