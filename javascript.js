@@ -13,7 +13,7 @@ var getDesktop = function() {
     var width = screen.width;
     var height = screen.height;
     var rWidth = ((16 / 16 * width) / width) * 100;
-    var rHeight = ((9 / 16 * width) / height) * 165;
+    var rHeight = ((9 / 16 * width) / height) * 167;
     var middle = (rHeight / 2) - 15;
 //Get total amount of videos
     var numVid = data.feed.openSearch$totalResults.$t;
