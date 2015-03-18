@@ -59,13 +59,14 @@
     </table>
     <table id="footer">
       <th>
-        <input id=“value" type="radio" name="entry.129317559" value=“1">
-        <input id=“value" type="radio" name="entry.129317559" value=“2">
-        <input id=“value" type="radio" name="entry.129317559" value=“3">
-        <input id=“value" type="radio" name="entry.129317559" value=“4">
-        <input id=“value" type="radio" name="entry.129317559" value=“5">
-        <button id="ButtonSubmit" onclick="postToGoogle()" type="button" >Send</button> 
-        <input type="submit" name="submit" value="Submit" onclick="postToGoogle()">
+        <form action="" method="POST" id="ratingForm" target="no-target" onsubmit="">
+          <button type="submit" name="star" value="1" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
+          <button type="submit" name="star" value="2" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
+          <button type="submit" name="star" value="3" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
+          <button type="submit" name="star" value="4" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
+          <button type="submit" name="star" value="5" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
+          <iframe src="#" id="no-target" name="no-target"></iframe>
+        </form>
       </th>
     </table>
   </footer>
