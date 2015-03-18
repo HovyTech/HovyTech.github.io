@@ -202,21 +202,10 @@ var getYouTubeCount = function() {
   });
 };
 //--------------------------------------------------POST RATING COUNT
-function postToGoogle() {
-  var value = $('#value').val();
-//Run POST Action
-  $.ajax({
-    url: "https://docs.google.com/forms/d/1s-QzFtYzKwsOqNLJpcQP9or8hHvEgcD1SBMvXeRy8Gc/formResponse",
-    data: { "entry.129317559": value },
-    type: "POST",
-    dataType: "xml"//,
-    //statusCode: {
-      //0: function () {
-        //window.location.replace("ThankYou.html");
-      //},
-      //200: function () {
-        //window.location.replace("ThankYou.html");
-      //}
-    //}
-  });
-}
+$('#ratingForm').one('submit',function() {
+  var ratingValue = encodeURIComponent($('#ratingValue').val());
+  var baseURL = 'https://docs.google.com/forms/d/1s-QzFtYzKwsOqNLJpcQP9or8hHvEgcD1SBMvXeRy8Gc/formResponse?entry.129317559=';
+  var submitRef = '&submit=submit';
+  var submitURL = (baseURL + ratingValue + submitRef);
+  $(this)[0].action=submitURL;
+});
