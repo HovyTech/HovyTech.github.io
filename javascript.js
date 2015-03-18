@@ -207,7 +207,7 @@ function postToGoogle() {
 //Run POST Action
   $.ajax({
     url: "https://docs.google.com/forms/d/1s-QzFtYzKwsOqNLJpcQP9or8hHvEgcD1SBMvXeRy8Gc/formResponse",
-    data: { "entry_1402836733": value }
+    data: { "entry.129317559": value }
     type: "POST",
     dataType: "xml",
     statusCode: {
