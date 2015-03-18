@@ -203,7 +203,7 @@ var getYouTubeCount = function() {
 };
 //--------------------------------------------------POST RATING COUNT
 function postToGoogle() {
-  var value = $(‘#value').val();
+  var value = $('#value').val();
 //Run POST Action
   $.ajax({
     url: "https://docs.google.com/forms/d/1s-QzFtYzKwsOqNLJpcQP9or8hHvEgcD1SBMvXeRy8Gc/formResponse",
