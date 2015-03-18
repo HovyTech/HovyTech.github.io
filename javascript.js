@@ -201,3 +201,22 @@ var getYouTubeCount = function() {
     $('#youtube_count').text(youtube);
   });
 };
+//--------------------------------------------------POST RATING COUNT
+function postToGoogle() {
+  var value = $(‘#value').val();
+//Run POST Action
+  $.ajax({
+    url: "https://docs.google.com/forms/d/1s-QzFtYzKwsOqNLJpcQP9or8hHvEgcD1SBMvXeRy8Gc/formResponse",
+    data: { "entry_1402836733": value }
+    type: "POST",
+    dataType: "xml",
+    statusCode: {
+      0: function () {
+        window.location.replace("ThankYou.html");
+      },
+      200: function () {
+        window.location.replace("ThankYou.html");
+      }
+    }
+  });
+}
