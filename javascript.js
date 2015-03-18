@@ -208,4 +208,4 @@ $('#ratingForm').one('submit',function() {
   var submitRef = '&submit=submit';
   var submitURL = (baseURL + ratingValue + submitRef);
   $(this)[0].action=submitURL;
-});
+},1000);
