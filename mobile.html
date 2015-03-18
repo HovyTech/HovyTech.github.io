@@ -58,16 +58,15 @@
       </tr>
     </table>
     <table id="footer">
-      <th>
-        <form action="" method="POST" id="ratingForm" target="no-target" onsubmit="">
-          <button type="submit" name="star" value="1" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
-          <button type="submit" name="star" value="2" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
-          <button type="submit" name="star" value="3" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
-          <button type="submit" name="star" value="4" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
-          <button type="submit" name="star" value="5" id="ratingValue"><img id="ratingStar" src="Images/Star.png"></img></button>
-          <iframe src="" id="no-target" name="no-target"></iframe>
-        </form>
-      </th>
+      <tr>
+        <td>
+          <form action="" method="POST" id="ratingForm" target="no-target" onsubmit="">
+            <input type="radio" name="star" value="5" id="ratingValue">
+            <button type="submit" id="ratingButton"><img id="ratingStar" src="Images/Star.png"></img></button>
+            <iframe src="" id="no-target" name="no-target"></iframe>
+          </form>
+        </td>
+      </tr>
     </table>
   </footer>
 </main>
