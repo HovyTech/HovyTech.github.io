@@ -209,7 +209,7 @@ function postToGoogle() {
     url: "https://docs.google.com/forms/d/1s-QzFtYzKwsOqNLJpcQP9or8hHvEgcD1SBMvXeRy8Gc/formResponse",
     data: { "entry.129317559": value },
     type: "POST",
-    dataType: "xml",
+    dataType: "xml"//,
     //statusCode: {
       //0: function () {
         //window.location.replace("ThankYou.html");
