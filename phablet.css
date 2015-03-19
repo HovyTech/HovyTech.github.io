@@ -9,6 +9,10 @@ main { height: auto; left: 0px; position: absolute; right: 0px; top: 100px; widt
 footer { height: auto; left: 0px; position: relative; right: 0px; top: 0px; width: auto; z-index: 21; }
 #footer { height: auto; left: 0px; position: relative; top: 0px; width: 100%; z-index: 22; }
 #line { height: 5px; left: 10%; margin-bottom: 10px; position: relative; top: 0px; width: 80%; z-index: 22; }
+#rrvTitle { color: rgb(214, 119, 125); font-family: "Arial", Sans-serif; font-size: 25px; z-index: 23; }
+#inFooter { height: auto; text-align: center; width: 100%; z-index: 23; }
+#rrvValue { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 16px; z-index: 23; }
+textarea { width: 98%; z-index: 23; }
 #star { height: 35px; width: auto; z-index: 23; }
 #rating { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 13px; z-index: 23; }
 #share_facebook { background-color: rgb(59, 89, 152); height: 50px; left: 0px; position: relative; top: 0px; width: 33%; z-index: 23; }
