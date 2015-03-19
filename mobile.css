@@ -10,7 +10,7 @@ main { height: auto; left: 0px; position: absolute; right: 0px; top: 100px; widt
 #description { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 15px; position: relative; top: -15px; z-index: 23; }
 footer { height: auto; left: 0px; position: relative; right: 0px; top: 0px; width: auto; z-index: 21; }
 #footer { height: auto; left: 0px; position: relative; top: 0px; width: 100%; z-index: 22; }
-#rrvTitle { color: rgb(153, 85, 89); font-family: "Arial", Sans-serif; font-size: 25px; z-index: 23; }
+#rrvTitle { color: rgb(214, 119, 125); font-family: "Arial", Sans-serif; font-size: 25px; z-index: 23; }
 #inFooter { height: auto; text-align: center; width: 100%; z-index: 23; }
 #rrvValue { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 16px; position: relative; top: 0px; z-index: 23; }
 #starObject { height: 35px; position: relative; top: 0px; width: auto; z-index: 23; }
