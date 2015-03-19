@@ -216,6 +216,3 @@ var getRRVCount = function() {
     $('#vote_count').text(vote);
   });
 };
-alert(rating)
-alert(review)
-alert(vote)
