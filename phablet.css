@@ -14,7 +14,7 @@ footer { height: auto; left: 0px; position: relative; right: 0px; top: 0px; widt
 #rrvValue { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 16px; z-index: 23; }
 textarea { width: 98%; z-index: 23; }
 #star { height: 35px; width: auto; z-index: 23; }
-#rating { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 13px; z-index: 23; }
+#count { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 13px; z-index: 23; }
 #share_facebook { background-color: rgb(59, 89, 152); height: 50px; left: 0px; position: relative; top: 0px; width: 33%; z-index: 23; }
 #share_twitter { background-color: rgb(64, 153, 255); height: 50px; left: 0px; position: relative; top: 0px; width: 33%; z-index: 23; }
 #share_youtube { background-color: rgb(229, 45, 39); height: 50px; left: 0px; position: relative; top: 0px; width: 33%; z-index: 23; }
