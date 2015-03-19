@@ -204,15 +204,15 @@ var getYouTubeCount = function() {
 //--------------------------------------------------GET RATING, REVIEW AND VOTE COUNT
 //Rating count
 var getRRVCount = function() {
-  $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/basic?alt=json', function(data) {
+  $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/values?alt=json', function(data) {
 //Rating count
-    var rating = data.feed.entry[7].content.$t;
+    var rating = data.feed.entry[1].content.$t;
     $('#rating_count').text(rating);
 //Review count
-    var review = data.feed.entry[19].content.$t;
+    var review = data.feed.entry[3].content.$t;
     $('#review_count').text(review);
 //Vote count
-    var vote = data.feed.entry[31].content.$t;
+    var vote = data.feed.entry[5].content.$t;
     $('#vote_count').text(vote);
   });
 };
