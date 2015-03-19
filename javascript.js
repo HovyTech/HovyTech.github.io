@@ -201,11 +201,21 @@ var getYouTubeCount = function() {
     $('#youtube_count').text(youtube);
   });
 };
-//--------------------------------------------------POST RATING COUNT
-$('#ratingForm').one('submit',function() {
-  var ratingValue = encodeURIComponent($('#ratingValue').val());
-  var baseURL = 'https://docs.google.com/forms/d/1s-QzFtYzKwsOqNLJpcQP9or8hHvEgcD1SBMvXeRy8Gc/formResponse?entry.129317559=';
-  var submitRef = '&submit=submit';
-  var submitURL = (baseURL + ratingValue + submitRef);
-  $(this)[0].action=submitURL;
-},1000);
+//--------------------------------------------------GET RATING, REVIEW AND VOTE COUNT
+//Rating count
+var getRRVCount = function() {
+  $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/basic?alt=json', function(data) {
+//Rating count
+    var rating = data.feed.entry[7].content.$t;
+    $('#rating_count').text(rating);
+//Review count
+    var review = data.feed.entry[19].content.$t;
+    $('#review_count').text(review);
+//Vote count
+    var vote = data.feed.entry[31].content.$t;
+    $('#vote_count').text(vote);
+  });
+};
+alert(rating)
+alert(review)
+alert(vote)
