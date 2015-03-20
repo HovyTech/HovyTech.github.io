@@ -1,8 +1,11 @@
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
+  alert('sf')
   var pageNum = 1;
+  alert('sf')
   var numVid = 5;
+  alert('sf')
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
     var pageShow = 1;
     var curNumVid = 0;
