@@ -1,19 +1,13 @@
-//--------------------------------------------------GLOBAL VARIABLES
-var pageNum = 1;
-var pageShow = 1;
-var numVid = 5;
-var totalVid = 0;
-var vidVar = 0;
-var curNumVid = 0;
-alert('1')
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
-    totalVid = data.feed.openSearch$totalResults.$t;
-    alert('2')
-    vidVar = totalVid / 5;
-    alert('3')
+    var pageNum = 1;
+    var pageShow = 1;
+    var numVid = 5;
+    var curNumVid = 0;
+    var totalVid = data.feed.openSearch$totalResults.$t;
+    var vidVar = totalVid / 5;
     var html = '';
     var strDescription = '';
 //Get total amount of videos
@@ -45,9 +39,7 @@ var getDesktop = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-  });
-};
-function prePageD() {
+    function prePageD() {
   if (pageNum - 1 = totalVid) {
     pageNum = pageNum - (curNumVid * 5);
     pageShow = pageShow - 1;
@@ -70,6 +62,8 @@ function nextPageD() {
     getDesktop();
   }
 }
+  });
+};
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
 //Get video image
 var getTablet = function() {
