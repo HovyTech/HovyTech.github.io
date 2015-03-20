@@ -68,6 +68,11 @@
       getRRVS();
     </script>
   </head>
-  <body>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+      <span itemprop="ratingValue"  id="rating_count"></span> Rating -
+      <span itemprop="reviewCount" id="review_count"></span> Reviews -
+      <span itemprop="voteCount" id="vote_count"></span> Votes
+    </div>
   </body>
 </html>
