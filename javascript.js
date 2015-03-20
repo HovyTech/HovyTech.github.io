@@ -38,18 +38,20 @@ var getDesktop = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
+    $('body').scrollTop();
   });
 };
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
 //Get video image
 var getTablet = function() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json', function(data) {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
+    totalVid = data.feed.openSearch$totalResults.$t;
     var html = '';
     var strDescription = '';
 //Get total amount of videos
     //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
-    for (i = 0; i < numVid; i++) {
+    for (i = 0; i < numVid[pageShow - 1]; i++) {
       var title = data.feed.entry[i].title.$t;
       var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
       var link = data.feed.entry[i].link[2].href;
@@ -74,18 +76,21 @@ var getTablet = function() {
     }
 //Load information into table
     $('#box').html(html);
+    $('#pageNum').text(pageShow);
+    $('body').scrollTop();
   });
 };
 //--------------------------------------------------LOADING PHABLET VIDEOS AND INFO
 //Get video image
 var getPhablet = function() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json', function(data) {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
+    totalVid = data.feed.openSearch$totalResults.$t;
     var html = '';
     var strDescription = '';
 //Get total amount of videos
     //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
-    for (i = 0; i < numVid; i++) {
+    for (i = 0; i < numVid[pageShow - 1]; i++) {
       var title = data.feed.entry[i].title.$t;
       var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
       var link = data.feed.entry[i].link[2].href;
@@ -110,18 +115,21 @@ var getPhablet = function() {
     }
 //Load information into table
     $('#box').html(html);
+    $('#pageNum').text(pageShow);
+    $('body').scrollTop();
   });
 };
 //--------------------------------------------------LOADING MOBILE VIDEOS AND INFO
 //Get video image
 var getMobile = function() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json', function(data) {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
+    totalVid = data.feed.openSearch$totalResults.$t;
     var html = '';
     var strDescription = '';
 //Get total amount of videos
     //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
-    for (i = 0; i < numVid; i++) {
+    for (i = 0; i < numVid[pageShow - 1]; i++) {
       var title = data.feed.entry[i].title.$t;
       var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
       var link = data.feed.entry[i].link[2].href;
@@ -146,6 +154,8 @@ var getMobile = function() {
     }
 //Load information into table
     $('#box').html(html);
+    $('#pageNum').text(pageShow);
+    $('body').scrollTop();
   });
 };
 //--------------------------------------------------HIDE SHOW HEADER
