@@ -1,12 +1,31 @@
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
-alert('sf')
+function prePageD() {
+  if (pageNum - 1 = totalVid) {
+    pageNum = pageNum - (curNumVid * 5);
+    pageShow = pageShow - 1;
+    getDesktop();
+  } else if (pageShow > 1) {
+    pageNum = pageNum - 5;
+    pageShow = pageShow - 1;
+    getDesktop();
+  }
+}
+function nextPageD() {
+  curNumVid = vidVar - pageShow;
+  if (curNumVid < 1) {
+    pageNum = pageNum + (curNumVid * 5);
+    pageShow = pageShow + 1;
+    getDesktop();
+  } else {
+    pageNum = pageNum + 5;
+    pageShow = pageShow + 1;
+    getDesktop();
+  }
+}
 var getDesktop = function() {
-  alert('sf')
   var pageNum = 1;
-  alert('sf')
   var numVid = 5;
-  alert('sf')
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
     var pageShow = 1;
     var curNumVid = 0;
