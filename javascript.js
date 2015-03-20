@@ -1,38 +1,36 @@
-var pageNum = 1;
-var numVid = 5;
-var pageShow = 1;
-var curNumVid = 0;
-var totalVid = data.feed.openSearch$totalResults.$t;
-var vidVar = totalVid / 5;
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 function prePageD() {
-  if (pageNum - 1 = totalVid) {
-    pageNum = pageNum - (curNumVid * 5);
-    pageShow = pageShow - 1;
+  if (window.pageNum - 1 = window.totalVid) {
+    window.pageNum = window.pageNum - (window.curNumVid * 5);
+    window.pageShow = window.pageShow - 1;
     getDesktop();
-  } else if (pageShow > 1) {
-    pageNum = pageNum - 5;
-    pageShow = pageShow - 1;
+  } else if (window.pageShow > 1) {
+    window.pageNum = window.pageNum - 5;
+    window.pageShow = window.pageShow - 1;
     getDesktop();
   }
 }
 function nextPageD() {
-  curNumVid = vidVar - pageShow;
-  if (curNumVid < 1) {
-    pageNum = pageNum + (curNumVid * 5);
-    pageShow = pageShow + 1;
+  window.curNumVid = window.vidVar - window.pageShow;
+  if (window.curNumVid < 1) {
+    window.pageNum = window.pageNum + (window.curNumVid * 5);
+    window.pageShow = window.pageShow + 1;
     getDesktop();
   } else {
-    pageNum = pageNum + 5;
-    pageShow = pageShow + 1;
+    window.pageNum = window.pageNum + 5;
+    window.pageShow = window.pageShow + 1;
     getDesktop();
   }
 }
 var getDesktop = function() {
+  var pageNum = 1;
+  var numVid = 5;
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
-    totalVid = data.feed.openSearch$totalResults.$t;
-    vidVar = totalVid / 5;
+    var pageShow = 1;
+    var curNumVid = 0;
+    var totalVid = data.feed.openSearch$totalResults.$t;
+    var vidVar = totalVid / 5;
     var html = '';
     var strDescription = '';
 //Get total amount of videos
