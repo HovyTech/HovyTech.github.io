@@ -222,9 +222,9 @@ var getRRVS = function() {
     alert(digit)
     alert(decimal)
     if (decimal >= 5) {
-      $('#starImage').load('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
+      $('#starImage').append('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
     } else {
-      $('#starImage').load('<img id="star" src="Images/Star' + digit + '.png"></img>');
+      $('#starImage').append('<img id="star" src="Images/Star' + digit + '.png"></img>');
     }
   });
 };
