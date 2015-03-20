@@ -5,12 +5,15 @@ var numVid = 5;
 var totalVid = 0;
 var vidVar = 0;
 var curNumVid = 0;
+alert('1')
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
     totalVid = data.feed.openSearch$totalResults.$t;
+    alert('2')
     vidVar = totalVid / 5;
+    alert('3')
     var html = '';
     var strDescription = '';
 //Get total amount of videos
