@@ -8,7 +8,7 @@
     <table id="footer">
       <tr id="pageBar">
         <th>
-          <button id="pageButton" onClick="function(){ if (pageNum - 1 = totalVid) { pageNum = pageNum - (curNumVid * 5); pageShow = pageShow - 1; getDesktop(); } else if (pageShow > 1) { pageNum = pageNum - 5; pageShow = pageShow - 1; getDesktop(); } }">&lt;</button>    <span id="pageNum"></span>    <button id="pageButton" onClick="nextPageD()">&gt;</button>
+          <button id="pageButton" onClick="function(){ if (pageNum - 1 = totalVid) { pageNum = pageNum - (curNumVid * 5); pageShow = pageShow - 1; getDesktop(); } else if (pageShow > 1) { pageNum = pageNum - 5; pageShow = pageShow - 1; getDesktop(); } }">&lt;</button>    <span id="pageNum"></span>    <button id="pageButton" onClick="function() { curNumVid = vidVar - pageShow; if (curNumVid < 1) { pageNum = pageNum + (curNumVid * 5); pageShow = pageShow + 1; getDesktop(); } else { pageNum = pageNum + 5; pageShow = pageShow + 1; getDesktop(); } }">&gt;</button>
         </th>
       </tr>
     </table>
