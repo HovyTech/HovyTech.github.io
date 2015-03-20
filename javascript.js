@@ -1,3 +1,9 @@
+var pageNum = 1;
+var numVid = 5;
+var pageShow = 1;
+var curNumVid = 0;
+var totalVid = data.feed.openSearch$totalResults.$t;
+var vidVar = totalVid / 5;
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 function prePageD() {
@@ -24,13 +30,9 @@ function nextPageD() {
   }
 }
 var getDesktop = function() {
-  var pageNum = 1;
-  var numVid = 5;
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
-    var pageShow = 1;
-    var curNumVid = 0;
-    var totalVid = data.feed.openSearch$totalResults.$t;
-    var vidVar = totalVid / 5;
+    totalVid = data.feed.openSearch$totalResults.$t;
+    vidVar = totalVid / 5;
     var html = '';
     var strDescription = '';
 //Get total amount of videos
