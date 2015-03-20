@@ -43,29 +43,6 @@ var getDesktop = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-    function prePageD() {
-  if (pageNum - 1 = totalVid) {
-    pageNum = pageNum - (curNumVid * 5);
-    pageShow = pageShow - 1;
-    getDesktop();
-  } else if (pageShow > 1) {
-    pageNum = pageNum - 5;
-    pageShow = pageShow - 1;
-    getDesktop();
-  }
-};
-function nextPageD() {
-  curNumVid = vidVar - pageShow;
-  if (curNumVid < 1) {
-    pageNum = pageNum + (curNumVid * 5);
-    pageShow = pageShow + 1;
-    getDesktop();
-  } else {
-    pageNum = pageNum + 5;
-    pageShow = pageShow + 1;
-    getDesktop();
-  }
-};
   });
 };
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
