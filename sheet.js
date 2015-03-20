@@ -1,3 +1,4 @@
+var submitted = false;
 (function(e, t) {
     "function" == typeof define && define.amd ? define(t) : e.H5F = t()
 })(this, function() {
