@@ -1,8 +1,9 @@
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=5', function(data) {
-    var pageNum = 1;
+  var pageNum = 1;
+  var numVid = 5;
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
     var pageShow = 1;
     var curNumVid = 0;
     var totalVid = data.feed.openSearch$totalResults.$t;
@@ -12,7 +13,7 @@ var getDesktop = function() {
 //Get total amount of videos
     //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < numVid; i++) {
       var title = data.feed.entry[i].title.$t;
       var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
       var link = data.feed.entry[i].link[2].href;
