@@ -77,7 +77,7 @@ var getTablet = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-    $('body').scrollTop();
+    $('body').scrollTop(0);
   });
 };
 //--------------------------------------------------LOADING PHABLET VIDEOS AND INFO
@@ -116,7 +116,7 @@ var getPhablet = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-    $('body').scrollTop();
+    $('body').scrollTop(0);
   });
 };
 //--------------------------------------------------LOADING MOBILE VIDEOS AND INFO
@@ -155,7 +155,7 @@ var getMobile = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-    $('body').scrollTop();
+    $('body').scrollTop(0);
   });
 };
 //--------------------------------------------------HIDE SHOW HEADER
