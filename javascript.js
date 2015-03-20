@@ -43,7 +43,7 @@ var getDesktop = function() {
   if (pageNum - 1 = totalVid) {
     pageNum = pageNum - (curNumVid * 5);
     pageShow = pageShow - 1;
-    getDesktop();
+    redirectD();
   } else if (pageShow > 1) {
     pageNum = pageNum - 5;
     pageShow = pageShow - 1;
@@ -55,7 +55,7 @@ function nextPageD() {
   if (curNumVid < 1) {
     pageNum = pageNum + (curNumVid * 5);
     pageShow = pageShow + 1;
-    getDesktop();
+    redirectD();
   } else {
     pageNum = pageNum + 5;
     pageShow = pageShow + 1;
