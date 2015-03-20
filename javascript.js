@@ -5,7 +5,7 @@ var getDesktop = function() {
     var html = '';
     var strDescription = '';
 //Get total amount of videos
-    var numVid = data.feed.openSearch$totalResults.$t;
+    var numVid = 2;//data.feed.openSearch$totalResults.$t;
 //Get needed information
     for (i = 0; i < numVid; i++) {
       var title = data.feed.entry[i].title.$t;
