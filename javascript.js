@@ -1,7 +1,7 @@
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json', function(data) {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=1&max-results=2', function(data) {
     var html = '';
     var strDescription = '';
 //Get total amount of videos
