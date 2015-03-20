@@ -1,11 +1,26 @@
+//--------------------------------------------------GLOBAL VARIABLES
+var pageNum = 1;
+var pageShow = 1;
+var numVid = 5;
+var totalVid = 0;
+var vidVar = 0;
+var curNumVid = 1;
+//--------------------------------------------------GET TOTAL COUNT OF VIDEOS 
+//Video count
+var getVideoCount = function() {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json', function(data) {
+    totalVid = data.feed.openSearch$totalResults.$t;
+    vidVar = totalVid / 5;
+  });
+};
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=1&max-results=2', function(data) {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
     var html = '';
     var strDescription = '';
 //Get total amount of videos
-    var numVid = 2;//data.feed.openSearch$totalResults.$t;
+    //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
     for (i = 0; i < numVid; i++) {
       var title = data.feed.entry[i].title.$t;
@@ -32,8 +47,32 @@ var getDesktop = function() {
     }
 //Load information into table
     $('#box').html(html);
+    $('#pageNum').text(pageShow);
   });
 };
+function prePageD() {
+  if (pageNum - 1 = totalVid) {
+    pageNum = pageNum - (curNumVid * 5);
+    pageShow = pageShow - 1;
+    getDesktop();
+  } else if (pageShow > 1) {
+    pageNum = pageNum - 5;
+    pageShow = pageShow - 1;
+    getDesktop();
+  }
+}
+function nextPageD() {
+  curNumVid = vidVar - pageShow;
+  if (curNumVid < 1) {
+    pageNum = pageNum + (curNumVid * 5);
+    pageShow = pageShow + 1;
+    getDesktop();
+  } else {
+    pageNum = pageNum + 5;
+    pageShow = pageShow + 1;
+    getDesktop();
+  }
+}
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
 //Get video image
 var getTablet = function() {
@@ -41,7 +80,7 @@ var getTablet = function() {
     var html = '';
     var strDescription = '';
 //Get total amount of videos
-    var numVid = data.feed.openSearch$totalResults.$t;
+    //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
     for (i = 0; i < numVid; i++) {
       var title = data.feed.entry[i].title.$t;
@@ -77,7 +116,7 @@ var getPhablet = function() {
     var html = '';
     var strDescription = '';
 //Get total amount of videos
-    var numVid = data.feed.openSearch$totalResults.$t;
+    //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
     for (i = 0; i < numVid; i++) {
       var title = data.feed.entry[i].title.$t;
@@ -113,7 +152,7 @@ var getMobile = function() {
     var html = '';
     var strDescription = '';
 //Get total amount of videos
-    var numVid = data.feed.openSearch$totalResults.$t;
+    //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
     for (i = 0; i < numVid; i++) {
       var title = data.feed.entry[i].title.$t;
