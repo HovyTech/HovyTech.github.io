@@ -1,5 +1,6 @@
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
+alert('sf')
 var getDesktop = function() {
   alert('sf')
   var pageNum = 1;
@@ -42,7 +43,7 @@ var getDesktop = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-    var prePageD = function() {
+    function prePageD() {
   if (pageNum - 1 = totalVid) {
     pageNum = pageNum - (curNumVid * 5);
     pageShow = pageShow - 1;
@@ -53,7 +54,7 @@ var getDesktop = function() {
     getDesktop();
   }
 };
-var nextPageD = function() {
+function nextPageD() {
   curNumVid = vidVar - pageShow;
   if (curNumVid < 1) {
     pageNum = pageNum + (curNumVid * 5);
