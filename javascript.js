@@ -218,6 +218,8 @@ var getRRVS = function() {
 //Get Star image
   var digit = description.substring(1, 1);
   var decimal = description.substring(3, 1);
+  alert(digit)
+  alert(decimal)
   if (decimal >= 5) {
     $('#starImage').load('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
   } else if ((decimal >= 0) && (decimal < 5)) {
