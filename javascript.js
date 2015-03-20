@@ -216,7 +216,8 @@ var getRRVS = function() {
     $('#vote_count').text(vote);
 //Get Star image
     var fullStop = rating.search('.');
-    var digit = rating.substring(fullStop - 1, fullStop);
+    alert(fullStop)
+    var digit = rating.substring(fullStop, fullStop + 1);
     var decimal = rating.substring(fullStop, fullStop + 1);
     alert(digit)
     alert(decimal)
