@@ -202,8 +202,8 @@ var getYouTubeCount = function() {
   });
 };
 //--------------------------------------------------GET RATING, REVIEW AND VOTE COUNT
-//Rating count
-var getRRVCount = function() {
+//Rating, Review, Vote and Star Load
+var getRRVS = function() {
   $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/values?alt=json', function(data) {
 //Rating count
     var rating = data.feed.entry[1].content.$t;
@@ -215,4 +215,12 @@ var getRRVCount = function() {
     var vote = data.feed.entry[5].content.$t;
     $('#vote_count').text(vote);
   });
+//Get Star image
+  var digit = description.substring(1, 1);
+  var decimal = description.substring(3, 1);
+  if (decimal >= 5) {
+    $('#starImage').load('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
+  } else if ((decimal >= 0) && (decimal < 5)) {
+    $('#starImage').load('<img id="star" src="Images/Star' + digit + '.png"></img>');
+  }
 };
