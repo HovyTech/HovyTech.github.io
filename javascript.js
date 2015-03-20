@@ -218,7 +218,7 @@ var getRRVS = function() {
     var fullStop = rating.search('.');
     alert(fullStop)
     var digit = rating.substring(0, 1);
-    var decimal = rating.substring(2, 1);
+    var decimal = rating.substring(2, 3);
     alert(digit)
     alert(decimal)
     if (decimal >= 5) {
