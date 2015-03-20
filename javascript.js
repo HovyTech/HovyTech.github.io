@@ -215,12 +215,8 @@ var getRRVS = function() {
     var vote = data.feed.entry[5].content.$t;
     $('#vote_count').text(vote);
 //Get Star image
-    var fullStop = rating.search('.');
-    alert(fullStop)
     var digit = rating.substring(0, 1);
     var decimal = rating.substring(2, 3);
-    alert(digit)
-    alert(decimal)
     if (decimal >= 5) {
       $('#starImage').append('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
     } else {
