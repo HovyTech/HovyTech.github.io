@@ -23,24 +23,21 @@
 //}
 //function(){ if (pageNum - 1 = totalVid) { pageNum = pageNum - (curNumVid * 5); pageShow = pageShow - 1; getDesktop(); } else if (pageShow > 1) { pageNum = pageNum - 5; pageShow = pageShow - 1; getDesktop(); } }
 //function() { curNumVid = vidVar - pageShow; if (curNumVid < 1) { pageNum = pageNum + (curNumVid * 5); pageShow = pageShow + 1; getDesktop(); } else { pageNum = pageNum + 5; pageShow = pageShow + 1; getDesktop(); } }
-var pageNum = 1;
-var numVid = 5;
+var numVid = [5, 5, 3];
+var numIndex = [1, 6, 11];
 var pageShow = 1;
 var totalVid = 0;
-var vidVar = 0;
-var leftNumVid = 0;
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + pageNum + '&max-results=' + numVid, function(data) {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
     totalVid = data.feed.openSearch$totalResults.$t;
-    vidVar = totalVid / 5;
     var html = '';
     var strDescription = '';
 //Get total amount of videos
     //var numVid = data.feed.openSearch$totalResults.$t;
 //Get needed information
-    for (i = 0; i < numVid; i++) {
+    for (i = 0; i < numVid[pageShow - 1]; i++) {
       var title = data.feed.entry[i].title.$t;
       var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
       var link = data.feed.entry[i].link[2].href;
