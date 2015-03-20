@@ -216,9 +216,11 @@ var getRRVS = function() {
     $('#vote_count').text(vote);
   });
 //Get Star image
-  var digit = rating.substring(0, 1);
-  var decimal = rating.substring(2, 1);
-  alert(digit)
+  var decimal = rating - Math.round(rating);
+  if (decimal < 0) {
+    decimal = decimal * -1;
+  }
+  alert('digit')
   alert(decimal)
   if (decimal >= 5) {
     $('#starImage').load('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
