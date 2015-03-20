@@ -21,7 +21,7 @@ footer { height: auto; left: 0px; position: relative; right: 0px; top: 0px; widt
 #footerBody { background-color: rgb(255, 255, 255); box-shadow: inset 0px 5px 5px 0px rgb(46, 46, 46); height: auto; position: relative; top: 0px; width: 100%; z-index: 23; }
 #rrvTitle { color: rgb(214, 119, 125); font-family: "Arial", Sans-serif; font-size: 25px; z-index: 24; }
 #rrvInfo { color: rgb(145, 140, 141); font-family: "Arial", Sans-serif; font-size: 13px; z-index: 24; }
-#footerMain { height: auto; left: 0px; margin-bottom: 20px; position: relative; top: 0px; width: 60%; z-index: 24; }
+#footerMain { height: auto; left: 20%; margin-bottom: 20px; position: relative; top: 0px; width: 60%; z-index: 24; }
 #inFooter { height: auto; text-align: center; width: 100%; z-index: 25; }
 #rrvValue { color: rgb(0, 0, 0); font-family: "Arial", Sans-serif; font-size: 16px; z-index: 26; }
-textarea { width: 100%; z-index: 26; }
+textarea { width: 90%; z-index: 26; }
