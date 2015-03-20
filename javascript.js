@@ -1,28 +1,3 @@
-//function prePageD() {
-  //if (pageNum - 1 = totalVid) {
-    //pageNum = pageNum - (curNumVid * 5);
-    //pageShow = pageShow - 1;
-    //getDesktop();
-  //} else if (pageShow > 1) {
-    //pageNum = pageNum - 5;
-    //pageShow = pageShow - 1;
-    //getDesktop();
-  //}
-//}
-//function nextPageD() {
-  //curNumVid = vidVar - pageShow;
-  //if (curNumVid < 1) {
-    //pageNum = pageNum + (curNumVid * 5);
-    //pageShow = pageShow + 1;
-    //getDesktop();
-  //} else {
-    //pageNum = pageNum + 5;
-    //pageShow = pageShow + 1;
-    //getDesktop();
-  //}
-//}
-//function(){ if (pageNum - 1 = totalVid) { pageNum = pageNum - (curNumVid * 5); pageShow = pageShow - 1; getDesktop(); } else if (pageShow > 1) { pageNum = pageNum - 5; pageShow = pageShow - 1; getDesktop(); } }
-//function() { curNumVid = vidVar - pageShow; if (curNumVid < 1) { pageNum = pageNum + (curNumVid * 5); pageShow = pageShow + 1; getDesktop(); } else { pageNum = pageNum + 5; pageShow = pageShow + 1; getDesktop(); } }
 var numVid = [5, 5, 3];
 var numIndex = [1, 6, 11];
 var pageShow = 1;
