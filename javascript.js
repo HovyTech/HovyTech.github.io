@@ -204,31 +204,25 @@ var getYouTubeCount = function() {
 //--------------------------------------------------GET RATING, REVIEW AND VOTE COUNT
 //Rating, Review, Vote and Star Load
 var getRRVS = function() {
-  var rating = 0;
-  var review = 0;
-  var vote = 0;
   $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/values?alt=json', function(data) {
 //Rating count
-    rating = data.feed.entry[1].content.$t;
+    var rating = data.feed.entry[1].content.$t;
     $('#rating_count').text(rating);
 //Review count
-    review = data.feed.entry[3].content.$t;
+    var review = data.feed.entry[3].content.$t;
     $('#review_count').text(review);
 //Vote count
-    vote = data.feed.entry[5].content.$t;
+    var vote = data.feed.entry[5].content.$t;
     $('#vote_count').text(vote);
-  });
 //Get Star image
-  var decimal = rating - Math.round(rating);
-  if (decimal < 0) {
-    decimal = decimal * -1;
-  }
-  var digit = rating - decimal;
-  alert(digit)
-  alert(decimal)
-  if (decimal >= 5) {
-    $('#starImage').load('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
-  } else if ((decimal >= 0) && (decimal < 5)) {
-    $('#starImage').load('<img id="star" src="Images/Star' + digit + '.png"></img>');
-  }
+    var digit = rating.substring(0, 1);
+    var decimal = rating.substring(2, 1);
+    alert(digit)
+    alert(decimal)
+    if (decimal >= 5) {
+      $('#starImage').load('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
+    } else {
+      $('#starImage').load('<img id="star" src="Images/Star' + digit + '.png"></img>');
+    }
+  });
 };
