@@ -39,30 +39,33 @@ var getDesktop = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-  });
-};
-function prePageD() {
-  if (window.pageNum - 1 = window.totalVid) {
-    window.pageNum = window.pageNum - (window.curNumVid * 5);
-    window.pageShow = window.pageShow - 1;
+    function prePageD() {
+  if (pageNum - 1 = totalVid) {
+    pageNum = pageNum - (curNumVid * 5);
+    pageShow = pageShow - 1;
     getDesktop();
-  } else if (window.pageShow > 1) {
-    window.pageNum = window.pageNum - 5;
-    window.pageShow = window.pageShow - 1;
-    getDesktop();
+  } else if (pageShow > 1) {
+    pageNum = pageNum - 5;
+    pageShow = pageShow - 1;
+    redirectD();
   }
 }
 function nextPageD() {
-  window.curNumVid = window.vidVar - window.pageShow;
-  if (window.curNumVid < 1) {
-    window.pageNum = window.pageNum + (window.curNumVid * 5);
-    window.pageShow = window.pageShow + 1;
+  curNumVid = vidVar - pageShow;
+  if (curNumVid < 1) {
+    pageNum = pageNum + (curNumVid * 5);
+    pageShow = pageShow + 1;
     getDesktop();
   } else {
-    window.pageNum = window.pageNum + 5;
-    window.pageShow = window.pageShow + 1;
-    getDesktop();
+    pageNum = pageNum + 5;
+    pageShow = pageShow + 1;
+    redirectD();
   }
+}
+  });
+};
+function redirectD() {
+  getDesktop();
 }
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
 //Get video image
