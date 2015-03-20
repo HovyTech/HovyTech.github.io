@@ -4,7 +4,7 @@ var pageShow = 1;
 var numVid = 5;
 var totalVid = 0;
 var vidVar = 0;
-var curNumVid = 1;
+var curNumVid = 0;
 //--------------------------------------------------GET TOTAL COUNT OF VIDEOS 
 //Video count
 var getVideoCount = function() {
