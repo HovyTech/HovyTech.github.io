@@ -2,11 +2,11 @@
   //if (pageNum - 1 = totalVid) {
     //pageNum = pageNum - (curNumVid * 5);
     //pageShow = pageShow - 1;
-    //redirectD();
+    //getDesktop();
   //} else if (pageShow > 1) {
     //pageNum = pageNum - 5;
     //pageShow = pageShow - 1;
-    //redirectD();
+    //getDesktop();
   //}
 //}
 //function nextPageD() {
@@ -14,11 +14,24 @@
   //if (curNumVid < 1) {
     //pageNum = pageNum + (curNumVid * 5);
     //pageShow = pageShow + 1;
-    //redirectD();
+    //getDesktop();
   //} else {
     //pageNum = pageNum + 5;
     //pageShow = pageShow + 1;
-    //redirectD();
+    //getDesktop();
+  //}
+//}
+//function(){ if (pageNum - 1 = totalVid) { pageNum = pageNum - (curNumVid * 5); pageShow = pageShow - 1; getDesktop(); } else if (pageShow > 1) { pageNum = pageNum - 5; pageShow = pageShow - 1; getDesktop(); } }
+//function nextPageD() {
+  //curNumVid = vidVar - pageShow;
+  //if (curNumVid < 1) {
+    //pageNum = pageNum + (curNumVid * 5);
+    //pageShow = pageShow + 1;
+    //getDesktop();
+  //} else {
+    //pageNum = pageNum + 5;
+    //pageShow = pageShow + 1;
+    //getDesktop();
   //}
 //}
 var pageNum = 1;
@@ -66,9 +79,6 @@ var getDesktop = function() {
     $('#pageNum').text(pageShow);
   });
 };
-function redirectD() {
-  getDesktop();
-}
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
 //Get video image
 var getTablet = function() {
