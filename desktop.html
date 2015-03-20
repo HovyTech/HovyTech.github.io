@@ -6,9 +6,11 @@
   </table>
   <footer>
     <table id="footer">
-      <tr id="pageBar">
+      <tr>
         <th>
-          <button id="pageButton" onClick="if (pageShow > 1) { pageShow = pageShow - 1; getDesktop(); }">&lt;</button><span id="pageNum"></span><button id="pageButton" onClick="if ((numVid[pageShow - 1] + numIndex[pageShow - 1] - 1) != totalVid) { pageShow = pageShow + 1; getDesktop(); }">&gt;</button>
+          <div id="pageBar">
+            <button id="pageButton" onClick="if (pageShow > 1) { pageShow = pageShow - 1; getDesktop(); }">&lt;</button><span id="pageNum"></span><button id="pageButton" onClick="if ((numVid[pageShow - 1] + numIndex[pageShow - 1] - 1) != totalVid) { pageShow = pageShow + 1; getDesktop(); }">&gt;</button>
+          </div>
         </th>
       </tr>
     </table>
