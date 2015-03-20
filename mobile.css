@@ -27,3 +27,4 @@ footer { height: auto; left: 0px; position: relative; right: 0px; top: 0px; widt
 #inFooter { height: auto; text-align: center; width: 100%; z-index: 25; }
 #rrvValue { color: rgb(0, 0, 0); font-family: "Arial", Sans-serif; font-size: 16px; z-index: 26; }
 textarea { width: 90%; z-index: 26; }
+#pageInfo { color: rgb(155, 155, 155); font-family: "Arial", Sans-serif; font-size: 11px; z-index: 26; }
