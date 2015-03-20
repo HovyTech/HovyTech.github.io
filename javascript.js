@@ -217,7 +217,7 @@ var getRRVS = function() {
 //Get Star image
     var fullStop = rating.search('.');
     var digit = rating.substring(fullStop - 1, fullStop);
-    var decimal = rating.substring(fullStop + 1, fullStop + 2);
+    var decimal = rating.substring(fullStop, fullStop + 1);
     alert(digit)
     alert(decimal)
     if (decimal >= 5) {
