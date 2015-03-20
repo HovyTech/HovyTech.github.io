@@ -26,9 +26,9 @@
 var pageNum = 1;
 var numVid = 5;
 var pageShow = 1;
-var curNumVid = 0;
 var totalVid = 0;
 var vidVar = 0;
+var leftNumVid = 0;
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
 var getDesktop = function() {
