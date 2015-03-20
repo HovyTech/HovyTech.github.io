@@ -1,28 +1,5 @@
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
-function prePageD() {
-  if (window.pageNum - 1 = window.totalVid) {
-    window.pageNum = window.pageNum - (window.curNumVid * 5);
-    window.pageShow = window.pageShow - 1;
-    getDesktop();
-  } else if (window.pageShow > 1) {
-    window.pageNum = window.pageNum - 5;
-    window.pageShow = window.pageShow - 1;
-    getDesktop();
-  }
-}
-function nextPageD() {
-  window.curNumVid = window.vidVar - window.pageShow;
-  if (window.curNumVid < 1) {
-    window.pageNum = window.pageNum + (window.curNumVid * 5);
-    window.pageShow = window.pageShow + 1;
-    getDesktop();
-  } else {
-    window.pageNum = window.pageNum + 5;
-    window.pageShow = window.pageShow + 1;
-    getDesktop();
-  }
-}
 var getDesktop = function() {
   var pageNum = 1;
   var numVid = 5;
@@ -64,6 +41,29 @@ var getDesktop = function() {
     $('#pageNum').text(pageShow);
   });
 };
+function prePageD() {
+  if (window.pageNum - 1 = window.totalVid) {
+    window.pageNum = window.pageNum - (window.curNumVid * 5);
+    window.pageShow = window.pageShow - 1;
+    getDesktop();
+  } else if (window.pageShow > 1) {
+    window.pageNum = window.pageNum - 5;
+    window.pageShow = window.pageShow - 1;
+    getDesktop();
+  }
+}
+function nextPageD() {
+  window.curNumVid = window.vidVar - window.pageShow;
+  if (window.curNumVid < 1) {
+    window.pageNum = window.pageNum + (window.curNumVid * 5);
+    window.pageShow = window.pageShow + 1;
+    getDesktop();
+  } else {
+    window.pageNum = window.pageNum + 5;
+    window.pageShow = window.pageShow + 1;
+    getDesktop();
+  }
+}
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
 //Get video image
 var getTablet = function() {
