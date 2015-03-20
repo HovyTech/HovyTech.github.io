@@ -38,7 +38,7 @@ var getDesktop = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-    $('body').scrollTop();
+    $('body').scrollTop(0);
   });
 };
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
