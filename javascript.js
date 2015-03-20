@@ -22,18 +22,7 @@
   //}
 //}
 //function(){ if (pageNum - 1 = totalVid) { pageNum = pageNum - (curNumVid * 5); pageShow = pageShow - 1; getDesktop(); } else if (pageShow > 1) { pageNum = pageNum - 5; pageShow = pageShow - 1; getDesktop(); } }
-//function nextPageD() {
-  //curNumVid = vidVar - pageShow;
-  //if (curNumVid < 1) {
-    //pageNum = pageNum + (curNumVid * 5);
-    //pageShow = pageShow + 1;
-    //getDesktop();
-  //} else {
-    //pageNum = pageNum + 5;
-    //pageShow = pageShow + 1;
-    //getDesktop();
-  //}
-//}
+//function() { curNumVid = vidVar - pageShow; if (curNumVid < 1) { pageNum = pageNum + (curNumVid * 5); pageShow = pageShow + 1; getDesktop(); } else { pageNum = pageNum + 5; pageShow = pageShow + 1; getDesktop(); } }
 var pageNum = 1;
 var numVid = 5;
 var pageShow = 1;
