@@ -42,7 +42,7 @@ var getDesktop = function() {
 //Load information into table
     $('#box').html(html);
     $('#pageNum').text(pageShow);
-    function prePageD() {
+    var prePageD = function() {
   if (pageNum - 1 = totalVid) {
     pageNum = pageNum - (curNumVid * 5);
     pageShow = pageShow - 1;
@@ -52,8 +52,8 @@ var getDesktop = function() {
     pageShow = pageShow - 1;
     getDesktop();
   }
-}
-function nextPageD() {
+};
+var nextPageD = function() {
   curNumVid = vidVar - pageShow;
   if (curNumVid < 1) {
     pageNum = pageNum + (curNumVid * 5);
@@ -64,7 +64,7 @@ function nextPageD() {
     pageShow = pageShow + 1;
     getDesktop();
   }
-}
+};
   });
 };
 //--------------------------------------------------LOADING TABLET VIDEOS AND INFO
