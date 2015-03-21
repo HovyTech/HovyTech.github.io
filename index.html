@@ -33,8 +33,6 @@
     <link rel="apple-touch-icon" href="Images/apple-touch-icon.png">
     <!--<link rel="apple-touch-startup-image" href="Images/startup.png">-->
     <a href="https://plus.google.com/108801816675888352655" rel="publisher"></a>
-    <!--https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js-->
-    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
     <script type="text/javascript">
 //--------------------------------------------------LOAD GOOGLE ANALYTICS
@@ -44,32 +42,6 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-60758503-1', 'auto');
       ga('send', 'pageview');
-//--------------------------------------------------DETECT SCREEN SIZE
-      if (screen.width < 480) {
-        //$('body').load('mobile.html');
-        //$('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
-        getMobile();
-        headerLoad();
-      }
-      if ((screen.width >= 480) && (screen.width < 720)) {
-        $('body').load('phablet.html');
-        //$('head').append('<link rel="stylesheet" type="text/css" href="phablet.css">');
-        getPhablet();
-      }
-      if ((screen.width >= 720) && (screen.width < 1024)) {
-        $('body').load('tablet.html');
-        //$('head').append('<link rel="stylesheet" type="text/css" href="tablet.css">');
-        getTablet();
-      }
-      if (screen.width >= 1024) {
-        $('body').load('desktop.html');
-        //$('head').append('<link rel="stylesheet" type="text/css" href="desktop.css">');
-        getDesktop();
-      }
-      getFacebookCount();
-      getTwitterCount();
-      getYouTubeCount();
-      getRRVS();
     </script>
   </head>
   <body>
