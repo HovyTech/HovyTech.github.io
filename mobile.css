@@ -3,13 +3,13 @@ header { background-color: rgb(239, 234, 200); box-shadow: 0px 5px 5px 0px rgb(4
 .show { top: 0px; transition-duration: 0.2s; }
 .hide { top: -90px; transition-duration: 0.2s; }
 #logo { height: 70px; left: 5px; position: absolute; top: 5px; width: auto; z-index: 31; }
-body { height: auto; left: 0px; position: absolute; right: 0px; top: 0px; width: 100%; z-index: 20; }
-main { height: auto; left: 2%; position: relative; right: 0px; top: 100px; width: 96%; z-index: 21; }
-#box { height: auto; left: 0px; margin-bottom: 10px; position: relative; top: 0px; width: 100%; z-index: 21; }
+body { height: auto; position: absolute; top: 0px; width: 100%; z-index: 20; }
+main { height: auto; left: 2%; position: relative; top: 100px; width: 96%; z-index: 21; }
+#box { height: auto; margin-bottom: 10px; position: relative; top: 0px; width: 100%; z-index: 21; }
 #title { color: rgb(70, 187, 136); font-family: "Arial", Sans-serif; font-size: 25px; z-index: 23; }
 #video { background-color: rgb(69, 125, 173); border: 2px solid; border-color: rgb(69, 125, 173); border-radius: 2px; height: auto; margin-bottom: 20px; position: relative; top: 0px; width: 100%; z-index: 22; }
 #description { color: rgb(255, 255, 255); font-family: "Arial", Sans-serif; font-size: 15px; position: relative; top: -15px; z-index: 23; }
-footer { height: auto; left: 0px; position: relative; right: 0px; top: 0px; width: 100%; z-index: 21; }
+footer { height: auto; position: relative; top: 0px; width: 100%; z-index: 21; }
 #footer { height: auto; left: 0px; position: relative; top: 0px; width: 100%; z-index: 22; }
 #pageBar { height: auto; left: 25%; position: relative; top: 0px; width: 50%; z-index: 22; }
 #pageButton { background-color: rgb(255, 255, 255); border: 2px solid; border-color: rgb(255, 255, 255); border-radius: 2px; color: rgb(100, 100, 100); font-family: "Arial", Sans-serif; font-size: 16px; height: auto; margin: 10px; position: relative; top: 0px; width: auto; z-index: 23; }
