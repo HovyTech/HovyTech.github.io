@@ -12,37 +12,14 @@ var numVid = [5, 5, 3];
 var numIndex = [1, 6, 11];
 var pageShow = 1;
 var totalVid = 0;
-var loadScreen = function() {
 //--------------------------------------------------DETECT SCREEN SIZE
-if ((screen.width >= 480) && (screen.width < 720)) {
-  //$('body').load('phablet.html');
-  $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  getPhablet();
-}
-if ((screen.width >= 720) && (screen.width < 1024)) {
-  //$('body').load('tablet.html');
-  $('header').append('<img id="logo" src="Images/HovyTech T&D.png"></img>');
-  $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  getTablet();
-}
-if (screen.width >= 1024) {
-  //$('body').load('desktop.html');
-  $('header').append('<img id="logo" src="Images/HovyTech T&D.png"></img>');
-  $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  getDesktop();
-}
-};
 function loadMobile() {
   alert('dfg')
   $('header').prepend('<img id="logo" src="Images/HovyTech M&P.png"></img>');
   alert('dfg')
-  $('#footer').html('<tr><td id="share_facebook" onclick="window.open(' + "'" + 'https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="facebook_count"></span></text><img id="social_image" src="Images/Facebook.png"></img></td><td id="share_twitter" onclick="window.open(' + "'" + 'https://twitter.com/home?status=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="twitter_count"></span></text><img id="social_image" src="Images/Twitter.png"></img></td><td id="share_youtube" onclick="window.open(' + "'" + 'http://www.youtube.com/user/hovytech?sub_confirmation=1' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="youtube_count"></span></text><img id="social_image" src="Images/YouTube.png"></img></td></tr>');
+  $('#footer').append('<tr><td id="share_facebook" onclick="window.open(' + "'" + 'https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="facebook_count"></span></text><img id="social_image" src="Images/Facebook.png"></img></td><td id="share_twitter" onclick="window.open(' + "'" + 'https://twitter.com/home?status=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="twitter_count"></span></text><img id="social_image" src="Images/Twitter.png"></img></td><td id="share_youtube" onclick="window.open(' + "'" + 'http://www.youtube.com/user/hovytech?sub_confirmation=1' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="youtube_count"></span></text><img id="social_image" src="Images/YouTube.png"></img></td></tr>');
   alert('dfg')
-  $('.socialBottom').html('<tr><td id="share_instagram" onclick="window.open(' + "'" + 'http://instagram.com/alexhovy?ref=badge' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count">@alexhovy</text><img id="social_image" src="Images/Instagram.png"></img></td></tr><tr><td id="share_email" onclick="window.location.href=' + "'" + 'mailto:hovytech@gmail.com' + "'" + '"><text id="share_count">hovytech@gmail.com</text><img id="social_image" src="Images/Email.png"></img></td></tr>');
+  $('.socialBottom').append('<tr><td id="share_instagram" onclick="window.open(' + "'" + 'http://instagram.com/alexhovy?ref=badge' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count">@alexhovy</text><img id="social_image" src="Images/Instagram.png"></img></td></tr><tr><td id="share_email" onclick="window.location.href=' + "'" + 'mailto:hovytech@gmail.com' + "'" + '"><text id="share_count">hovytech@gmail.com</text><img id="social_image" src="Images/Email.png"></img></td></tr>');
   alert('dfg')
 }
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
