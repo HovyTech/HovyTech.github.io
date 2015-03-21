@@ -14,95 +14,14 @@ var totalVid = 0;
 //--------------------------------------------------DETECT SCREEN SIZE
 //var loadImage = function() {
   //$('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
-  //$('#footer').append('<tr><td id="share_facebook" onclick="window.open(' + "'" + 'https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="facebook_count"></span></text><img id="social_image" src="Images/Facebook.png"></img></td><td id="share_twitter" onclick="window.open(' + "'" + 'https://twitter.com/home?status=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="twitter_count"></span></text><img id="social_image" src="Images/Twitter.png"></img></td><td id="share_youtube" onclick="window.open(' + "'" + 'http://www.youtube.com/user/hovytech?sub_confirmation=1' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="youtube_count"></span></text><img id="social_image" src="Images/YouTube.png"></img></td></tr>');
+  //$('#footer').append('<tr><td id="share_facebook" onclick="window.open(' + "'" + 'https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="facebook_count"></span></text><img id="social_image" src="Images/Facebook.png"></img></td><td id="share_twitter" onclick="window.open(' + "'" + 'https://twitter.com/home?status=http://hovytech.github.io' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="twitter_count"></span></text><img id="social_image" src="Images/Twitter.png"></img></td><td id="share_youtube" onclick="window.open(' + "'" + 'http://www.youtube.com/user/hovytech?sub_confirmation=1' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="youtube_count"></span></text><img id="social_image" src="Images/YouTube.png"></img></td></tr>');
   //$('.socialBottom').append('<tr><td id="share_instagram" onclick="window.open(' + "'" + 'http://instagram.com/alexhovy?ref=badge' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count">@alexhovy</text><img id="social_image" src="Images/Instagram.png"></img></td></tr><tr><td id="share_email" onclick="window.location.href=' + "'" + 'mailto:hovytech@gmail.com' + "'" + '"><text id="share_count">hovytech@gmail.com</text><img id="social_image" src="Images/Email.png"></img></td></tr>');
 //};
 //--------------------------------------------------LOAD BODY CONTENT
-function loadBody() {
-  if (screen.width < 480) {
-    choose = 6;
-    loadHeader();
-  }
-  if ((screen.width >= 480) && (screen.width < 720)) {
-    choose = 4;
-  }
-  if ((screen.width >= 720) && (screen.width < 1024)) {
-    choose = 2;
-  }
-  if (screen.width >= 1024) {
-    choose = 0;
-  }
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
-    totalVid = data.feed.openSearch$totalResults.$t;
-    var html = '';
-    var strDescription = '';
-    for (i = 0; i < numVid[pageShow - 1]; i++) {
-      var title = data.feed.entry[i].title.$t;
-      var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
-      var link = data.feed.entry[i].link[2].href;
-      var id = link.substring(31);
-      var url = 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1&modestbranding=1';
-      var iframe = '<iframe id=replace' + i + ' height=' + device[choose] + 'px width=100% src=' + url + ' frameborder=0 allowfullscreen></iframe>';
-      var description = data.feed.entry[i].media$group.media$description.$t;
-      var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
-      var strImage = '<tr><th><img style="height:60px; position:relative; top:' + device[choose + 1] + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
-      var strIframe = '<div id="video' + i + '" style="height:' + device[choose] + 'px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:' + device[choose] + 'px; width:100%;" src="' + image + '"></img></div></th></tr>';
-      if (description.match('http')) {
-        var beginPos = description.search('http');
-        var descLink = description.substring(beginPos);
-        var descText = description.substring(0, beginPos - 1);
-        var strDescStitch = descText + '<br /><a href="' + descLink + '" target="_blank">Link</a>';
-        strDescription = '<tr><th><pre id="description">' + strDescStitch + '</pre></th></tr></table></td></tr>';
-      } else {
-        strDescription = '<tr><th><pre id="description">' + description + '</pre></th></tr></table></td></tr>';
-      }
-      html = html.concat(strTitle, strImage, strIframe, strDescription);
-    }
-    $('#box').html(html);
-    $('#pageNum').text(pageShow);
-    $('body').scrollTop(0);
-  });
-}
+function loadBody(){screen.width<480&&(choose=6,loadHeader()),screen.width>=480&&screen.width<720&&(choose=4),screen.width>=720&&screen.width<1024&&(choose=2),screen.width>=1024&&(choose=0),$.getJSON("http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index="+numIndex[pageShow-1]+"&max-results="+numVid[pageShow-1],function(e){totalVid=e.feed.openSearch$totalResults.$t;var t="",d="";for(i=0;i<numVid[pageShow-1];i++){var o=e.feed.entry[i].title.$t,r=e.feed.entry[i].media$group.media$thumbnail[0].url,h=e.feed.entry[i].link[2].href,s=h.substring(31),a="https://www.youtube.com/embed/"+s+"?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1&modestbranding=1",n="<iframe id=replace"+i+" height="+device[choose]+"px width=100% src="+a+" frameborder=0 allowfullscreen></iframe>",c=e.feed.entry[i].media$group.media$description.$t,l='<tr><td><table id="video"><tr><th id="title">'+o+"</th></tr>",p='<tr><th><img style="height:60px; position:relative; top:'+device[choose+1]+'px; width:60px; z-index:25;" onClick="document.getElementById(\'video'+i+"').innerHTML = '"+n+"'; this.style.visibility='hidden';\" src=\"Images/Play.png\"></img>",m='<div id="video'+i+'" style="height:'+device[choose]+'px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:'+device[choose]+'px; width:100%;" src="'+r+'"></img></div></th></tr>';if(c.match("http")){var g=c.search("http"),u=c.substring(g),w=c.substring(0,g-1),b=w+'<br /><a href="'+u+'" target="_blank">Link</a>';d='<tr><th><pre id="description">'+b+"</pre></th></tr></table></td></tr>"}else d='<tr><th><pre id="description">'+c+"</pre></th></tr></table></td></tr>";t=t.concat(l,p,m,d)}$("#box").html(t),$("#pageNum").text(pageShow),$("body").scrollTop(0)})}
 //--------------------------------------------------HIDE SHOW HEADER
 function loadHeader(){function e(){var e=$(this).scrollTop();Math.abs(o-e)<=s||(e>o&&e>d?$("header").removeClass("show").addClass("hide"):e+$(window).height()<$(document).height()&&$("header").removeClass("hide").addClass("show"),o=e)}var a,o=0,s=5,d=$("header").outerHeight();$(window).scroll(function(){a=!0}),setInterval(function(){a&&(e(),a=!1)},250)}
 //--------------------------------------------------GET SOCIAL COUNTS  
-function getFacebookCount() {
-  $.getJSON('https://graph.facebook.com/fql?q=SELECT%20like_count,%20total_count,%20share_count,%20click_count,%20comment_count%20FROM%20link_stat%20WHERE%20url%20=%20%22https://www.facebook.com/pages/HovyTech/755340597847731%22', function(data) {
-    var facebook = data.data[0].total_count;
-    $('#facebook_count').text(facebook);
-  });
-}
-getFacebookCount();
-function getTwitterCount() {
-  $.getJSON('http://urls.api.twitter.com/1/urls/count.json?url=https://twitter.com/HovyTech&callback=?', function(data) {
-    var twitter = data.count;
-    $('#twitter_count').text(twitter);
-  });
-}
-getTwitterCount();
-function getYouTubeCount() {
-  $.getJSON('http://gdata.youtube.com/feeds/api/users/hovytech?alt=json', function(data) {
-    var youtube = data.entry.yt$statistics.subscriberCount;
-    $('#youtube_count').text(youtube);
-  });
-}
-getYouTubeCount();
+function getFacebookCount(){$.getJSON("https://graph.facebook.com/fql?q=SELECT%20like_count,%20total_count,%20share_count,%20click_count,%20comment_count%20FROM%20link_stat%20WHERE%20url%20=%20%22https://www.facebook.com/pages/HovyTech/755340597847731%22",function(t){var o=t.data[0].total_count;$("#facebook_count").text(o)})}function getTwitterCount(){$.getJSON("http://urls.api.twitter.com/1/urls/count.json?url=https://twitter.com/HovyTech&callback=?",function(t){var o=t.count;$("#twitter_count").text(o)})}function getYouTubeCount(){$.getJSON("http://gdata.youtube.com/feeds/api/users/hovytech?alt=json",function(t){var o=t.entry.yt$statistics.subscriberCount;$("#youtube_count").text(o)})}getFacebookCount(),getTwitterCount(),getYouTubeCount();
 //--------------------------------------------------GET RATING, REVIEW AND VOTE COUNT
-function getRRVS() {
-  $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/values?alt=json', function(data) {
-    var rating = data.feed.entry[1].content.$t;
-    $('#rating_count').text(rating);
-    var review = data.feed.entry[3].content.$t;
-    $('#review_count').text(review);
-    var vote = data.feed.entry[5].content.$t;
-    $('#vote_count').text(vote);
-    var digit = rating.substring(0, 1);
-    var decimal = rating.substring(2, 3);
-    if (decimal >= 5) {
-      $('#starImage').append('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
-    } else {
-      $('#starImage').append('<img id="star" src="Images/Star' + digit + '.png"></img>');
-    }
-  });
-};
-getRRVS();
+function getRRVS(){$.getJSON("https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/values?alt=json",function(t){var e=t.feed.entry[1].content.$t;$("#rating_count").text(e);var n=t.feed.entry[3].content.$t;$("#review_count").text(n);var g=t.feed.entry[5].content.$t;$("#vote_count").text(g);var r=e.substring(0,1),s=e.substring(2,3);$("#starImage").append(s>=5?'<img id="star" src="Images/Star'+r+'-5.png"></img>':'<img id="star" src="Images/Star'+r+'.png"></img>')})}getRRVS();
