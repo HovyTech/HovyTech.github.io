@@ -17,7 +17,7 @@ var loadScreen = function() {
 if (screen.width < 480) {
   var socialT = '<tr><td id="share_facebook" onclick="window.open(' + "'" + 'https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="facebook_count"></span></text><img id="social_image" src="Images/Facebook.png"></img></td><td id="share_twitter" onclick="window.open(' + "'" + 'https://twitter.com/home?status=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="twitter_count"></span></text><img id="social_image" src="Images/Twitter.png"></img></td><td id="share_youtube" onclick="window.open(' + "'" + 'http://www.youtube.com/user/hovytech?sub_confirmation=1' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="youtube_count"></span></text><img id="social_image" src="Images/YouTube.png"></img></td></tr>';
   //$('body').load('mobile.html');
-  $('#header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
+  $('#header').innerHTML('<img id="logo" src="Images/HovyTech M&P.png"></img>');
   $('.socialTop').append(socialT);
   $('.socialBottom').html('<tr><td id="share_instagram" onclick="window.open(' + "'" + 'http://instagram.com/alexhovy?ref=badge' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count">@alexhovy</text><img id="social_image" src="Images/Instagram.png"></img></td></tr><tr><td id="share_email" onclick="window.location.href=' + "'" + 'mailto:hovytech@gmail.com' + "'" + '"><text id="share_count">hovytech@gmail.com</text><img id="social_image" src="Images/Email.png"></img></td></tr>');
   getMobile();
