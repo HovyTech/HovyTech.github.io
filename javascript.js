@@ -41,7 +41,7 @@ function loadBody() {
       var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
       var link = data.feed.entry[i].link[2].href;
       var id = link.substring(31);
-      var url = 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1';
+      var url = 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1&modestbranding=1';
       var iframe = '<iframe id=replace' + i + ' height=' + device[choose] + 'px width=100% src=' + url + ' frameborder=0 allowfullscreen></iframe>';
       var description = data.feed.entry[i].media$group.media$description.$t;
       var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
