@@ -38,6 +38,12 @@
 //--------------------------------------------------LOAD GOOGLE ANALYTICS
       !function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-60758503-1","auto"),ga("send","pageview");
       loadScreen();
+      if (screen.width < 480) {
+  var socialT = '<tr><td id="share_facebook" onclick="window.open(' + "'" + 'https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="facebook_count"></span></text><img id="social_image" src="Images/Facebook.png"></img></td><td id="share_twitter" onclick="window.open(' + "'" + 'https://twitter.com/home?status=http://hovytech.github.io/HovyTech' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="twitter_count"></span></text><img id="social_image" src="Images/Twitter.png"></img></td><td id="share_youtube" onclick="window.open(' + "'" + 'http://www.youtube.com/user/hovytech?sub_confirmation=1' + "'" + ', ' + "'" + '_blank' + "'" + ')"><text id="share_count"><span id="youtube_count"></span></text><img id="social_image" src="Images/YouTube.png"></img></td></tr>';
+    $('.socialTop').append(socialT);
+    getMobile();
+    headerLoad();
+}
     </script>
   </head>
   <body>
