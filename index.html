@@ -43,7 +43,7 @@
 //--------------------------------------------------DETECT SCREEN SIZE
       if (screen.width < 480) {
         $('body').load('mobile.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
         getMobile();
         headerLoad();
       }
@@ -67,6 +67,7 @@
       getYouTubeCount();
       getRRVS();
     </script>
+    <link rel="stylesheet" media="screen and (max-device-width: 479px)" href="mobile.css" />
   </head>
   <body>
   </body>
