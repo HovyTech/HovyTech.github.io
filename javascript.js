@@ -12,6 +12,7 @@ var numVid = [5, 5, 3];
 var numIndex = [1, 6, 11];
 var pageShow = 1;
 var totalVid = 0;
+var loadScreen = function() {
 //--------------------------------------------------DETECT SCREEN SIZE
 if (screen.width < 480) {
   //$('body').load('mobile.html');
@@ -41,6 +42,7 @@ if (screen.width >= 1024) {
   $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
   $('header').append('<img id="logo" src="Images/HovyTech M&P.png"></img>');
   getDesktop();
+}
 }
 //--------------------------------------------------LOADING DESKTOP VIDEOS AND INFO
 //Get video image
