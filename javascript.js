@@ -21,7 +21,7 @@ var totalVid = 0;
 function loadBody() {
   if (screen.width < 480) {
     choose = 6;
-    headerLoad();
+    loadHeader();
   }
   if ((screen.width >= 480) && (screen.width < 720)) {
     choose = 4;
@@ -64,29 +64,25 @@ function loadBody() {
   });
 }
 //--------------------------------------------------HIDE SHOW HEADER
-var headerLoad = function() {
-//Header Show Hide
+function loadHeader() {
   var didScroll;
   var oldScroll = 0;
   var delta = 5;
   var headerHeight = $('header').outerHeight();
-//Checking for scroll
   $(window).scroll(function(event) {
     didScroll = true;
   });
-//Scrolled a certain amount
   setInterval(function() {
     if(didScroll) {
       hasScrolled();
       didScroll = false;
     }
   }, 250);
-//Execute hide show
   function hasScrolled() {
     var newScroll = $(this).scrollTop();
-    if (Math.abs(oldScroll - newScroll) <= delta)
+    if (Math.abs(oldScroll - newScroll) <= delta) {
       return;
-//Determan hide or show
+    }
     if ((newScroll > oldScroll) && (newScroll > headerHeight)) {
       $('header').removeClass('show').addClass('hide');
     } else if ((newScroll + $(window).height()) < $(document).height()) {
@@ -94,43 +90,38 @@ var headerLoad = function() {
     }
     oldScroll = newScroll;
   }
-};
+}
 //--------------------------------------------------GET SOCIAL COUNTS  
-//Facebook count
-var getFacebookCount = function() {
+function getFacebookCount() {
   $.getJSON('https://graph.facebook.com/fql?q=SELECT%20like_count,%20total_count,%20share_count,%20click_count,%20comment_count%20FROM%20link_stat%20WHERE%20url%20=%20%22https://www.facebook.com/pages/HovyTech/755340597847731%22', function(data) {
     var facebook = data.data[0].total_count;
     $('#facebook_count').text(facebook);
   });
-};
-//Twitter count
-var getTwitterCount = function() {
+}
+getFacebookCount();
+function getTwitterCount() {
   $.getJSON('http://urls.api.twitter.com/1/urls/count.json?url=https://twitter.com/HovyTech&callback=?', function(data) {
     var twitter = data.count;
     $('#twitter_count').text(twitter);
   });
-};
-//YouTube count
-var getYouTubeCount = function() {
+}
+getTwitterCount();
+function getYouTubeCount() {
   $.getJSON('http://gdata.youtube.com/feeds/api/users/hovytech?alt=json', function(data) {
     var youtube = data.entry.yt$statistics.subscriberCount;
     $('#youtube_count').text(youtube);
   });
-};
+}
+getYouTubeCount();
 //--------------------------------------------------GET RATING, REVIEW AND VOTE COUNT
-//Rating, Review, Vote and Star Load
-var getRRVS = function() {
+function getRRVS() {
   $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/values?alt=json', function(data) {
-//Rating count
     var rating = data.feed.entry[1].content.$t;
     $('#rating_count').text(rating);
-//Review count
     var review = data.feed.entry[3].content.$t;
     $('#review_count').text(review);
-//Vote count
     var vote = data.feed.entry[5].content.$t;
     $('#vote_count').text(vote);
-//Get Star image
     var digit = rating.substring(0, 1);
     var decimal = rating.substring(2, 3);
     if (decimal >= 5) {
@@ -140,7 +131,4 @@ var getRRVS = function() {
     }
   });
 };
-getFacebookCount();
-getTwitterCount();
-getYouTubeCount();
 getRRVS();
