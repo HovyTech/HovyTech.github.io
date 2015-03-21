@@ -26,6 +26,9 @@
     <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
     <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
     <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 479px)" href="mobile.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 480px) and (max-device-width: 719px)" href="phablet.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 720px) and (max-device-width: 1023px)" href="phablet.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1024px)" href="desktop.css">
     <link rel="shortcut icon" href="Images/favicon.ico">
     <link rel="apple-touch-icon" href="Images/apple-touch-icon.png">
     <!--<link rel="apple-touch-startup-image" href="Images/startup.png">-->
@@ -50,17 +53,17 @@
       }
       if ((screen.width >= 480) && (screen.width < 720)) {
         $('body').load('phablet.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="phablet.css">');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="phablet.css">');
         getPhablet();
       }
       if ((screen.width >= 720) && (screen.width < 1024)) {
         $('body').load('tablet.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="tablet.css">');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="tablet.css">');
         getTablet();
       }
       if (screen.width >= 1024) {
         $('body').load('desktop.html');
-        $('head').append('<link rel="stylesheet" type="text/css" href="desktop.css">');
+        //$('head').append('<link rel="stylesheet" type="text/css" href="desktop.css">');
         getDesktop();
       }
       getFacebookCount();
