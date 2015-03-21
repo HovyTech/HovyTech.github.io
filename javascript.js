@@ -64,33 +64,7 @@ function loadBody() {
   });
 }
 //--------------------------------------------------HIDE SHOW HEADER
-function loadHeader() {
-  var didScroll;
-  var oldScroll = 0;
-  var delta = 5;
-  var headerHeight = $('header').outerHeight();
-  $(window).scroll(function(event) {
-    didScroll = true;
-  });
-  setInterval(function() {
-    if(didScroll) {
-      hasScrolled();
-      didScroll = false;
-    }
-  }, 250);
-  function hasScrolled() {
-    var newScroll = $(this).scrollTop();
-    if (Math.abs(oldScroll - newScroll) <= delta) {
-      return;
-    }
-    if ((newScroll > oldScroll) && (newScroll > headerHeight)) {
-      $('header').removeClass('show').addClass('hide');
-    } else if ((newScroll + $(window).height()) < $(document).height()) {
-      $('header').removeClass('hide').addClass('show');
-    }
-    oldScroll = newScroll;
-  }
-}
+function loadHeader(){function e(){var e=$(this).scrollTop();Math.abs(o-e)<=s||(e>o&&e>d?$("header").removeClass("show").addClass("hide"):e+$(window).height()<$(document).height()&&$("header").removeClass("hide").addClass("show"),o=e)}var a,o=0,s=5,d=$("header").outerHeight();$(window).scroll(function(){a=!0}),setInterval(function(){a&&(e(),a=!1)},250)}
 //--------------------------------------------------GET SOCIAL COUNTS  
 function getFacebookCount() {
   $.getJSON('https://graph.facebook.com/fql?q=SELECT%20like_count,%20total_count,%20share_count,%20click_count,%20comment_count%20FROM%20link_stat%20WHERE%20url%20=%20%22https://www.facebook.com/pages/HovyTech/755340597847731%22', function(data) {
