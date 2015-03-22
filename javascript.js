@@ -7,7 +7,7 @@ var submitted=!1;!function(e,t){"function"==typeof define&&define.amd?define(t):
 //--------------------------------------------------GLOBAL VARIABLES
 var choose=0;var device=[500,260,440,230,360,190,180,100];var numVid=[5,5,3];var numIndex=[1,6,11];var pageShow=1;var totalVid=0;
 //--------------------------------------------------LOAD BODY CONTENT
-function loadBody(){screen.width<480&&(choose=6,loadHeader()),screen.width>=480&&screen.width<720&&(choose=4),screen.width>=720&&screen.width<1024&&(choose=2),screen.width>=1024&&(choose=0),$.getJSON("http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index="+numIndex[pageShow-1]+"&max-results="+numVid[pageShow-1],function(e){totalVid=e.feed.openSearch$totalResults.$t;var t="",d="";for(i=0;i<numVid[pageShow-1];i++){var o=e.feed.entry[i].title.$t,r=e.feed.entry[i].media$group.media$thumbnail[0].url,h=e.feed.entry[i].link[2].href,s=h.substring(31),a="https://www.youtube.com/embed/"+s+"?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1&modestbranding=1",n="<iframe id=replace"+i+" height="+device[choose]+"px width=100% src="+a+" frameborder=0 allowfullscreen></iframe>",c=e.feed.entry[i].media$group.media$description.$t,l='<tr><td><table id="video"><tr><th id="title">'+o+"</th></tr>",p='<tr><th><img style="height:60px; position:relative; top:'+device[choose+1]+'px; width:60px; z-index:25;" onClick="document.getElementById(\'video'+i+"').innerHTML = '"+n+"'; this.style.visibility='hidden';\" src=\"Images/Play.png\"></img>",m='<div id="video'+i+'" style="height:'+device[choose]+'px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:'+device[choose]+'px; width:100%;" src="'+r+'"></img></div></th></tr>';if(c.match("http")){var g=c.search("http"),u=c.substring(g),w=c.substring(0,g-1),b=w+'<br /><a href="'+u+'" target="_blank">Link</a>';d='<tr><th><pre id="description">'+b+"</pre></th></tr></table></td></tr>"}else d='<tr><th><pre id="description">'+c+"</pre></th></tr></table></td></tr>";t=t.concat(l,p,m,d)}$("#box").html(t),$("#pageNum").text(pageShow),$("body").scrollTop(0)})}
+//function loadBody(){screen.width<480&&(choose=6,loadHeader()),screen.width>=480&&screen.width<720&&(choose=4),screen.width>=720&&screen.width<1024&&(choose=2),screen.width>=1024&&(choose=0),$.getJSON("http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index="+numIndex[pageShow-1]+"&max-results="+numVid[pageShow-1],function(e){totalVid=e.feed.openSearch$totalResults.$t;var t="",d="";for(i=0;i<numVid[pageShow-1];i++){var o=e.feed.entry[i].title.$t,r=e.feed.entry[i].media$group.media$thumbnail[0].url,h=e.feed.entry[i].link[2].href,s=h.substring(31),a="https://www.youtube.com/embed/"+s+"?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1&modestbranding=1",n="<iframe id=replace"+i+" height="+device[choose]+"px width=100% src="+a+" frameborder=0 allowfullscreen></iframe>",c=e.feed.entry[i].media$group.media$description.$t,l='<tr><td><table id="video"><tr><th id="title">'+o+"</th></tr>",p='<tr><th><img style="height:60px; position:relative; top:'+device[choose+1]+'px; width:60px; z-index:25;" onClick="document.getElementById(\'video'+i+"').innerHTML = '"+n+"'; this.style.visibility='hidden';\" src=\"Images/Play.png\"></img>",m='<div id="video'+i+'" style="height:'+device[choose]+'px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:'+device[choose]+'px; width:100%;" src="'+r+'"></img></div></th></tr>';if(c.match("http")){var g=c.search("http"),u=c.substring(g),w=c.substring(0,g-1),b=w+'<br /><a href="'+u+'" target="_blank">Link</a>';d='<tr><th><pre id="description">'+b+"</pre></th></tr></table></td></tr>"}else d='<tr><th><pre id="description">'+c+"</pre></th></tr></table></td></tr>";t=t.concat(l,p,m,d)}$("#box").html(t),$("#pageNum").text(pageShow),$("body").scrollTop(0)})}
 //--------------------------------------------------HIDE SHOW HEADER
 function loadHeader(){function e(){var e=$(this).scrollTop();Math.abs(o-e)<=s||(e>o&&e>d?$("header").removeClass("show").addClass("hide"):e+$(window).height()<$(document).height()&&$("header").removeClass("hide").addClass("show"),o=e)}var a,o=0,s=5,d=$("header").outerHeight();$(window).scroll(function(){a=!0}),setInterval(function(){a&&(e(),a=!1)},250)}
 //--------------------------------------------------GET SOCIAL COUNTS  
@@ -22,3 +22,43 @@ function getRRVS(){$.getJSON("https://spreadsheets.google.com/feeds/cells/1_Zdo8
 //var head=document.getElementsByTagName("head"),element=document.createElement("link");element.rel="stylesheet",element.type="text/css",element.href="phablet.css",element.media="non-existant-media",head.appendChild(element,head.firstChild),setTimeout(function(){element.media="all"});
 //var head=document.getElementsByTagName("head"),element=document.createElement("link");element.rel="stylesheet",element.type="text/css",element.href="tablet.css",element.media="non-existant-media",head.appendChild(element,head.firstChild),setTimeout(function(){element.media="all"});
 //var head=document.getElementsByTagName("head"),element=document.createElement("link");element.rel="stylesheet",element.type="text/css",element.href="desktop.css",element.media="non-existant-media",head.appendChild(element,head.firstChild),setTimeout(function(){element.media="all"});
+
+
+
+
+function loadBody() {
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
+    totalVid = data.feed.openSearch$totalResults.$t;
+    var idNum = '';
+    var strDescription = '';
+    for (i = 0; i < numVid[pageShow - 1]; i++) {
+      var title = data.feed.entry[i].title.$t;
+      var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
+      var link = data.feed.entry[i].link[2].href;
+      var description = data.feed.entry[i].media$group.media$description.$t;
+      var id = link.substring(31);
+      var url = 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1';
+      var iframe = '<iframe id=replace' + i + ' height=500px width=100% src=' + url + ' frameborder=0 allowfullscreen></iframe>';
+      var strImage = '<img style="height:60px; position:relative; top:260px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
+      var strIframe = '<div id="video' + i + '" style="height:500px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:500px; width:100%;" src="' + image + '"></img></div>';
+      var mainContent = strImage + strIframe;
+      if (description.match('http')) {
+        var beginPos = description.search('http');
+        var descLink = description.substring(beginPos);
+        var descText = description.substring(0, beginPos - 1);
+        var strDescStitch = descText + '<br /><a href="' + descLink + '" target="_blank">Link</a>';
+        strDescription = strDescStitch;
+      } else {
+        strDescription = description;
+      }
+      idNum = '#title' + i;
+      $(idNum).text(title);
+      idNum = '#content' + i;
+      $(idNum).html(mainContent);
+      idNum = '#description' + i;
+      $(idNum).text(strDescription);
+    }
+    $('#pageNum').text(pageShow);
+    $('body').scrollTop(0);
+  });
+}
