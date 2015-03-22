@@ -46,7 +46,7 @@ function loadBody() {
         var beginPos = description.search('http');
         var descLink = description.substring(beginPos);
         var descText = description.substring(0, beginPos - 1);
-        var strDescStitch = descText + '<br /><a href="' + descLink + '" target="_blank">Link</a>';
+        var strDescStitch = descText + '<br><a href="' + descLink + '" target="_blank">Link</a>';
         strDescription = strDescStitch;
       } else {
         strDescription = description;
@@ -54,11 +54,11 @@ function loadBody() {
       var temp = i;
       temp = temp + 1;
       idNum = '#title' + temp;
-      $(idNum).text(title);
+      $(idNum).html(title);
       idNum = '#content' + temp;
       $(idNum).html(mainContent);
       idNum = '#description' + temp;
-      $(idNum).text(strDescription);
+      $(idNum).html(strDescription);
     }
     $('#pageNum').text(pageShow);
     $('body').scrollTop(0);
