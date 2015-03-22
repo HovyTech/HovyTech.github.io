@@ -51,11 +51,13 @@ function loadBody() {
       } else {
         strDescription = description;
       }
-      idNum = '#title' + i;
+      var temp = i;
+      temp = temp + 1;
+      idNum = '#title' + temp;
       $(idNum).text(title);
-      idNum = '#content' + i;
+      idNum = '#content' + temp;
       $(idNum).html(mainContent);
-      idNum = '#description' + i;
+      idNum = '#description' + temp;
       $(idNum).text(strDescription);
     }
     $('#pageNum').text(pageShow);
