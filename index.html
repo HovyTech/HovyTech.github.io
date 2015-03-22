@@ -10,13 +10,17 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no, minimum-scale = 1.0, maximum-scale = 1.0">
     <meta name="google-site-verification" content="FFG84IO5zVrRpU64TEV5fusuVuGc21KIiIaQR4Earps">
     <meta name="author" content="Alexander Hovy">
-    <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 479px)" href="mobile.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 480px) and (max-device-width: 719px)" href="phablet.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 720px) and (max-device-width: 1023px)" href="tablet.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1024px)" href="desktop.css">
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (max-device-width: 479px)" href="mobile.css"></noscript>
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 480px) and (max-device-width: 719px)" href="phablet.css"></noscript>
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 720px) and (max-device-width: 1023px)" href="tablet.css"></noscript>
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1024px)" href="desktop.css"></noscript>
     <link rel="shortcut icon" href="Images/favicon.ico">
     <link rel="apple-touch-icon" href="Images/apple-touch-icon.png">
     <a href="https://plus.google.com/108801816675888352655" rel="publisher"></a>
+    <script type="text/javascript">
+      function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],s=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(n){for(var o,t=0;t<s.length;t++)s[t].href&&s[t].href.indexOf(e)>-1&&(o=!0);o?n():setTimeout(function(){d.onloadcssdefined(n)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
+      screen.width<480&&loadCSS("mobile.css"),screen.width>=480&&screen.width<720&&loadCSS("phablet.css"),screen.width>=720&&screen.width<1024&&loadCSS("tablet.css"),screen.width>=1024&&loadCSS("desktop.css");
+    </script>
     <script type="text/javascript" src="javascript.js" async></script>
     <script type="text/javascript">
 //--------------------------------------------------LOAD GOOGLE ANALYTICS
