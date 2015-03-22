@@ -47,25 +47,19 @@
         </tr>
       </table>
       <table id="footer">
-        <tr>
-          <th><hr></th>
-        </tr>
-      </table>
-      <table itemscope itemtype="http://schema.org/Product" id="footer">
-        <th itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" id="count">
-          <span itemprop="name" style="display:none;">HovyTech</span>
+        <th id="count">
           <div id="starImage"></div>
-          <br>Ratings: <span itemprop="ratingValue" id="rating_count">4.5</span>
-          <br>Reviews: <span itemprop="reviewCount" id="review_count">9</span>
-          <br>Votes: <span id="vote_count"></span>
+          <br>Ratings: <span id="rating-count"></span>
+          <br>Reviews: <span id="review-count"></span>
+          <br>Votes: <span id="vote-count"></span>
         </th>
       </table>
       <table id="footerBody">
         <tr>
           <th>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="submitted&&window.location.reload();"></iframe>
+            <iframe name="hidden-iframe" id="hidden_iframe" style="display:none;" onload="submitted&&window.location.reload();"></iframe>
             <table id="footerMain">
-              <form action="https://docs.google.com/forms/d/1lt5SU8q8FmHbJfGXNtLa6XGsBF6evfrTBjV3dDoztvY/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+              <form action="https://docs.google.com/forms/d/1lt5SU8q8FmHbJfGXNtLa6XGsBF6evfrTBjV3dDoztvY/formResponse" method="POST" id="ss-form" target="hidden-iframe" onsubmit="submitted=true;">
                 <tr>
                   <th id="rrvTitle">Rate Us<br><span id="rrvInfo">Rate us between 1 and 5.</span></th>
                 </tr>
@@ -117,7 +111,7 @@
               </form>
             </table>
             <table id="footerMain">
-              <form action="https://docs.google.com/forms/d/1xlsueebaEdacAbni89u3wnHsn67I_oOAqrmqsKkeY9U/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+              <form action="https://docs.google.com/forms/d/1xlsueebaEdacAbni89u3wnHsn67I_oOAqrmqsKkeY9U/formResponse" method="POST" id="ss-form" target="hidden-iframe" onsubmit="submitted=true;">
                 <tr>
                   <th id="rrvTitle">Review Us<br><span id="rrvInfo">Review, comment, recommend upgrades... for us.</span></th>
                 </tr>
@@ -155,7 +149,7 @@
               </form>
             </table>
             <table id="footerMain">
-              <form action="https://docs.google.com/forms/d/1YUsbZYyR5izrdoVYxYVJy5fhwBo1PYwzmeko1mocCcg/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true;">
+              <form action="https://docs.google.com/forms/d/1YUsbZYyR5izrdoVYxYVJy5fhwBo1PYwzmeko1mocCcg/formResponse" method="POST" id="ss-form" target="hidden-iframe" onsubmit="submitted=true;">
                 <tr>
                   <th id="rrvTitle">Recommend Us<br><span id="rrvInfo">Would you recommend us to others?</span></th>
                 </tr>
@@ -184,23 +178,23 @@
             </table>
             <table id="footerMain">
               <tr>
-                <td id="share_facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io', '_blank')">
-                  <text id="share_count">
-                    <span id="facebook_count"></span>
+                <td id="share-facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://hovytech.github.io', '_blank')">
+                  <text id="share-count">
+                    <span id="facebook-count"></span>
                   </text>
-                  <img id="social_image" src="Images/Facebook.png"></img>
+                  <img id="social-image" src="Images/Facebook.png"></img>
                 </td>
-                <td id="share_twitter" onclick="window.open('https://twitter.com/home?status=http://hovytech.github.io', '_blank')">
-                  <text id="share_count">
-                    <span id="twitter_count"></span>
+                <td id="share-twitter" onclick="window.open('https://twitter.com/home?status=http://hovytech.github.io', '_blank')">
+                  <text id="share-count">
+                    <span id="twitter-count"></span>
                   </text>
-                  <img id="social_image" src="Images/Twitter.png"></img>
+                  <img id="social-image" src="Images/Twitter.png"></img>
                 </td>
-                <td id="share_youtube" onclick="window.open('http://www.youtube.com/user/hovytech?sub_confirmation=1', '_blank')">
-                  <text id="share_count">
-                    <span id="youtube_count"></span>
+                <td id="share-youtube" onclick="window.open('http://www.youtube.com/user/hovytech?sub_confirmation=1', '_blank')">
+                  <text id="share-count">
+                    <span id="youtube-count"></span>
                   </text>
-                  <img id="social_image" src="Images/YouTube.png"></img>
+                  <img id="social-image" src="Images/YouTube.png"></img>
                 </td>
               </tr>
             </table>
