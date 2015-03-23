@@ -115,9 +115,11 @@ function getRRVS() {
   $.getJSON('https://spreadsheets.google.com/feeds/cells/1_Zdo8bgDvRkE13ykZk2iD6dHmPv8GCIgiOqyvOW-3Xc/od6/public/values?alt=json', function(data) {
     var rating = data.feed.entry[1].content.$t;
     $('#rating-count').text(rating);
-    var review = data.feed.entry[3].content.$t;
+    var rated = data.feed.entry[3].content.$t;
+    $('#rated-count').text(rated);
+    var review = data.feed.entry[5].content.$t;
     $('#review-count').text(review);
-    var vote = data.feed.entry[5].content.$t;
+    var vote = data.feed.entry[7].content.$t;
     $('#vote-count').text(vote);
     var digit = rating.substring(0, 1);
     var decimal = rating.substring(2, 3);
