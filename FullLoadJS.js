@@ -1,5 +1,5 @@
 function loadJS(src, cb) {
-	"use strict";
+  "use strict";
 	var ref = window.document.getElementsByTagName("script")[0];
 	var script = window.document.createElement("script");
 	script.src = src;
@@ -10,3 +10,5 @@ function loadJS(src, cb) {
 	}
 	return script;
 }
+//Use this in <head></head>
+//loadJS("script.js");
