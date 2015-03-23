@@ -30,6 +30,18 @@ function loadCSS(href, before, media, callback) {
   });
   return ss;
 }
+if (screen.width < 480) {
+  loadCSS('mobile.css');
+}
+if ((screen.width >= 480) && (screen.width < 720)) {
+  loadCSS('phablet.css');
+}
+if ((screen.width >= 720) && (screen.width < 1024)) {
+  loadCSS('tablet.css');
+}
+if (screen.width >= 1024) {
+  loadCSS('desktop.css');
+}
 //Use this in <head></head>
 //loadCSS('style.css');
 //<noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 480px) and (max-device-width: 719px)" href="phablet.css"></noscript>
