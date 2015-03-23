@@ -11,7 +11,82 @@ var numVid = [5, 5, 3];
 var numIndex = [1, 6, 11];
 var pageShow = 1;
 var totalVid = 0;
+var mainTable = document.getElementById('box');
+//var table = document.getElementById('data');
+//var thead = table.createTHead();
+//var tbody = table.createTBody();
+//var tfoot = table.createTFoot();
 //--------------------------------------------------LOAD BODY CONTENT
+function loadBody() {
+  if (screen.width < 480) {
+    choose = 6;
+    loadHeader();
+  }
+  if ((screen.width >= 480) && (screen.width < 720)) {
+    choose = 4;
+  }
+  if ((screen.width >= 720) && (screen.width < 1024)) {
+    choose = 2;
+  }
+  if (screen.width >= 1024) {
+    choose = 0;
+  }
+  $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
+    totalVid = data.feed.openSearch$totalResults.$t;
+    var html = '';
+    var strDescription = '';
+    for (i = 0; i < numVid[pageShow - 1]; i++) {
+      var title = data.feed.entry[i].title.$t;
+      var image = data.feed.entry[i].media$group.media$thumbnail[0].url;
+      var description = data.feed.entry[i].media$group.media$description.$t;
+      var link = data.feed.entry[i].link[2].href;
+      var id = link.substring(31);
+      var url = 'https://www.youtube.com/embed/' + id + '?rel=0&showinfo=0&autoplay=1&vq=hd1080&autohide=1&modestbranding=1';
+      var iframe = '<iframe id=replace' + i + ' height=' + device[choose] + 'px width=100% src=' + url + ' frameborder=0 allowfullscreen></iframe>';
+//construct tables
+      var mainRow = mainTable.insertRow(i - 1);
+      var mainCell = mainRow.insertCell(0);
+      var table = document.createElement('table');
+      table.className = 'video';
+      row = table.insertRow(0);
+      cell = row.insertCell(0);
+      cell.innerHTML = '<span id="title">' + title + '</span>';
+      row = table.insertRow(1);
+      cell = row.insertCell(0);
+      cell.innerHTML = '<img style="height:60px; position:relative; top:' + device[choose + 1] + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img><div id="video' + i + '" style="height:' + device[choose] + 'px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:' + device[choose] + 'px; width:100%;" src="' + image + '"></img></div>';
+      row = table.insertRow(2);
+      cell = row.insertCell(0);
+      if (description.match('http')) {
+        var beginPos = description.search('http');
+        var descLink = description.substring(beginPos);
+        var descText = description.substring(0, beginPos - 1);
+        var strDescStitch = descText + '<br /><a href="' + descLink + '" target="_blank">Link</a>';
+        cell.innerHTML = '<pre id="description">' + strDescStitch + '</pre>';
+      } else {
+        cell.innerHTML = '<pre id="description">' + description + '</pre>';
+      }
+      mainCell.innHTML = table;
+      //var strTitle = '<tr><td><table id="video"><tr><th id="title">' + title + '</th></tr>';
+      //var strImage = '<tr><th><img style="height:60px; position:relative; top:' + device[choose + 1] + 'px; width:60px; z-index:25;" onClick="document.getElementById(' + "'" + 'video' + i + "'" + ').innerHTML = ' + "'" + iframe + "'" + '; this.style.visibility=' + "'" + 'hidden' + "'" + ';" src="Images/Play.png"></img>';
+      //var strIframe = '<div id="video' + i + '" style="height:' + device[choose] + 'px; position:relative; top:-25px; width:100%; z-index:24;"><img style="height:' + device[choose] + 'px; width:100%;" src="' + image + '"></img></div></th></tr>';
+      //if (description.match('http')) {
+        //var beginPos = description.search('http');
+        //var descLink = description.substring(beginPos);
+        //var descText = description.substring(0, beginPos - 1);
+        //var strDescStitch = descText + '<br /><a href="' + descLink + '" target="_blank">Link</a>';
+        //strDescription = '<tr><th><pre id="description">' + strDescStitch + '</pre></th></tr></table></td></tr>';
+      //} else {
+        //strDescription = '<tr><th><pre id="description">' + description + '</pre></th></tr></table></td></tr>';
+      //}
+      //html = html.concat(strTitle, strImage, strIframe, strDescription);
+    }
+    //$('#box').html(html);
+    $('#pageNum').text(pageShow);
+    $('body').scrollTop(0);
+  });
+}
+
+
 function loadBody() {
   if (screen.width < 480) {
     choose = 6;
