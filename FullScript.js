@@ -28,7 +28,7 @@ function loadBody() {
   }
   $.getJSON('http://gdata.youtube.com/feeds/api/users/HovyTech/uploads?alt=json&start-index=' + numIndex[pageShow - 1] + '&max-results=' + numVid[pageShow - 1], function(data) {
     totalVid = data.feed.openSearch$totalResults.$t;
-    var html = '';
+    $('#box').html('');
     var strDescription = '';
     for (i = 0; i < numVid[pageShow - 1]; i++) {
       var title = data.feed.entry[i].title.$t;
