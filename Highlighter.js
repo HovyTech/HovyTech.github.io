@@ -10,7 +10,7 @@ var js = 1;
 function preHTML(char, tag, all, charLen, tagLen, allLen, str) {
   //Elements
   //Characters
-  char = ['/</igm', '/<\/\/igm', '/</igm'];
+  char = ['/</igm', '/<\//igm', '/</igm'];
   //Tags
   tag = ['html', 'head'];
   //All the arrays
