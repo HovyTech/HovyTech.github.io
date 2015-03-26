@@ -25,8 +25,10 @@ alert('')
   for (a = 1; a < html; a++) {
     //Loop for each HTML element
     for (b = 1; b < allLen; b++) {
+alert('')
       //Loop for each HTML tag
       for (c = 1; c < all[c - 1]; c++) {
+alert('')
         //Set <pre> text
         var str = document.getElementById('html-' + html);
         //If element = character
