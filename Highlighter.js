@@ -27,7 +27,7 @@ function preHTML() {
       //Loop for each HTML tag
       for (c = 1; c < all[c - 1]; c++) {
         //Set <pre> text
-        str = document.getElementById('html-' + html);
+        var str = document.getElementById('html-' + html);
         //If element = character
         if (all[c - 1] = charLen) {
           str.replace(char[c - 1], '<span id="char">' + char[c - 1] + '</span>');
