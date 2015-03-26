@@ -27,7 +27,7 @@ function preHTML() {
       //Loop for each HTML tag
       for (c = 1; c < all[c - 1]; c++) {
         //Set <pre> text
-        var str = document.getElementById('html-' + html).innerHTML;
+        var str = document.getElementById('html-1').innerHTML;
 alert(str)
         //If element = character
         if (all[c - 1] = charLen) {
