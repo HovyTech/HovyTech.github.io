@@ -41,6 +41,7 @@ function preHTML(char, tag, all, charLen, tagLen, allLen, str) {
         }
       }
     }
+    alert(str)
     //Load highlighted text into <pre>
     $('#html-' + a).html(str);
   }
