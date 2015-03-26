@@ -21,6 +21,7 @@ function preHTML() {
 alert(charLen)
   //Get length of all elements
   var allLen = all.length;
+alert('')
   //Looping variables
   var aa = 1;
   var bb = 1;
