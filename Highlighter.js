@@ -47,7 +47,7 @@ alert(str)
       }
 alert(str)
     }
-    alert(str)
+    alert('')
     //Load highlighted text into <pre>
     $('#html-' + a).html(str);
   }
