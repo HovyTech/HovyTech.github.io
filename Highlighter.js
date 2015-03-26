@@ -21,7 +21,7 @@ function preHTML() {
   //Get length of all elements
   var allLen = all.length;
   //Loop for each <pre> tag
-  for (a = 1; a < html; a++) {
+  for (a = 0; a < html; a++) {
     //Loop for each HTML element
     for (b = 1; b < allLen; b++) {
       //Loop for each HTML tag
