@@ -18,23 +18,14 @@ function preHTML() {
   var tagLen = tag.length;
   //All the arrays
   var all = [charLen, tagLen];
-alert(charLen)
   //Get length of all elements
   var allLen = all.length;
-alert('')
-  //Looping variables
-  var aa = 1;
-  var bb = 1;
-  var cc = 1;
   //Loop for each <pre> tag
-  for (a = 0; a < html; a++) {
-alert('')
+  for (a = 1; a < html; a++) {
     //Loop for each HTML element
-    for (b = 1; bb < allLen; b++) {
-alert('')
+    for (b = 1; b < allLen; b++) {
       //Loop for each HTML tag
-      for (c = 1; cc < all[c - 1]; c++) {
-alert('')
+      for (c = 1; c < all[c - 1]; c++) {
         //Set <pre> text
         var str = document.getElementById('html-' + html).innerHTML;
         //If element = character
@@ -45,16 +36,11 @@ alert('')
         if (all[c - 1] = tagLen) {
           str.replace(tag[c - 1], '<span id="tag">' + tag[c - 1] + '</span>');
         }
-        cc = cc + 1;
-alert('')
       }
-alert('')
-      bb = bb + 1;
     }
-    alert('')
+    alert(str)
     //Load highlighted text into <pre>
     $('#html-' + a).html(str);
-    aa = aa + 1;
   }
 }
 preHTML();
