@@ -22,12 +22,12 @@ alert('')
   //Get length of all elements
   var allLen = all.length;
   //Loop for each <pre> tag
-  for (a = 1; a < html; a++) {
+  for (var a = 1; a < html; a++) {
     //Loop for each HTML element
-    for (b = 1; b < allLen; b++) {
+    for (var b = 1; b < allLen; b++) {
 alert('')
       //Loop for each HTML tag
-      for (c = 1; c < all[c - 1]; c++) {
+      for (var c = 1; c < all[c - 1]; c++) {
 alert('')
         //Set <pre> text
         var str = document.getElementById('html-' + html);
