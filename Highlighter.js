@@ -37,10 +37,6 @@ alert('')
         if (all[c - 1] = tagLen) {
           str.replace(tag[c - 1], '<span id="tag">' + tag[c - 1] + '</span>');
         }
-        //If element = attribute
-        if (all[c - 1] = attLen) {
-          str.replace(att[c - 1], '<span id="att">' + att[c - 1] + '</span>');
-        }
 alert(str)
       }
 alert(str)
