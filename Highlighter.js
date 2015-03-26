@@ -26,7 +26,7 @@ alert(charLen)
   var bb = 1;
   var cc = 1;
   //Loop for each <pre> tag
-  for (a = 1; aa < html; a++) {
+  for (a = 1; aa < html; ++a) {
 alert('')
     //Loop for each HTML element
     for (b = 1; bb < allLen; b++) {
