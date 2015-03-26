@@ -7,6 +7,7 @@ var css = 1;
 var js = 1;
 
 //--------------------------------------------------HTML
+alert(str)
 function preHTML() {
   //Elements
   //Characters
