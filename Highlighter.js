@@ -28,7 +28,6 @@ function preHTML() {
       for (c = 1; c < all[b - 1]; c++) {
         //Set <pre> text
         var str = '<html>';
-alert(str)
         //If element = character
         if (all[c - 1] = charLen) {
           str.replace(char[c - 1], '<span id="char">' + char[c - 1] + '</span>');
