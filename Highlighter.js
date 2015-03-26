@@ -25,7 +25,7 @@ function preHTML() {
     //Loop for each HTML element
     for (b = 1; b < allLen; b++) {
       //Loop for each HTML tag
-      for (c = 1; c < all[c - 1]; c++) {
+      for (c = 1; c < all[b - 1]; c++) {
         //Set <pre> text
         var str = '<html>';
 alert(str)
