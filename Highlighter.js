@@ -18,7 +18,7 @@ function preHTML() {
   var tagLen = tag.length;
   //All the arrays
   var all = [charLen, tagLen];
-alert('')
+alert(charLen)
   //Get length of all elements
   var allLen = all.length;
   //Looping variables
