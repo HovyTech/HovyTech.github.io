@@ -48,3 +48,4 @@ alert(str)
     $('#html-' + a).html(str);
   }
 }
+preHTML();
