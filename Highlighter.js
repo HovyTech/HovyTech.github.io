@@ -36,7 +36,7 @@ alert('')
       for (c = 1; cc < all[c - 1]; c++) {
 alert('')
         //Set <pre> text
-        var str = document.getElementById('html-' + html);
+        var str = document.getElementById('html-' + html).innerHTML;
         //If element = character
         if (all[c - 1] = charLen) {
           str.replace(char[c - 1], '<span id="char">' + char[c - 1] + '</span>');
