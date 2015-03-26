@@ -37,9 +37,9 @@ alert('')
         if (all[c - 1] = tagLen) {
           str.replace(tag[c - 1], '<span id="tag">' + tag[c - 1] + '</span>');
         }
-alert(str)
+alert('')
       }
-alert(str)
+alert('')
     }
     alert('')
     //Load highlighted text into <pre>
