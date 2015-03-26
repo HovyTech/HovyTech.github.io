@@ -23,6 +23,7 @@ alert('')
   var allLen = all.length;
   //Loop for each <pre> tag
   for (var a = 1; a < html; a++) {
+alert('')
     //Loop for each HTML element
     for (var b = 1; b < allLen; b++) {
 alert('')
