@@ -21,14 +21,18 @@ function preHTML() {
 alert('')
   //Get length of all elements
   var allLen = all.length;
+  //Looping variables
+  var aa = 1;
+  var bb = 1;
+  var cc = 1;
   //Loop for each <pre> tag
-  for (var a = 1; a < html; a++) {
+  for (a = 1; aa < html; a++) {
 alert('')
     //Loop for each HTML element
-    for (var b = 1; b < allLen; b++) {
+    for (b = 1; bb < allLen; b++) {
 alert('')
       //Loop for each HTML tag
-      for (var c = 1; c < all[c - 1]; c++) {
+      for (c = 1; cc < all[c - 1]; c++) {
 alert('')
         //Set <pre> text
         var str = document.getElementById('html-' + html);
@@ -40,13 +44,16 @@ alert('')
         if (all[c - 1] = tagLen) {
           str.replace(tag[c - 1], '<span id="tag">' + tag[c - 1] + '</span>');
         }
+        cc = cc + 1;
 alert('')
       }
 alert('')
+      bb = bb + 1;
     }
     alert('')
     //Load highlighted text into <pre>
     $('#html-' + a).html(str);
+    aa = aa + 1;
   }
 }
 preHTML();
