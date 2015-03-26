@@ -28,6 +28,7 @@ function preHTML() {
       for (c = 1; c < all[c - 1]; c++) {
         //Set <pre> text
         var str = document.getElementById('html-' + html).innerHTML;
+alert(str)
         //If element = character
         if (all[c - 1] = charLen) {
           str.replace(char[c - 1], '<span id="char">' + char[c - 1] + '</span>');
@@ -38,7 +39,6 @@ function preHTML() {
         }
       }
     }
-    alert(str)
     //Load highlighted text into <pre>
     $('#html-' + a).html(str);
   }
