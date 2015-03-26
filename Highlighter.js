@@ -39,7 +39,9 @@ function preHTML(char, tag, all, charLen, tagLen, allLen, str) {
         if (all[c - 1] = attLen) {
           str.replace(att[c - 1], '<span id="att">' + att[c - 1] + '</span>');
         }
+alert(str)
       }
+alert(str)
     }
     alert(str)
     //Load highlighted text into <pre>
