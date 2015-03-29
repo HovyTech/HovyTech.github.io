@@ -15,7 +15,7 @@ function preHTML() {
     //Get <pre> string 
     //var pre = document.getElementById('html').innerHTML;
 //alert(pre)
-    var str = $('#html-0').val();
+    var str = document.getElementById('html-' + a).value;
 alert(str)
     //Characters
     for (b = 1; b < charLen; b++) {
