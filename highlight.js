@@ -7,9 +7,9 @@ var js = 1;
 var char = ['<', '>', '</', '/>', '="', '"'];
 //Length
 var charLen = char.length;
-alert('')
 //--------------------HTML
 function html() {
+alert('')
 var str = document.getElementById('htmla').innerHTML;
 var preContents = str.match('/<pre>(.*?)<\/pre>/igm').substring(5, -6);
 alert(preContents)
