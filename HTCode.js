@@ -4,12 +4,12 @@ function bodyLoad() {
   var showNum = true;
   //Total number of pre tags in body
   var body = document.body.childNodes;
-  alert(body)
   var total = 0;
   for (a = 0; a < body.length; a++) {
     if (body[a].nodeName = 'PRE') {
       total = total + 1;
     }
+    alert(total)
   }
   //Store Pre tag text in code array
   var code = [];
