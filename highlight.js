@@ -30,3 +30,4 @@ var str = document.getElementById('htmla').innerHTML;
 var preContents = str.substring(5, -6);
 alert(preContents)
 }
+html();
