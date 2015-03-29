@@ -18,11 +18,13 @@ function preHTML() {
     var str = document.getElementById('html-' + a).value;
     //Characters
     for (b = 1; b < charLen; b++) {
+alert('')
       //Character count
       var charCount = str.split(char[b - 1]).length - 1;
       var oldPos = str.indexOf(char[b - 1]);
       str.replaceAt(oldPos, '<span id="char">' + char[b - 1] + '</span>');
       for (c = 1; c < charCount; c++) {
+alert('')
         var newPos = str.indexOf(char[b - 1], oldPos + 1);
         str.replaceAt(newPos, '<span id="char">' + char[b - 1] + '</span>');
         oldPos = newPos + 1;
