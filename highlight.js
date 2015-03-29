@@ -29,7 +29,7 @@ function preHTML() {
         //if (count <= 3) {
           //str.replace(newPos, '<span id="char">' + charShort[count] + '</span>');
         //}
-        str.replace(newPos, '<span id="char">' + char[b - 1] + '</span>');
+        str.replace(newPos, '<font color="green">' + char[b - 1] + '</font>');
         oldPos = newPos + 1;
       }
       //count = count + 1;
