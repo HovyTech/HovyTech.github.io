@@ -16,7 +16,6 @@ function preHTML() {
     //var pre = document.getElementById('html').innerHTML;
 //alert(pre)
     var str = document.getElementById('html-' + a).value;
-alert(str)
     //Characters
     for (b = 1; b < charLen; b++) {
       //Character count
@@ -27,6 +26,7 @@ alert(str)
         var newPos = str.indexOf(char[b - 1], oldPos + 1);
         str.replaceAt(newPos, '<span id="char">' + char[b - 1] + '</span>');
         oldPos = newPos + 1;
+        alert(str)
       }
     }
   }
