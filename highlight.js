@@ -31,7 +31,8 @@ alert('')
         alert(str)
       }
     }
-    $('#html-div-' + a).html('<pre>' + str + '</pre>');
+    document.getElementById('html-div-' + a).innerHTML = '<pre>' + str + '</pre>';
+    //$('#html-div-' + a).html('<pre>' + str + '</pre>');
   }
 }
 preHTML();
