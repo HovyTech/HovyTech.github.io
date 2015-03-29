@@ -42,4 +42,11 @@ function bodyLoad() {
   for (d = 0; d < total; d++) {
     newCode[d] = newCode[d].replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
   }
+  
+  //--------------------------------------------------Insert Clean Code
+  for (e = 0; e < total; e++) {
+    document.getElementsByTagName("PRE")[e].childNodes[0].nodeValue = newCode[e];
+    alert(newCode[e])
+  }
 }
+bodyLoad();
