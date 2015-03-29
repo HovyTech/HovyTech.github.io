@@ -9,6 +9,9 @@ var char = ['<', '>', '</', '/>', '="', '"'];
 var charLen = char.length;
 //--------------------HTML
 function html() {
+var str = document.getElementById('htmla').innerHTML;
+var preContents = str.substring(5, -6);
+alert(preContents)
   for (a = 0; a < html; a++) {
     //Get <pre> string 
     var pre = document.getElementById('html').innerHTML;
@@ -26,8 +29,5 @@ alert(pre)
       }
     }
   }
-var str = document.getElementById('htmla').innerHTML;
-var preContents = str.substring(5, -6);
-alert(preContents)
 }
 html();
