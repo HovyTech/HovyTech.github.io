@@ -7,6 +7,7 @@ var js = 1;
 var char = ['<', '>', '</', '/>', '="', '"'];
 //Length
 var charLen = char.length;
+alert('')
 //--------------------HTML
 function html() {
 var str = document.getElementById('htmla').innerHTML;
