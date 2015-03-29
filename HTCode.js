@@ -43,8 +43,8 @@ function bodyLoad() {
   //Sorting code spaces
   for (d = 0; d < total; d++) {
     newCode.push(code[d]);
-    newCode[d] = newCode[d].replace(/\t/g, '\s\s\s\s');
-    //newCode[d] = newCode[d].replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+    //newCode[d] = newCode[d].replace(/\t/g, '\s\s\s\s');
+    newCode[d] = newCode[d].replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
   }
   
   //--------------------------------------------------Insert Clean Code
