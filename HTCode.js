@@ -6,7 +6,7 @@ function bodyLoad() {
   var body = document.body.childNodes;
   var total = 0;
   for (a = 0; a < body.length; a++) {
-    if (body[a].nodeName = 'PRE') {
+    if (body[a].nodeName != 'PRE') {
       alert(body[a].nodeName)
       total = total + 1;
     }
