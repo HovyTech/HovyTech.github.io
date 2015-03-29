@@ -7,7 +7,7 @@ var js = 1;
 //Put code in order
 //Characters
 var char = ['<', '>', '</', '/>', '="', '"'];
-var charShort = ['&lt;', '&gt;', '&lt;/', '/&gt;']
+//var charShort = ['&lt;', '&gt;', '&lt;/', '/&gt;']
 //Length
 var charLen = char.length;
 //--------------------HTML
@@ -19,20 +19,22 @@ function preHTML() {
       //Character count
       var charCount = str.split(char[b - 1]).length - 1;
       var oldPos = str.indexOf(char[b - 1], 0);
-      var count = 0;
-      if (count <= 3) {
-        str.replace(oldPos, '<span id="char">' + charShort[count] + '</span>');
-      }
+      //var count = 0;
+      //if (count <= 3) {
+        //str.replace(oldPos, '<span id="char">' + charShort[count] + '</span>');
+      //}
+      str.replace(oldPos, '<span id="char">' + char[b - 1] + '</span>');
       for (c = 1; c < charCount; c++) {
         var newPos = str.indexOf(char[b - 1], oldPos + 1);
-        if (count <= 3) {
-          str.replace(newPos, '<span id="char">' + charShort[count] + '</span>');
-        }
+        //if (count <= 3) {
+          //str.replace(newPos, '<span id="char">' + charShort[count] + '</span>');
+        //}
+        str.replace(newPos, '<span id="char">' + char[b - 1] + '</span>');
         oldPos = newPos + 1;
       }
-      count = count + 1;
+      //count = count + 1;
     }
-    document.getElementById('html-div-' + a).innerHTML = '<xmp id="pre">' + str + '</xmp>';
+    document.getElementById('html-div-' + a).innerHTML = '<xmp>' + str + '</xmp>';
   }
 }
 preHTML();
