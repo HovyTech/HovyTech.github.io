@@ -32,7 +32,7 @@ function preHTML() {
       }
       count = count + 1;
     }
-    document.getElementById('html-div-' + a).innerHTML = '<pre id="pre">' + str + '</pre>';
+    document.getElementById('html-div-' + a).innerHTML = '<xmp id="pre">' + str + '</xmp>';
   }
 }
 preHTML();
