@@ -3,15 +3,15 @@ function bodyLoad() {
   //Show numbers = True or False
   var showNum = true;
   //Total number of pre tags in body
-  var body = document.body.childNodes;
-  var total = 0;
-  for (a = 0; a < body.length; a++) {
-    if (body[a].nodeName = 'PRE') {
-      alert(body[a].nodeName)
-      alert(body[a].nodeType)
-      total = total + 1;
-    }
-  }
+  //var body = document.body.childNodes;
+  var total = 1;
+  //for (a = 0; a < body.length; a++) {
+    //if (body[a].nodeName = 'PRE') {
+      //alert(body[a].nodeName)
+      //alert(body[a].nodeType)
+      //total = total + 1;
+    //}
+  //}
   //Store Pre tag text in code array
   var code = [];
   var newCode = [];
