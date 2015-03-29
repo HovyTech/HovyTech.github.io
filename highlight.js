@@ -10,10 +10,10 @@ var charLen = char.length;
 //--------------------HTML
 function preHTML() {
 var str = document.getElementById('htmla').innerHTML;
-alert('')
-var preContents = str.substring(5, str.length - 6);
+alert(str)
+//var preContents = str.substring(5, str.length - 6);
 //var preContents = str.match(/(<pre>.*?<\/pre>)|(<code>.*?<\/code>)/igm).substring(5, str.length - 6);
-alert(preContents)
+//alert(preContents)
   for (a = 0; a < html; a++) {
     //Get <pre> string 
     var pre = document.getElementById('html').innerHTML;
