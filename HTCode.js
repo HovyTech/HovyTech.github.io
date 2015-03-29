@@ -20,7 +20,7 @@ function bodyLoad() {
   }
   //Find characters
   for (c = 0; c < total; c++) {
-    for (d = 0; d < char.length; d++) {
+    for (d = 0; d < tag.length; d++) {
       newCode[c] = newCode[c].replace(tag[d], '<span style="color: green;">' + charVal[d] + '</span>');
       alert(tag[d])
       alert(newCode[c])
