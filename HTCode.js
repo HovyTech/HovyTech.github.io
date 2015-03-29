@@ -11,6 +11,7 @@ function bodyLoad() {
   }
   //Characters
   var char = [/</g, /<\//g, />/g];
+  var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
   //Sorting code spaces
@@ -20,7 +21,7 @@ function bodyLoad() {
   //Find characters
   for (c = 0; c < total; c++) {
     for (d = 0; d < char.length; d++) {
-      newCode[c] = newCode[c].replace(char[d], '<span id="char"><</span>');
+      newCode[c] = newCode[c].replace(char[d], <span id="char"> + charVal[d] + </span>);
       alert(char[d])
       alert(newCode[c])
     }
