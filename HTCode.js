@@ -18,7 +18,7 @@ function bodyLoad() {
   }
   
   //--------------------------------------------------Clean Up
-  //Replacing spaces and new lines
+  //Sorting code lines
   if (showNum = true) {
     for (c = 0; c < total; c++) {
       newCode.push(code[c]);
@@ -37,5 +37,9 @@ function bodyLoad() {
         newCode[c] = newCode[c].replace('<li></li></ul>', '</ul>');
       }
     }
+  }
+  //Sorting code spaces
+  for (d = 0; d < total; d++) {
+    newCode[d] = newCode[d].replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
   }
 }
