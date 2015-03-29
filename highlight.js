@@ -24,6 +24,7 @@ function preHTML() {
         //str.replace(oldPos, '<span id="char">' + charShort[count] + '</span>');
       //}
       str.replace(oldPos, '<span id="char">' + char[b - 1] + '</span>');
+      alert(str)
       for (c = 1; c < charCount; c++) {
         var newPos = str.indexOf(char[b - 1], oldPos + 1);
         //if (count <= 3) {
