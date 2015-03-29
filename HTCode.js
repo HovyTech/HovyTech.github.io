@@ -1,7 +1,7 @@
 function bodyLoad() {
   //--------------------------------------------------Global Variables
   //Show numbers = True or False
-  var showNum = true;
+  //var showNum = true;
   //Total number of pre tags in body
   //var body = document.body.childNodes;
   var total = 1;
@@ -21,30 +21,30 @@ function bodyLoad() {
   
   //--------------------------------------------------Clean Up
   //Sorting code lines
-  if (showNum = true) {
-    for (c = 0; c < total; c++) {
-      newCode.push(code[c]);
-      newCode[c] = newCode[c].replace(/\n/g, '\n');
+  //if (showNum = true) {
+    //for (c = 0; c < total; c++) {
+      //newCode.push(code[c]);
       //newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
       //newCode[c] = '<ol id="code-num"><li>' + newCode[c] + '</li></ol>';
       //while (newCode[c].indexOf('<li></li></ol>') != -1) {
         //newCode[c] = newCode[c].replace('<li></li></ol>', '</ol>');
       //}
-    }
-  } else {
-    for (c = 0; c < total; c++) {
-      newCode.push(code[c]);
-      newCode[c] = newCode[c].replace(/\n/g, '\n');
+    //}
+  //} else {
+    //for (c = 0; c < total; c++) {
+      //newCode.push(code[c]);
       //newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
       //newCode[c] = '<ul id="code-num"><li>' + newCode[c] + '</li></ul>';
       //while (newCode[c].indexOf('<li></li></ul>') != -1) {
         //newCode[c] = newCode[c].replace('<li></li></ul>', '</ul>');
       //}
-    }
-  }
+    //}
+  //}
   //Sorting code spaces
   for (d = 0; d < total; d++) {
-    newCode[d] = newCode[d].replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+    newCode.push(code[d]);
+    newCode[d] = newCode[d].replace(/\t/g, '\s\s\s\s');
+    //newCode[d] = newCode[d].replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
   }
   
   //--------------------------------------------------Insert Clean Code
