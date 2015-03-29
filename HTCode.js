@@ -10,7 +10,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Characters
-  var char = ['/</g', '/<\//g', '/>/g'];
+  var char = [/</g, /<\//g, />/g];
   
   //--------------------------------------------------Clean Up
   //Sorting code spaces
