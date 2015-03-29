@@ -24,20 +24,22 @@ function bodyLoad() {
   if (showNum = true) {
     for (c = 0; c < total; c++) {
       newCode.push(code[c]);
-      newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
-      newCode[c] = '<ol id="code-num"><li>' + newCode[c] + '</li></ol>';
-      while (newCode[c].indexOf('<li></li></ol>') = -1) {
-        newCode[c] = newCode[c].replace('<li></li></ol>', '</ol>');
-      }
+      newCode[c] = newCode[c].replace(/\n/g, '&NewLine;');
+      //newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
+      //newCode[c] = '<ol id="code-num"><li>' + newCode[c] + '</li></ol>';
+      //while (newCode[c].indexOf('<li></li></ol>') != -1) {
+        //newCode[c] = newCode[c].replace('<li></li></ol>', '</ol>');
+      //}
     }
   } else {
     for (c = 0; c < total; c++) {
       newCode.push(code[c]);
-      newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
-      newCode[c] = '<ul id="code-num"><li>' + newCode[c] + '</li></ul>';
-      while (newCode[c].indexOf('<li></li></ul>') = -1) {
-        newCode[c] = newCode[c].replace('<li></li></ul>', '</ul>');
-      }
+      newCode[c] = newCode[c].replace(/\n/g, '&NewLine;');
+      //newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
+      //newCode[c] = '<ul id="code-num"><li>' + newCode[c] + '</li></ul>';
+      //while (newCode[c].indexOf('<li></li></ul>') != -1) {
+        //newCode[c] = newCode[c].replace('<li></li></ul>', '</ul>');
+      //}
     }
   }
   //Sorting code spaces
