@@ -11,6 +11,14 @@ var charLen = char.length;
 function preHTML() {
 var str = document.getElementById('htmla').innerHTML;
 alert(str)
+var str = document.getElementById('htmla').innerText;
+alert(str)
+var str = document.getElementById('htmla').textContent;
+alert(str)
+var str = document.getElementById('htmla').html();
+alert(str)
+var str = document.getElementById('htmla').text();
+alert(str)
 //var preContents = str.substring(5, str.length - 6);
 //var preContents = str.match(/(<pre>.*?<\/pre>)|(<code>.*?<\/code>)/igm).substring(5, str.length - 6);
 //alert(preContents)
