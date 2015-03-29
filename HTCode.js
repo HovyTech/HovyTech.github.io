@@ -8,6 +8,7 @@ function bodyLoad() {
   for (a = 0; a < body.length; a++) {
     if (body[a].nodeName = 'PRE') {
       alert(body[a].nodeName)
+      alert(body[a].nodeType)
       total = total + 1;
     }
   }
