@@ -8,6 +8,7 @@ pre {
   position: absolute;
   top: 200px;
   width: 60%;
+  z-index: 100;
 }
 #char {
   color: rgb(143, 56, 78);
