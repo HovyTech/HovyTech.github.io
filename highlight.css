@@ -2,11 +2,10 @@
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   height: auto;
-  left: 10%;
   margin: 10px;
   padding: 5px;
   position: relative;
-  width: 80%;
+  width: 100%;
 }
 #char {
   color: rgb(143, 56, 78);
