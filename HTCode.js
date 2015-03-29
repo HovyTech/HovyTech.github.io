@@ -15,7 +15,7 @@ function bodyLoad() {
   var code = [];
   var newCode = [];
   for (b = 0; b < total; b++) {
-    code.push(document.getElementsByTagName("PRE")[b].childNodes[0].nodeValue);
+    code.push(document.getElementsByTagName('PRE')[b].childNodes[0].nodeValue);
   }
   
   //--------------------------------------------------Clean Up
@@ -46,7 +46,7 @@ function bodyLoad() {
   
   //--------------------------------------------------Insert Clean Code
   for (e = 0; e < total; e++) {
-    document.getElementsByTagName("PRE")[e].childNodes[0].nodeValue = newCode[e];
+    document.getElementsByTagName('PRE')[e].childNodes[0].nodeValue = newCode[e];
     alert(newCode[e])
   }
 }
