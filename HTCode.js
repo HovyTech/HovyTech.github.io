@@ -10,7 +10,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Characters
-  var att = [/\s.*?="/ig];
+  var att = [/\s(.*?)="/ig];
   var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
