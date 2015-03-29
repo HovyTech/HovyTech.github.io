@@ -17,7 +17,8 @@ var str = document.getElementById('htmla').textContent;
 alert(str)
 var str = document.getElementById('htmla').html();
 alert(str)
-var str = document.getElementById('htmla').text();
+var str = 'fhdjhf
+    Dhdjdh';
 alert(str)
 //var preContents = str.substring(5, str.length - 6);
 //var preContents = str.match(/(<pre>.*?<\/pre>)|(<code>.*?<\/code>)/igm).substring(5, str.length - 6);
