@@ -10,7 +10,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Characters
-  var char = ['&lt;', '&lt;/', '&gt;'];
+  var char = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
   //Sorting code spaces
