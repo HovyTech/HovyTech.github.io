@@ -9,8 +9,8 @@ var char = ['<', '>', '</', '/>', '="', '"'];
 var charLen = char.length;
 //--------------------HTML
 function preHTML() {
+var str = $('#htmla').text();
 alert('')
-var str = $('pre').text();;
 var preContents = str.match('/<pre>(.*?)<\/pre>/igm').substring(5, -6);
 alert(preContents)
   for (a = 0; a < html; a++) {
