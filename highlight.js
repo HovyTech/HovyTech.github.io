@@ -27,6 +27,6 @@ alert(pre)
     }
   }
 var str = document.getElementById('htmla').innerHTML;
-var preContents = str.match(/<pre>.*?<\/pre>/ims).substr(5, -6);
+var preContents = str.match(new RegExp(/<pre>(.*?)<\/pre>, 'igm')).substring(5, -6);
 alert(preContents)
 }
