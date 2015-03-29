@@ -11,7 +11,7 @@ var charLen = char.length;
 function preHTML() {
 var str = '<pre><html></pre>';
 alert('')
-var preContents = myHTMLString.match(/<pre>.*?<\/pre>/ims).substr(5, -6);
+var preContents = str.match(/<pre>.*?<\/pre>/ims).substr(5, -6);
 //var preContents = str.match('/(<pre>.*?<\/pre>)|(<code>.*?<\/code>)/igm').substring(5, -6);
 alert(preContents)
   for (a = 0; a < html; a++) {
