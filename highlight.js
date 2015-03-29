@@ -3,6 +3,8 @@
 var html = 1;
 var css = 1;
 var js = 1;
+//HTML code
+//Put code in order
 //Characters
 var char = ['<', '>', '</', '/>', '="', '"'];
 //Length
@@ -10,9 +12,6 @@ var charLen = char.length;
 //--------------------HTML
 function preHTML() {
 var str = document.getElementById('htmla').innerHTML;
-alert(str)
-var str = 'fhdjhf
-    Dhdjdh';
 alert(str)
 //var preContents = str.substring(5, str.length - 6);
 //var preContents = str.match(/(<pre>.*?<\/pre>)|(<code>.*?<\/code>)/igm).substring(5, str.length - 6);
