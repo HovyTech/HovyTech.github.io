@@ -9,7 +9,6 @@ function bodyLoad() {
     if (body[a].nodeName = 'PRE') {
       total = total + 1;
     }
-    alert(total)
   }
   //Store Pre tag text in code array
   var code = [];
