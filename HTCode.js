@@ -21,7 +21,7 @@ function bodyLoad() {
   //Find characters
   for (c = 0; c < total; c++) {
     for (d = 0; d < att.length; d++) {
-      newCode[c] = newCode[c].replace(att[d], '<span style="color: green;">' + charVal[d] + '</span>');
+      newCode[c] = newCode[c].replace(att[d], '0');
       alert(att[d])
       alert(newCode[c])
     }
