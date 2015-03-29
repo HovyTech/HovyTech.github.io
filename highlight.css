@@ -1,11 +1,12 @@
-#pre {
+xmp {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   height: auto;
+  left: 20%;
   margin: 10px;
   padding: 5px;
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 60%;
 }
 #char {
   color: rgb(143, 56, 78);
