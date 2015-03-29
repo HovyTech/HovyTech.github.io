@@ -10,7 +10,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Characters
-  var char = [/</g, /<\//g, />/g];
+  var tag = [/(<(.*?)>|<\/(.*?)>|<(.*?)\s|<(.*?)\s\/>)/g];
   var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
@@ -21,7 +21,7 @@ function bodyLoad() {
   //Find characters
   for (c = 0; c < total; c++) {
     for (d = 0; d < char.length; d++) {
-      newCode[c] = newCode[c].replace(char[d], '<span style="color: green;">' + charVal[d] + '</span>');
+      newCode[c] = newCode[c].replace(tag[d], '<span style="color: green;">' + charVal[d] + '</span>');
       alert(char[d])
       alert(newCode[c])
     }
