@@ -26,7 +26,7 @@ function bodyLoad() {
       newCode.push(code[c]);
       newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
       newCode[c] = '<ol id="code-num"><li>' + newCode[c] + '</li></ol>';
-      while (newCode[c].indexOf('<li></li></ol>') != -1) {
+      while (newCode[c].indexOf('<li></li></ol>') = -1) {
         newCode[c] = newCode[c].replace('<li></li></ol>', '</ol>');
       }
     }
@@ -35,7 +35,7 @@ function bodyLoad() {
       newCode.push(code[c]);
       newCode[c] = newCode[c].replace(/\n/g, '</li><li>');
       newCode[c] = '<ul id="code-num"><li>' + newCode[c] + '</li></ul>';
-      while (newCode[c].indexOf('<li></li></ul>') != -1) {
+      while (newCode[c].indexOf('<li></li></ul>') = -1) {
         newCode[c] = newCode[c].replace('<li></li></ul>', '</ul>');
       }
     }
