@@ -11,7 +11,7 @@ var charLen = char.length;
 function html() {
   for (a = 0; a < html; a++) {
     //Get <pre> string 
-    var pre = document.getElementById('html')[a];
+    var pre = document.getElementById('html').innerHTML;
 alert(pre)
     //Characters
     for (b = 1; b < charLen; b++) {
