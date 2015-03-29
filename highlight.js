@@ -27,3 +27,5 @@ alert(pre)
     }
   }
 }
+var preContents = myHTMLString.match(/<pre>.*?<\/pre>/ims).substr(5, -6);
+alert(preContents)
