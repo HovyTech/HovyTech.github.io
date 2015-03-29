@@ -11,7 +11,7 @@ var charLen = char.length;
 function html() {
   for (a = 0; a < html; a++) {
     //Get <pre> string 
-    var pre = getElementById('html').childNodes[a].innerHTML;
+    var pre = getElementById('html')[a];
     //Characters
     for (b = 1; b < charLen; b++) {
       //Character count
