@@ -3,7 +3,7 @@ function bodyLoad() {
   //Show numbers = True or False
   var showNum = true;
   //Total number of pre tags in body
-  var body = document.body.childNodes;
+  var body = document.footer.childNodes;
   var total = 0;
   for (a = 0; a < body.length; a++) {
     if (body[a].nodeName != 'PRE') {
