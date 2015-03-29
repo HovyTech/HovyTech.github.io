@@ -8,7 +8,7 @@ var char = ['<', '>', '</', '/>', '="', '"'];
 //Length
 var charLen = char.length;
 //--------------------HTML
-function html() {
+function preHTML() {
 alert('')
 var str = document.getElementById('htmla').innerHTML;
 var preContents = str.match('/<pre>(.*?)<\/pre>/igm').substring(5, -6);
@@ -31,4 +31,4 @@ alert(pre)
     }
   }
 }
-html();
+preHTML();
