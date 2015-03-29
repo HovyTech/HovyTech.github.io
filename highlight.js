@@ -11,12 +11,6 @@ var charLen = char.length;
 function preHTML() {
 var str = document.getElementById('htmla').innerHTML;
 alert(str)
-var str = document.getElementById('htmla').innerText;
-alert(str)
-var str = document.getElementById('htmla').textContent;
-alert(str)
-var str = document.getElementById('htmla').html();
-alert(str)
 var str = 'fhdjhf
     Dhdjdh';
 alert(str)
