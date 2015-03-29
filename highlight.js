@@ -21,12 +21,12 @@ function preHTML() {
 alert('')
       //Character count
       var charCount = str.split(char[b - 1]).length - 1;
-      var oldPos = str.indexOf(char[b - 1]);
-      str.replaceAt(oldPos, '<span id="char">' + char[b - 1] + '</span>');
+      var oldPos = str.indexOf(char[b - 1], 0);
+      str.replace(oldPos, '<span id="char">' + char[b - 1] + '</span>');
       for (c = 1; c < charCount; c++) {
 alert('')
         var newPos = str.indexOf(char[b - 1], oldPos + 1);
-        str.replaceAt(newPos, '<span id="char">' + char[b - 1] + '</span>');
+        str.replace(newPos, '<span id="char">' + char[b - 1] + '</span>');
         oldPos = newPos + 1;
         alert(str)
       }
