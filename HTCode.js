@@ -29,7 +29,7 @@ function bodyLoad() {
         return '<span color="' + attColor + '">' + attText + '</span>';
       }
       newCode[c] = newCode[c].replace(html[d], attColorText);
-      alert(att[d])
+      alert(html[d])
       alert(newCode[c])
     }
   }
