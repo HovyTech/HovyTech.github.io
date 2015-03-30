@@ -9,7 +9,7 @@ function HTHighlight() {
   var code = [];
   for (a = 0; a < total; a++) {
     code.push(document.getElementsByTagName('PRE')[a].childNodes[0].nodeValue);
-    alert($('pre').eq(a).html())
+    alert($('body').find('pre').eq(a).html())
   }
   //document.getElementsByTagName('PRE')[0].innerHTML = 'dfgdf';
   //$('pre').eq(0).html('rfgdfgdrfgdg');
