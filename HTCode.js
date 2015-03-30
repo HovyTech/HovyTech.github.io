@@ -12,7 +12,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Values
-  var html = [/<(\/)?[A-Za-z][A-Za-z0-9]*(\/)?>/ig];//, /<(\/)?[A-Za-z][A-Za-z0-9]*/ig];//, /\s\w(.*?)="/ig, /"(.*?)"/ig, /<!--(.*?)-->/ig];
+  var html = [/<(\/)?[A-Za-z][A-Za-z0-9]*(\/)?>/ig, /<(\/)?[A-Za-z][A-Za-z0-9]*/ig], /\s\w(.*?)="/ig, /"(.*?)"/ig, /<!--(.*?)-->/ig];
   var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
@@ -22,13 +22,13 @@ function bodyLoad() {
   }
   //Find attributes
   for (c = 0; c < total; c++) {
-    for (d = 0; d < att.length; d++) {
+    for (d = 0; d < html.length; d++) {
       //Create color text
       function attColorText(color) {
-        var attText = newCode[c].match(att[d]);
+        var attText = newCode[c].match(html[d]);
         return '<span color="' + attColor + '">' + attText + '</span>';
       }
-      newCode[c] = newCode[c].replace(att[d], attColorText);
+      newCode[c] = newCode[c].replace(html[d], attColorText);
       alert(att[d])
       alert(newCode[c])
     }
