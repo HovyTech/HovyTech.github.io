@@ -6,11 +6,11 @@
 //Total number of code <div> to clean
 var total = 1;
 //Color
-var charCol = 'rgb(251, 255, 132)';
-var comCol = 'rgb(104, 255, 162)';
-var tagCol = 'rgb(255, 147, 141)';
-var attCol = 'rgb(102, 150, 255)';
-var valCol = 'rgb(201, 151, 255)';
+//var charCol = 'rgb(251, 255, 132)';
+//var comCol = 'rgb(104, 255, 162)';
+//var tagCol = 'rgb(255, 147, 141)';
+//var attCol = 'rgb(102, 150, 255)';
+//var valCol = 'rgb(201, 151, 255)';
 //var elementCol = 'rgb(251, 255, 132)';
 //Where each part of code is stored
 var code = [];
