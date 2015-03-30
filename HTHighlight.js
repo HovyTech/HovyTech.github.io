@@ -25,6 +25,9 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
+var char1 = /</ig;
+var char2 = />/ig;
+var char3 = /"/ig;
 var tag = /<(.*?)([\w]+)|>/ig;
 var att = /\s([\w-]+)/ig;
 var val = /="(.*?)"/ig;
@@ -41,7 +44,7 @@ function HTHighlight() {
     code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
     code[a].replace(com, '<font color="' + comCol + '">' + code[a].match(com) + '</font>');
-    alert('')
+    alert(code[a])
     $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
   }
   //breakCode();
