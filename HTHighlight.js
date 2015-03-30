@@ -41,6 +41,7 @@ function HTHighlight() {
     code[a] = code[a].replace(att, code[a].match(att)).css('color', attCol);
     code[a] = code[a].replace(val, code[a].match(val)).css('color', valCol);
     code[a] = code[a].replace(com, code[a].match(com)).css('color', comCol);
+    alert('')
     $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
   }
   //breakCode();
