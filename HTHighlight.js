@@ -6,7 +6,7 @@
 //Total number of code <div> to clean
 var total = 1;
 //Color
-var preCol = 'rgb(102, 99, 98)';
+//var preCol = 'rgb(102, 99, 98)';
 var comCol = 'rgb(104, 255, 162)';
 var tagCol = 'rgb(255, 147, 141)';
 var attCol = 'rgb(102, 150, 255)';
@@ -19,11 +19,11 @@ var code = [];
 //Where the stitched code is stored
 //var stitchCode = '';
 //Where the colored code is stored
-var colorCode = '';
+//var colorCode = '';
 //Where the cleaned code is stored
-var cleanCode = '';
+//var cleanCode = '';
 //Index of each <div id="HTHighlight"></div>
-var divIndex = 0;
+//var divIndex = 0;
 //HTML Values
 var tag = /<(.*?)([\w]+)|>/ig;
 var att = /\s([\w-]+)/ig;
@@ -32,18 +32,21 @@ var com = /<!--(.*?)-->/ig;
 
 //--------------------------------------------------Get Code
 //Get the code from each <textarea> and load it into an array
-function getCode() {
+function HTHighlight() {
   //Load <pre> tag text into code[]
   for (a = 0; a < total; a++) {
     var pre = $('textarea').eq(a).val();
     code.push(pre);
-    alert(pre)
-    alert(code[a])
+    code[a] = code[a].replace(tag, code[a].match(tag)).css('color', tagCol);
+    code[a] = code[a].replace(att, code[a].match(att)).css('color', attCol);
+    code[a] = code[a].replace(val, code[a].match(val)).css('color', valCol);
+    code[a] = code[a].replace(com, code[a].match(com)).css('color', comCol);
+    $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
   }
   //breakCode();
-  colorCode();
-  alert(code[a])
+  //colorCode();
 }
+HTHighlight();
 
 //--------------------------------------------------Break Code
 //Go through each array object and break the code up in it's tags
@@ -81,26 +84,27 @@ function getCode() {
 
 //--------------------------------------------------Color Code
 //Color all the elements of the code to user prefered colors
-function colorCode() {
-  alert(code[0])
+//function colorCode() {
+  //alert(code[0])
   //Load <pre> tag text into code[]
-  for (b = 0; b < total; b++) {
-    alert(code[b])
-    code[b] = code[b].replace(tag, code[b].match(tag)).css('color', tagCol);
-    code[b] = code[b].replace(att, code[b].match(att)).css('color', attCol);
-    code[b] = code[b].replace(val, code[b].match(val)).css('color', valCol);
-    code[b] = code[b].replace(com, code[b].match(com)).css('color', comCol);
-    alert(code[b])
-    cleanCode = code[b];
-    insertCode();
-  }
-}
+  //for (b = 0; b < total; b++) {
+    //alert(code[b])
+    //code[a] = code[a].replace(tag, code[a].match(tag)).css('color', tagCol);
+    //code[a] = code[a].replace(att, code[a].match(att)).css('color', attCol);
+    //code[a] = code[a].replace(val, code[a].match(val)).css('color', valCol);
+    //code[a] = code[a].replace(com, code[a].match(com)).css('color', comCol);
+    //$('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
+    //alert(code[b])
+    //cleanCode = code[b];
+    //insertCode();
+  //}
+//}
 
 //--------------------------------------------------Insert Code
 //Insert the colored code into it's own <pre> tag in it's original <div id="HTHighlight"></div>
-function insertCode() {
-  $('#HTHighlight').eq(divIndex).html('<pre>' + cleanCode + '</pre>');
-  divIndex = divIndex + 1;
-}
+//function insertCode() {
+  //$('#HTHighlight').eq(divIndex).html('<pre>' + cleanCode + '</pre>');
+  //divIndex = divIndex + 1;
+//}
 
-getCode();
+//getCode();
