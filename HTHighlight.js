@@ -37,10 +37,10 @@ function HTHighlight() {
   for (a = 0; a < total; a++) {
     var pre = $('textarea').eq(a).val();
     code.push(pre);
-    code[a].replace(tag, code[a].match(tag)).css('color', tagCol);
-    code[a].replace(att, code[a].match(att)).css('color', attCol);
-    code[a].replace(val, code[a].match(val)).css('color', valCol);
-    code[a].replace(com, code[a].match(com)).css('color', comCol);
+    code[a].replace(tag, '<font color="' + tagCol + '">' + code[a].match(tag) + '</font>');
+    code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
+    code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
+    code[a].replace(com, '<font color="' + comCol + '">' + code[a].match(com) + '</font>');
     alert('')
     $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
   }
