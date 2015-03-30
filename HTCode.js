@@ -2,6 +2,8 @@ function bodyLoad() {
   //--------------------------------------------------Global Variables
   //Total number of pre tags
   var total = 1;
+  //Attributes RGB Color
+  var attColor = 'rgb(12, 45, 68)';
   //Store Pre tag text in code array
   var code = [];
   var newCode = [];
@@ -18,10 +20,15 @@ function bodyLoad() {
   for (b = 0; b < total; b++) {
     newCode[b] = newCode[b].replace(/\t/g, '\s\s\s\s');
   }
-  //Find characters
+  //Find attributes
   for (c = 0; c < total; c++) {
     for (d = 0; d < att.length; d++) {
-      newCode[c] = newCode[c].replace(att[d], $('newCode[c].match(att[d])').css('color', 'red'));
+      //Create color text
+      function attColorText(color) {
+        var attText = newCode[c].match(att[d]);
+        return '<span color="' + attColor + '">' + attText + '</span>';
+      }
+      newCode[c] = newCode[c].replace(att[d], attColorText);
       alert(att[d])
       alert(newCode[c])
     }
