@@ -12,7 +12,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Characters
-  var att = [/^\s([\w].*)\=$/ig];
+  var att = [/\s([\w].*)=/ig];
   var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
