@@ -81,6 +81,7 @@ function getCode() {
 function colorCode() {
   //Load <pre> tag text into code[]
   for (b = 0; b < total; b++) {
+    alert(code[b])
     code[b] = code[b].replace(tag, code[b].match(tag)).css('color', tagCol);
     code[b] = code[b].replace(att, code[b].match(att)).css('color', attCol);
     code[b] = code[b].replace(val, code[b].match(val)).css('color', valCol);
