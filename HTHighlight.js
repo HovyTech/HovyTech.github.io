@@ -4,7 +4,7 @@ var total = 1;
 //HTML values
 //var char = /[<>]/g;
 
-function loadBody() {
+function HTHighlight() {
   //Load <pre> tag text into array
   var code = [];
   for (a = 0; a < total; a++) {
@@ -12,3 +12,4 @@ function loadBody() {
     alert(code[a])
   }
 }
+HTHighlight();
