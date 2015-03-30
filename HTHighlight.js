@@ -25,13 +25,10 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
-var char1 = /</ig;
-var char2 = />/ig;
-var char3 = /"/ig;
-var tag = /<(.*?)([\w]+)|>/ig;
+var tag = /&lt;(.*?)([\w]+)|&gt;/ig;
 var att = /\s([\w-]+)/ig;
 var val = /="(.*?)"/ig;
-var com = /<!--(.*?)-->/ig;
+var com = /&lt;!--(.*?)--&gt;/ig;
 
 //--------------------------------------------------Get Code
 //Get the code from each <textarea> and load it into an array
@@ -44,11 +41,8 @@ function HTHighlight() {
     code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
     code[a].replace(com, '<font color="' + comCol + '">' + code[a].match(com) + '</font>');
-    code[a].replace(char1, '<font color="' + charCol + '">&lt;</font>');
-    code[a].replace(char2, '<font color="' + charCol + '">&gt;</font>');
-    code[a].replace(char3, '<font color="' + charCol + '">&quot;</font>');
     alert(code[a])
-    $('#HTHighlight').eq(a).html('<textarea>' + code[a] + '</textarea>');
+    $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
   }
   //breakCode();
   //colorCode();
