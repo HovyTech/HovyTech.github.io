@@ -4,14 +4,16 @@
 
 //Total number of <pre> tags
 var total = 1;
-
-//HTML values
-//var char = /[<>]/g;
+//Where each part of code is stored
+var code = [];
+//Where the elements are stored
+var structure = [];
+//Where the cleaned code is stored
+var cleanCode = '';
 
 function HTHighlight() {
   //Load <pre> tag text into array
   alert('')
-  var code = [];
   alert('')
   for (a = 0; a < total; a++) {
     alert('')
@@ -20,6 +22,6 @@ function HTHighlight() {
     code.push(pre);
     alert(code[a])
   }
-  $('pre').eq(0).html('rfgdfgdrfgdg');
+  $('#HTHighlight').eq(0).html(cleanCode);
 }
 HTHighlight();
