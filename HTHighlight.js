@@ -48,7 +48,7 @@ function HTHighlight() {
     code[a].replace(char2, '<font color="' + charCol + '">&gt;</font>');
     code[a].replace(char3, '<font color="' + charCol + '">&quot;</font>');
     alert(code[a])
-    $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
+    $('#HTHighlight').eq(a).html('<textarea>' + code[a] + '</textarea>');
   }
   //breakCode();
   //colorCode();
