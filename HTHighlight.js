@@ -36,6 +36,7 @@ function HTHighlight() {
   //Load <pre> tag text into code[]
   for (a = 0; a < total; a++) {
     var pre = $('textarea').eq(a).val();
+    alert(pre)
     code.push(pre);
     code[a].replace(tag, '<font color="' + tagCol + '">' + code[a].match(tag) + '</font>');
     code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
