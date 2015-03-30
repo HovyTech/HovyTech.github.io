@@ -42,6 +42,7 @@ function getCode() {
   }
   //breakCode();
   colorCode();
+  alert(code[a])
 }
 
 //--------------------------------------------------Break Code
@@ -81,6 +82,7 @@ function getCode() {
 //--------------------------------------------------Color Code
 //Color all the elements of the code to user prefered colors
 function colorCode() {
+  alert(code[0])
   //Load <pre> tag text into code[]
   for (b = 0; b < total; b++) {
     alert(code[b])
