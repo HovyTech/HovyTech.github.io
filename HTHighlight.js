@@ -42,11 +42,11 @@ function HTHighlight() {
     //code.push(pre);
     $('pre').html(function(_, html) {
       return [
-        html.replace(tag, '<span id="tag">$1</span>'), 
-        html.replace(att, '<span id="att">$1</span>'), 
-        html.replace(val, '<span id="val">$1</span>'), 
-        html.replace(elm, '<span id="elm">$1</span>'), 
+        html.replace(tag, '<span id="tag">$1</span>'),
+        html.replace(elm, '<span id="elm">$1</span>'),
         html.replace(txt, '<span id="txt">$1</span>'),
+        html.replace(att, '<span id="att">$1</span>'),
+        html.replace(val, '<span id="val">$1</span>'),
         html.replace(com, '<span id="com">$1</span>')
       ];
     });
