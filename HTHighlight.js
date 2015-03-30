@@ -6,7 +6,7 @@
 //Total number of code <div> to clean
 var total = 1;
 //Color
-//var preCol = 'rgb(102, 99, 98)';
+var charCol = 'rgb(251, 255, 132)';
 var comCol = 'rgb(104, 255, 162)';
 var tagCol = 'rgb(255, 147, 141)';
 var attCol = 'rgb(102, 150, 255)';
@@ -25,9 +25,9 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
-var char1 = /</ig;
-var char2 = />/ig;
-var char3 = /"/ig;
+var char1 = /[</]/ig;
+var char2 = /[/>]/ig;
+var char3 = /[="]/ig;
 var tag = /<(.*?)([\w]+)|>/ig;
 var att = /\s([\w-]+)/ig;
 var val = /="(.*?)"/ig;
@@ -44,6 +44,9 @@ function HTHighlight() {
     code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
     code[a].replace(com, '<font color="' + comCol + '">' + code[a].match(com) + '</font>');
+    code[a].replace(char1, '<font color="' + charCol + '">' + code[a].match(char1) + '</font>');
+    code[a].replace(char2, '<font color="' + charCol + '">' + code[a].match(char2) + '</font>');
+    code[a].replace(char3, '<font color="' + charCol + '">' + code[a].match(char3) + '</font>');
     alert(code[a])
     $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
   }
