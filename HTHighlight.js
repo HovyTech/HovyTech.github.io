@@ -4,7 +4,7 @@ var total = 1;
 //HTML values
 //var char = /[<>]/g;
 
-$(document).ready(function() {
+function HTHighlight() {
   //Load <pre> tag text into array
   alert('')
   var code = [];
@@ -13,4 +13,5 @@ $(document).ready(function() {
     alert(code[a])
   }
   $('pre').eq(0).html('rfgdfgdrfgdg');
-});
+}
+HTHighlight();
