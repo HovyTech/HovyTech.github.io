@@ -11,8 +11,8 @@ function bodyLoad() {
     code.push(document.getElementsByTagName('PRE')[a].childNodes[0].nodeValue);
     newCode.push(code[a]);
   }
-  //Characters
-  var att = [/\s([\w].*)=/ig];
+  //Values
+  var html = [/<(\/)?[A-Za-z][A-Za-z0-9]*(\/)?>/ig, /<(\/)?[A-Za-z][A-Za-z0-9]*/ig, /\s\w(.*?)="/ig, /"(.*?)"/ig, /<!--(.*?)-->/ig];
   var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
