@@ -29,7 +29,7 @@ var tag = /(&lt;(.*?)([\w]+)|&gt;)/ig;
 var att = /(([\w-]+)=)/ig;
 var val = /("(.*?)")/ig;
 var elm = /(\s([\w]+)(\s|\w))/ig;
-var txt = /(&gt;(.*?)&lt;)/ig;
+var txt = /(&gt;(.|\n)*?&lt;)/ig;
 var com = /(&lt;!--(.*?)--&gt;)/ig;
 
 //--------------------------------------------------Get Code
