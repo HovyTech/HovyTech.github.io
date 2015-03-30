@@ -42,7 +42,7 @@ function HTHighlight() {
     code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
     code[a].replace(com, '<font color="' + comCol + '">' + code[a].match(com) + '</font>');
-    alert(code[a])
+    alert(code[a].match(tag))
     $('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
   }
   //breakCode();
