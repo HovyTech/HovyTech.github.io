@@ -12,5 +12,6 @@ function HTHighlight() {
     alert(code[a])
   }
   document.getElementsByTagName('PRE')[0].innerHTML = 'dfgdf';
+  $('pre').eq(0).html('rfgdfgdrfgdg');
 }
 HTHighlight();
