@@ -1,5 +1,6 @@
 pre {
   background-color: rgb(89, 87, 86);
+  font: bold;
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   height: auto;
@@ -29,4 +30,5 @@ pre {
 }
 #com {
   color: rgb(104, 255, 162);
+  font: italic;
 }
