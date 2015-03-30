@@ -6,6 +6,7 @@ var total = 1;
 
 $(document).ready(function() {
   //Load <pre> tag text into array
+  alert('')
   var code = [];
   for (a = 0; a < total; a++) {
     code.push($('pre').eq(a).html());
