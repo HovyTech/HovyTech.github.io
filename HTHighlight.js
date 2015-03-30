@@ -12,15 +12,11 @@ var structure = [];
 var cleanCode = '';
 
 function HTHighlight() {
-  //Load <pre> tag text into array
-  alert('')
-  alert('')
+  //Load <pre> tag text into code[]
   for (a = 0; a < total; a++) {
-    alert('')
     var pre = $('textarea').eq(a).val();
     alert(pre)
     code.push(pre);
-    alert(code[a])
   }
   $('#HTHighlight').eq(0).html(cleanCode);
 }
