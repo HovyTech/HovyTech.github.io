@@ -32,6 +32,13 @@ function getCode() {
 //--------------------------------------------------Break Code
 //Go through each array object and break the code up in it's tags
 function breakCode() {
+  // /<(.*?)(>|\w*|\s*)/i
+  // /<\/(.*?)>/i
+  // /\w(.*?)(>|\w*|\s*)/i
+  // /<(.*)>/i
+  // />(.*)</i
+  // />(.|\n)*<\//i
+  // /<head>(.|\n)*<\/head>/i
   //Load <pre> tag text into code[]
   for (a = 0; a < total; a++) {
     var pre = $('textarea').eq(a).val();
