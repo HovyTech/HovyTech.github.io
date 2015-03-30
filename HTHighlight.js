@@ -85,6 +85,7 @@ function colorCode() {
     code[b] = code[b].replace(att, code[b].match(att)).css('color', attCol);
     code[b] = code[b].replace(val, code[b].match(val)).css('color', valCol);
     code[b] = code[b].replace(com, code[b].match(com)).css('color', comCol);
+    alert(code[b])
     cleanCode = code[b];
     insertCode();
   }
