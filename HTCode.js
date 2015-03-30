@@ -12,7 +12,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Values
-  var html = [/<(\/)?[A-Za-z][A-Za-z0-9]*(\/)?>/ig, /<(\/)?[A-Za-z][A-Za-z0-9]*/ig, /\s\w(.*?)="/ig, /"(.*?)"/ig, /<!--(.*?)-->/ig];
+  var html = [/<(\/)?[A-Za-z][A-Za-z0-9]*(\/)?>/ig, /<(\/)?[A-Za-z][A-Za-z0-9]*/ig];//, /\s\w(.*?)="/ig, /"(.*?)"/ig, /<!--(.*?)-->/ig];
   var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
