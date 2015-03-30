@@ -37,6 +37,8 @@ function getCode() {
   for (a = 0; a < total; a++) {
     var pre = $('textarea').eq(a).val();
     code.push(pre);
+    alert(pre)
+    alert(code[a])
   }
   //breakCode();
   colorCode();
