@@ -1,17 +1,29 @@
 pre {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(89, 87, 86);
   height: auto;
   left: 20%;
   margin: 10px;
   padding: 5px;
-  position: absolute;
+  position: relative;
   top: 200px;
   width: 60%;
   z-index: 100;
 }
-#char {
-  color: rgb(143, 56, 78);
-}
 #tag {
-  color: rgb(223, 164, 164);
+  color: rgb(255, 147, 141);
+}
+#att {
+  color: rgb(102, 150, 255);
+}
+#val {
+  color: rgb(201, 151, 255);
+}
+#elm {
+  color: rgb(251, 255, 132);
+}
+#txt {
+  color: rgb(0, 0, 0);
+}
+#com {
+  color: rgb(104, 255, 162);
 }
