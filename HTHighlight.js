@@ -11,7 +11,8 @@ function HTHighlight() {
   alert('')
   for (a = 0; a < total; a++) {
     alert('')
-    code.push($('pre').eq(a).html());
+    var pre = $('pre').eq(a).html();
+    code.push(pre);
     alert(code[a])
   }
   $('pre').eq(0).html('rfgdfgdrfgdg');
