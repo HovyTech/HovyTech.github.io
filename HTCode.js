@@ -10,7 +10,7 @@ function bodyLoad() {
     newCode.push(code[a]);
   }
   //Characters
-  var att = [/\s(.*?)="/ig];
+  var att = [/\s([\w].*)="/ig];
   var charVal = ['<', '</', '>'];
   
   //--------------------------------------------------Clean Up
@@ -21,7 +21,7 @@ function bodyLoad() {
   //Find characters
   for (c = 0; c < total; c++) {
     for (d = 0; d < att.length; d++) {
-      newCode[c] = newCode[c].replace(att[d], '0');
+      newCode[c] = newCode[c].replace(att[d], newCode[c].match(att[d]));
       alert(att[d])
       alert(newCode[c])
     }
