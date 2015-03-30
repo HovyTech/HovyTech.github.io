@@ -6,9 +6,9 @@ var total = 1;
 
 function HTHighlight() {
   //Load <pre> tag text into array
-  var code = [];
+  //var code = [];
   for (a = 0; a < total; a++) {
-    code.push(document.getElementsByTagName('PRE')[a].childNodes[0].nodeValue);
+    //code.push(document.getElementsByTagName('PRE')[a].childNodes[0].nodeValue);
     alert($('body').find('pre').eq(a).html())
   }
   //document.getElementsByTagName('PRE')[0].innerHTML = 'dfgdf';
