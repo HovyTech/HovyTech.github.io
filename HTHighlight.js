@@ -38,7 +38,7 @@ function HTHighlight() {
     var pre = $('textarea').eq(a).html();
     alert(pre)
     code.push(pre);
-    code[a] = code[a].replace(tag, '<span style="color:' + tagCol + '">code[a].match(tag)</span>');
+    code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     code[a] = code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
     code[a] = code[a].replace(com, '<font color="' + comCol + '">' + code[a].match(com) + '</font>');
