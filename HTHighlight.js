@@ -25,10 +25,12 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
-var tag = /&lt;(.*?)([\w]+)|&gt;/ig;
-var att = /\s([\w-]+)/ig;
-var val = /="(.*?)"/ig;
-var com = /&lt;!--(.*?)--&gt;/ig;
+var tag = /(&lt;(.*?)([\w]+)|&gt;)/ig;
+var att = /(([\w-]+)=)/ig;
+var val = /("(.*?)")/ig;
+var elm = /(\s([\w]+)(\s|\w))/ig;
+var txt = /(&gt;(.*?)&lt;)/ig;
+var com = /(&lt;!--(.*?)--&gt;)/ig;
 
 //--------------------------------------------------Get Code
 //Get the code from each <textarea> and load it into an array
@@ -38,8 +40,15 @@ function HTHighlight() {
     //var pre = $('textarea').eq(a).html();
     //alert(pre)
     //code.push(pre);
-    $('pre').eq(a).html(function(_, html) {
-      return html.replace(tag, '<span id="tag">$1</span>');   
+    $('pre').html(function(_, html) {
+      return [
+        html.replace(tag, '<span id="tag">$1</span>'), 
+        html.replace(att, '<span id="att">$1</span>'), 
+        html.replace(val, '<span id="val">$1</span>'), 
+        html.replace(elm, '<span id="elm">$1</span>'), 
+        html.replace(txt, '<span id="txt">$1</span>'),
+        html.replace(com, '<span id="com">$1</span>')
+      ];
     });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
