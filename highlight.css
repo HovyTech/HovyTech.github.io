@@ -1,11 +1,14 @@
 pre {
   background-color: rgb(89, 87, 86);
+  font-family: "Arial", Sans-serif;
+  font-size: 13px;
   height: auto;
   left: 20%;
   margin: 10px;
   padding: 5px;
   position: relative;
   top: 200px;
+  white-space: pre;
   width: 60%;
   z-index: 100;
 }
