@@ -15,7 +15,7 @@ function HTHighlight() {
   alert('')
   for (a = 0; a < total; a++) {
     alert('')
-    var pre = $('pre').eq(a).html();
+    var pre = $('textarea').eq(a).val();
     alert(pre)
     code.push(pre);
     alert(code[a])
