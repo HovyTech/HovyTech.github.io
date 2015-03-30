@@ -35,7 +35,7 @@ var com = /&lt;!--(.*?)--&gt;/ig;
 function HTHighlight() {
   //Load <pre> tag text into code[]
   for (a = 0; a < total; a++) {
-    var pre = $('textarea').eq(a).val();
+    var pre = $('textarea').eq(a).html();
     alert(pre)
     code.push(pre);
     code[a].replace(tag, '<font color="' + tagCol + '">' + code[a].match(tag) + '</font>');
