@@ -1,14 +1,14 @@
 pre {
   background-color: rgb(89, 87, 86);
   font-family: "Arial", Sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   height: auto;
   left: 20%;
   margin: 10px;
   padding: 5px;
   position: relative;
   top: 200px;
-  white-space: pre;
+  white-space: pre-wrap;
   width: 60%;
   z-index: 100;
 }
