@@ -9,6 +9,7 @@ $(document).ready(function() {
   var code = [];
   for (a = 0; a < total; a++) {
     code.push($('pre').eq(a).html());
+    alert(code[a])
   }
   $('pre').eq(0).html('rfgdfgdrfgdg');
 });
