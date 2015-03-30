@@ -16,5 +16,5 @@ function HTHighlight() {
 }
 HTHighlight();
 $(document).ready(function() {
-  alert($('pre').eq(0).text())
+  alert($('pre').eq(1).text())
 });
