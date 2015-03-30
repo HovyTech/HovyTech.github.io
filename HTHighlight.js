@@ -15,3 +15,6 @@ function HTHighlight() {
   //$('pre').eq(0).html('rfgdfgdrfgdg');
 }
 HTHighlight();
+$(document).ready(function() {
+  alert($('pre').eq(0))
+});
