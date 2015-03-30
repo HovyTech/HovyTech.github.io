@@ -5,18 +5,30 @@
 //--------------------------------------------------Global Variables
 //Total number of code <div> to clean
 var total = 1;
+//Color
+var preCol = 'rgb(102, 99, 98)';
+var comCol = 'rgb(104, 255, 162)';
+var tagCol = 'rgb(255, 147, 141)';
+var attCol = 'rgb(102, 150, 255)';
+var valCol = 'rgb(201, 151, 255)';
+//var elementCol = 'rgb(251, 255, 132)';
 //Where each part of code is stored
 var code = [];
 //Where the tags are stored
-var breakCode = [];
+//var breakCode = [];
 //Where the stitched code is stored
-var stitchCode = '';
+//var stitchCode = '';
 //Where the colored code is stored
 var colorCode = '';
 //Where the cleaned code is stored
 var cleanCode = '';
 //Index of each <div id="HTHighlight"></div>
 var divIndex = 0;
+//HTML Values
+var tag = /<(.*?)([\w]+)|>/ig;
+var att = /\s([\w-]+)/ig;
+var val = /="(.*?)"/ig;
+var com = /<!--(.*?)-->/ig;
 
 //--------------------------------------------------Get Code
 //Get the code from each <textarea> and load it into an array
@@ -26,12 +38,13 @@ function getCode() {
     var pre = $('textarea').eq(a).val();
     code.push(pre);
   }
-  breakCode();
+  //breakCode();
+  colorCode();
 }
 
 //--------------------------------------------------Break Code
 //Go through each array object and break the code up in it's tags
-function breakCode() {
+//function breakCode() {
   // /<(.*?)(>|\w*|\s*)/i
   // /<\/(.*?)>/i
   // /\w(.*?)(>|\w*|\s*)/i
@@ -39,34 +52,42 @@ function breakCode() {
   // />(.*)</i
   // />(.|\n)*<\//i
   // /<head>(.|\n)*<\/head>/i
+  // /<script(.*?)>(.|\n)*?<\/script>/ig
+  // /\s([\w-]+)/ig
+  // /="(.*?)"/ig
+  // /<(.*?)([\w]+)|>/ig
+  // /<!--(.*?)-->/ig
   //Load <pre> tag text into code[]
-  for (a = 0; a < total; a++) {
-    var pre = $('textarea').eq(a).val();
-    code.push(pre);
-  }
-  stitchCode();
-}
+  //for (a = 0; a < total; a++) {
+    //var pre = $('textarea').eq(a).val();
+    //code.push(pre);
+  //}
+  //stitchCode();
+//}
 
 //--------------------------------------------------Stitch Code
 //Stitch each of the objects together to recreate the structure of the code
-function stitchCode() {
+//function stitchCode() {
   //Load <pre> tag text into code[]
-  for (a = 0; a < total; a++) {
-    var pre = $('textarea').eq(a).val();
-    code.push(pre);
-  }
-  colorCode();
-}
+  //for (a = 0; a < total; a++) {
+    //var pre = $('textarea').eq(a).val();
+    //code.push(pre);
+  //}
+  //colorCode();
+//}
 
 //--------------------------------------------------Color Code
 //Color all the elements of the code to user prefered colors
 function colorCode() {
   //Load <pre> tag text into code[]
-  for (a = 0; a < total; a++) {
-    var pre = $('textarea').eq(a).val();
-    code.push(pre);
+  for (b = 0; b < total; b++) {
+    code[b] = code[b].replace(tag, code[b].match(tag)).css('color', tagCol);
+    code[b] = code[b].replace(att, code[b].match(att)).css('color', attCol);
+    code[b] = code[b].replace(val, code[b].match(val)).css('color', valCol);
+    code[b] = code[b].replace(com, code[b].match(com)).css('color', comCol);
+    cleanCode = code[b];
+    insertCode();
   }
-  insertCode();
 }
 
 //--------------------------------------------------Insert Code
