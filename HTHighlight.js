@@ -26,7 +26,7 @@ var code = [];
 //var divIndex = 0;
 //HTML Values
 var txt = /(&gt;((.|\n)*?)&lt;)/ig;
-var tag = /(&lt;(.*?)([\w]+)|&gt;)/ig;
+var tag = /(<(.*?)([\w]+)|>)/ig;
 var elm = /(\s([\w]+)(\s|\w))/ig;
 var att = /(([\w-]+)=)/ig;
 var val = /("(.*?)")/ig;
