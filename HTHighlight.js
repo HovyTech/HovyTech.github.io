@@ -63,9 +63,14 @@ function HTHighlight() {
         //html.replace(all, '<span id="text">$1</span><span id="tag">$2</span><span id="elm">$3</span><span id="att">$4</span><span id="val">$5</span><span id="com">$6</span>')
       //];
     //});
+    var text = 'the car is 100m long it has 0.5m cable';
+text = text.replace(/\d+(\.\d+)?m/g, function () {
+    return '<span style="color:red;">' + arguments[0] + '</span>';
+});
+alert(text);
     $(function() {
       for (a = 0; a < char.length; a++) {
-        $('pre').html($('pre').html().replace(char[a],'<span style="color:green">'+charVal[a]+'</span>'));
+        $('pre').html($('pre').html().replace(char[a],'<span style="color:green;">'+charVal[a]+'</span>'));
       }
       //for (b = 0; b < tag.length; b++) {
         //$('pre').html($('pre').html().replace(tag[b], '<span id="tag">'+tag[b]+'</span>'));
