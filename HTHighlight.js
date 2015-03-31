@@ -61,7 +61,7 @@ function HTHighlight() {
     //$('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
     //$('#tag').css('color', 'red');
     //$('pre').html(code[a]);
-  }
+  //}
   //breakCode();
   //colorCode();
 }
