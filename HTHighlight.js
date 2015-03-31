@@ -45,19 +45,19 @@ function HTHighlight() {
     //code.push(pre);
     //code[a] = code[a].replace(txt, '<span id="txt">' + code[a].match(txt) + '</span>');
     //code[a] = code[a].replace(tag, '<span id="tag">' + code[a].match(tag) + '</span>');//.replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
-    $('pre').html(function(_, html) {
-      return [
-        html.replace(txt, '<span id="txt">$1</span>'),
-        html.replace(tag, '<span id="tag">$1</span>'),
-        html.replace(elm, '<span id="elm">$1</span>'),
-        html.replace(att, '<span id="att">$1</span>'),
-        html.replace(val, '<span id="val">$1</span>'),
-        html.replace(com, '<span id="com">$1</span>'),
-        html.replace(all, '<span id="text">$1</span><span id="tag">$2</span><span id="elm">$3</span><span id="att">$4</span><span id="val">$5</span><span id="com">$6</span>')
-      ];
-    });
+    //$('pre').html(function(_, html) {
+      //return [
+        //html.replace(txt, '<span id="txt">$1</span>'),
+        //html.replace(tag, '<span id="tag">$1</span>'),
+        //html.replace(elm, '<span id="elm">$1</span>'),
+        //html.replace(att, '<span id="att">$1</span>'),
+        //html.replace(val, '<span id="val">$1</span>'),
+        //html.replace(com, '<span id="com">$1</span>'),
+        //html.replace(all, '<span id="text">$1</span><span id="tag">$2</span><span id="elm">$3</span><span id="att">$4</span><span id="val">$5</span><span id="com">$6</span>')
+      //];
+    //});
     $(document).ready(function() {
-      $('pre:contains(' + txt + ')').css("color", "yellow");
+      $('pre:contains(&lt;)').css("color", "yellow");
     });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
