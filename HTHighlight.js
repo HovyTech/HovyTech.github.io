@@ -72,7 +72,7 @@ function HTHighlight() {
   //}
   //breakCode();
   //colorCode();
-  var chara = '&lt;([\w]+)|&gt;';
+  var chara = '&lt;([\/\w]+)';
   var thisDiv = 'pre';
   var replaceWithThis = '<font color="red">'+chara+'</font>';
   var newText = $(thisDiv).html().replace(new RegExp(chara, 'ig'), replaceWithThis);
