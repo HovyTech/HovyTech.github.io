@@ -25,16 +25,21 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
-var txt = /(&lt;(.*?)([\w]+)|&gt;)/ig;
-var tag = /(<(.*?)([\w]+)|>)/ig;
-var elm = /(\s([\w]+)(\s|\w))/ig;
-var att = /(([\w-]+)=)/ig;
-var val = /("(.*?)")/ig;
-var com = /(&lt;!--(.*?)--&gt;)/ig;
+//var txt = /(&lt;(.*?)([\w]+)|&gt;)/ig;
+//var tag = /(<(.*?)([\w]+)|>)/ig;
+//var elm = /(\s([\w]+)(\s|\w))/ig;
+//var att = /(([\w-]+)=)/ig;
+//var val = /("(.*?)")/ig;
+//var com = /(&lt;!--(.*?)--&gt;)/ig;
 //var all = /(&gt;((.|\n)*?)&lt;)(&lt;(.*?)([\w]+)|&gt;)(\s([\w]+)(\s|\w))(([\w-]+)=)|("(.*?)")(&lt;!--(.*?)--&gt;)/ig;
 //var arr = [tag, att, val, elm, txt, com];
 //var arrText = ['tag', 'att', 'val', 'elm', 'txt', 'com'];
-var char = [''];
+//Characters
+var char = ['&lt;', '&gt;', '&lt;/', '/&gt;', '="', '"'];
+//Tags
+var tag = ['a', 'abbr', 'acronym', 'address', 'applet', 'area', 'article', 'aside', 'audio', 'b', 'base', 'basefont', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'center', 'city', 'code', 'col', 'colgroup', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'dir', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'font', 'footer', 'form', 'frame', 'frameset', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noframes', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strike', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'tt', 'u', 'ul', 'var', 'video', 'wbr'];
+//Attributes
+//Values
 
 //--------------------------------------------------Get Code
 //Get the code from each <textarea> and load it into an array
@@ -57,11 +62,14 @@ function HTHighlight() {
         //html.replace(all, '<span id="text">$1</span><span id="tag">$2</span><span id="elm">$3</span><span id="att">$4</span><span id="val">$5</span><span id="com">$6</span>')
       //];
     //});
-    //$(function() {
-      //for (a = 0; a < char.length; a++) {
-        //$('pre').text($('pre').html().replace(tag,'<span style="color:red">'+tag+'</span>'));
-      //}
-    //});
+    $(function() {
+      for (a = 0; a < char.length; a++) {
+        $('pre').html($('pre').html().replace(tag[a], '<span id="char">' + tag[a] + '</span>'));
+      }
+      for (b = 0; b < tag.length; b++) {
+        $('pre').html($('pre').html().replace(tag[b], '<span id="tag">' + tag[b] + '</span>'));
+      }
+    });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     //code[a] = code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
@@ -72,11 +80,11 @@ function HTHighlight() {
   //}
   //breakCode();
   //colorCode();
-  var chara = '&lt;([\/\w]+)';
-  var thisDiv = 'pre';
-  var replaceWithThis = '<font color="red">'+chara+'</font>';
-  var newText = $(thisDiv).html().replace(new RegExp(chara, 'ig'), replaceWithThis);
-  $(thisDiv).html(newText);
+  //var chara = '&lt;([\/\w]+)';
+  //var thisDiv = 'pre';
+  //var replaceWithThis = '<font color="red">'+chara+'</font>';
+  //var newText = $(thisDiv).html().replace(new RegExp(chara, 'ig'), replaceWithThis);
+  //$(thisDiv).html(newText);
 }
 HTHighlight();
 
