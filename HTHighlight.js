@@ -44,7 +44,7 @@ function HTHighlight() {
     //code.push(pre);
     //code[a] = code[a].replace(txt, '<span id="txt">' + code[a].match(txt) + '</span>');
     //code[a] = code[a].replace(tag, '<span id="tag">' + code[a].match(tag) + '</span>');//.replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
-    for (a = 0; a < 6; a++) {
+    for (a = 0; a < arr.length; a++) {
       $('pre').html(function(_, html) {
         var span = '<span id="' + arrText[a] + '">$1</span>';
         return html.replace(arr[a], span);//.replace(tag, '<span id="tag">$1</span>').replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
