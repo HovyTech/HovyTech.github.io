@@ -25,13 +25,14 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
-var line = /(\s)/ig;
 var tag = /(&lt;(.*?)([\w]+)|&gt;)/ig;
 var att = /(([\w-]+)=)/ig;
 var val = /("(.*?)")/ig;
 var elm = /(\s([\w]+)(\s|\w))/ig;
 var txt = /(&gt;((.|\n)*?)&lt;)/ig;
 var com = /(&lt;!--(.*?)--&gt;)/ig;
+var arr = [tag, att, val, elm, txt, com];
+var arrText = ['tag', 'att', 'val', 'elm', 'txt', 'com'];
 
 //--------------------------------------------------Get Code
 //Get the code from each <textarea> and load it into an array
@@ -42,10 +43,14 @@ function HTHighlight() {
     //alert(pre)
     //code.push(pre);
     //code[a] = code[a].replace(txt, '<span id="txt">' + code[a].match(txt) + '</span>');
-    code[a] = code[a].replace(tag, '<span id="tag">' + code[a].match(tag) + '</span>');//.replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
-    //$('pre').html(function(_, html) {
-      //return html.replace(txt, '<span id="txt">$1</span>').replace(tag, '<span id="tag">$1</span>').replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
-    //});
+    //code[a] = code[a].replace(tag, '<span id="tag">' + code[a].match(tag) + '</span>');//.replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
+    for (a = 0; a < 6; a++) {
+      $('pre').html(function(_, html) {
+        var span = '<span id="' + arrText[a] + '">$1</span>';
+        return html.replace(arr[a], span);//.replace(tag, '<span id="tag">$1</span>').replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
+        
+      });
+    }
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     //code[a] = code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
