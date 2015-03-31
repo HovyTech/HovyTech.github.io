@@ -72,10 +72,10 @@ function HTHighlight() {
   //}
   //breakCode();
   //colorCode();
-  var char = '(&lt;(.*?)([\w]+)|&gt;)';
+  var chara = '(&lt;(.*?)([\w]+)|&gt;)';
   var thisDiv = 'pre';
-  var replaceWithThis = '<font color="red">'+char+'</font>';
-  var newText = $(thisDiv).html().replace(new RegExp(char, 'ig'), replaceWithThis);
+  var replaceWithThis = '<font color="red">'+chara+'</font>';
+  var newText = $(thisDiv).html().replace(tag, replaceWithThis);
   $(thisDiv).html(newText);
 }
 HTHighlight();
