@@ -56,8 +56,8 @@ function HTHighlight() {
     //code[a] = code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
     //code[a] = code[a].replace(com, '<font color="' + comCol + '">' + code[a].match(com) + '</font>');
     //$('#HTHighlight').eq(a).html('<pre>' + code[a] + '</pre>');
-    $('#tag').css('color', 'red');
-    $('pre').html(code[a]);
+    //$('#tag').css('color', 'red');
+    //$('pre').html(code[a]);
   }
   //breakCode();
   //colorCode();
