@@ -41,9 +41,10 @@ function HTHighlight() {
     //var pre = $('textarea').eq(a).html();
     //alert(pre)
     //code.push(pre);
-    $('pre').html(function(_, html) {
-      return html.replace(txt, '<span id="txt">$1</span>').replace(tag, '<span id="tag">$1</span>').replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
-    });
+    code[a] = code[a].replace(txt, '<span id="txt">' + code[a].match(txt) + '</span>').replace(tag, '<span id="tag">$1</span>').replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
+    //$('pre').html(function(_, html) {
+      //return html.replace(txt, '<span id="txt">$1</span>').replace(tag, '<span id="tag">$1</span>').replace(elm, '<span id="elm">$1</span>').replace(att, '<span id="att">$1</span>').replace(val, '<span id="val">$1</span>').replace(com, '<span id="com">$1</span>');
+    //});
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     //code[a] = code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
