@@ -57,8 +57,6 @@ function HTHighlight() {
         //html.replace(all, '<span id="text">$1</span><span id="tag">$2</span><span id="elm">$3</span><span id="att">$4</span><span id="val">$5</span><span id="com">$6</span>')
       //];
     //});
-    alert($('pre').html())
-    alert($('pre').text())
     $(function() {
       for (a = 0; a < char.length; a++) {
         $('pre').text($('pre').text().replace(tag,'<span style="color:red">'+tag+'</span>'));
