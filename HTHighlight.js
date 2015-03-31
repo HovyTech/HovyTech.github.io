@@ -57,7 +57,7 @@ function HTHighlight() {
       //];
     //});
     $(document).ready(function() {
-      $('pre:contains(&lt;)').css("color", "yellow");
+      $('pre').match(tag).css('color', 'yellow');
     });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
