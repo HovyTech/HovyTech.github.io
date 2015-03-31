@@ -64,7 +64,7 @@ function HTHighlight() {
     //});
     $(function() {
       for (a = 0; a < char.length; a++) {
-        $('pre').html($('pre').html().replace(char[a], '<span id="char">'+char[a]+'</span>'));
+        $('pre').html($('pre').html().replace(char[a], '<span style="color:green">'+char[a]+'</span>'));
       }
       for (b = 0; b < tag.length; b++) {
         $('pre').html($('pre').html().replace(tag[b], '<span id="tag">'+tag[b]+'</span>'));
