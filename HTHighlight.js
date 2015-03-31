@@ -25,7 +25,7 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
-var txt = /(&gt;((.|\n)*?)&lt;)/ig;
+var txt = /(&lt;(.*?)([\w]+)|&gt;)/ig;
 var tag = /(<(.*?)([\w]+)|>)/ig;
 var elm = /(\s([\w]+)(\s|\w))/ig;
 var att = /(([\w-]+)=)/ig;
@@ -57,11 +57,11 @@ function HTHighlight() {
         //html.replace(all, '<span id="text">$1</span><span id="tag">$2</span><span id="elm">$3</span><span id="att">$4</span><span id="val">$5</span><span id="com">$6</span>')
       //];
     //});
-    $(function() {
-      for (a = 0; a < char.length; a++) {
-        $('pre').text($('pre').text().replace(tag,'<span style="color:red">'+tag+'</span>'));
-      }
-    });
+    //$(function() {
+      //for (a = 0; a < char.length; a++) {
+        //$('pre').text($('pre').html().replace(tag,'<span style="color:red">'+tag+'</span>'));
+      //}
+    //});
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     //code[a] = code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
@@ -72,6 +72,11 @@ function HTHighlight() {
   //}
   //breakCode();
   //colorCode();
+  var char = '(&lt;(.*?)([\w]+)|&gt;)';
+  var thisDiv = 'pre';
+  var replaceWithThis = '<font color="red">'+char+'</font>';
+  var newText = $(thisDiv).html().replace(new RegExp(char, 'ig'), replaceWithThis);
+  $(thisDiv).html(newText);
 }
 HTHighlight();
 
