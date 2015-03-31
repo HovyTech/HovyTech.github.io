@@ -56,7 +56,9 @@ function HTHighlight() {
         //html.replace(all, '<span id="text">$1</span><span id="tag">$2</span><span id="elm">$3</span><span id="att">$4</span><span id="val">$5</span><span id="com">$6</span>')
       //];
     //});
+    $('pre').match(tag).css('color', 'yellow');
     $(document).ready(function() {
+      alert('')
       $('pre').match(tag).css('color', 'yellow');
     });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
