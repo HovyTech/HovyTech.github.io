@@ -57,7 +57,7 @@ function HTHighlight() {
       //];
     //});
     $(function() { 
-    var search = "&lt;"; 
+    var search = tag; 
     var elm=$("pre");
     elm.html(elm.html().replace(search,"<span style='color:red'>"+search+"</span>"));
 }); 
