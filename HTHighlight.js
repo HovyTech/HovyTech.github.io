@@ -25,13 +25,13 @@ var code = [];
 //Index of each <div id="HTHighlight"></div>
 //var divIndex = 0;
 //HTML Values
+var txt = /(&gt;((.|\n)*?)&lt;)/ig;
 var tag = /(&lt;(.*?)([\w]+)|&gt;)/ig;
+var elm = /(\s([\w]+)(\s|\w))/ig;
 var att = /(([\w-]+)=)/ig;
 var val = /("(.*?)")/ig;
-var elm = /(\s([\w]+)(\s|\w))/ig;
-var txt = /(&gt;((.|\n)*?)&lt;)/ig;
 var com = /(&lt;!--(.*?)--&gt;)/ig;
-var all = /(&lt;(.*?)([\w]+)|&gt;)|(([\w-]+)=)|("(.*?)")|(\s([\w]+)(\s|\w))|(&gt;((.|\n)*?)&lt;)|(&lt;!--(.*?)--&gt;)/ig
+var all = /(&gt;((.|\n)*?)&lt;)|(&lt;(.*?)([\w]+)|&gt;)|(\s([\w]+)(\s|\w))|(([\w-]+)=)|("(.*?)")|(&lt;!--(.*?)--&gt;)/ig
 //var arr = [tag, att, val, elm, txt, com];
 //var arrText = ['tag', 'att', 'val', 'elm', 'txt', 'com'];
 
@@ -53,7 +53,7 @@ function HTHighlight() {
         html.replace(att, '<span id="att">$1</span>'),
         html.replace(val, '<span id="val">$1</span>'),
         html.replace(com, '<span id="com">$1</span>'),
-        html.replace(all, '<span id="com">$1$2$3$4$5$6</span>')
+        html.replace(all, '<span id="text">$1</span>' + '<span id="tag">$2</span>')
       ];
     });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
