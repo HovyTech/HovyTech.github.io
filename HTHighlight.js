@@ -66,9 +66,9 @@ function HTHighlight() {
       for (a = 0; a < char.length; a++) {
         $('pre').html($('pre').html().replace(char[a], '<span style="color:green">'+char[a]+'</span>'));
       }
-      for (b = 0; b < tag.length; b++) {
-        $('pre').html($('pre').html().replace(tag[b], '<span id="tag">'+tag[b]+'</span>'));
-      }
+      //for (b = 0; b < tag.length; b++) {
+        //$('pre').html($('pre').html().replace(tag[b], '<span id="tag">'+tag[b]+'</span>'));
+      //}
     });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
@@ -80,11 +80,11 @@ function HTHighlight() {
   //}
   //breakCode();
   //colorCode();
-  var chara = '&lt;([\/\w]+)';
-  var thisDiv = 'pre';
-  var replaceWithThis = '<font color="red">'+chara+'</font>';
-  var newText = $(thisDiv).html().replace(new RegExp(chara, 'ig'), replaceWithThis);
-  $(thisDiv).html(newText);
+  //var chara = '&lt;([\/\w]+)';
+  //var thisDiv = 'pre';
+  //var replaceWithThis = '<font color="red">'+chara+'</font>';
+  //var newText = $(thisDiv).html().replace(new RegExp(chara, 'ig'), replaceWithThis);
+  //$(thisDiv).html(newText);
 }
 HTHighlight();
 
