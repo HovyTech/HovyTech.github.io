@@ -59,7 +59,8 @@ function HTHighlight() {
     $(function() { 
     var search = tag; 
     var elm=$("pre");
-    elm.html(elm.html().replace(search,"<span style='color:red'>"+elm.match(search)+"</span>"));
+    var match = &('pre').match(tag);
+    elm.html(elm.html().replace(search,"<span style='color:red'>"+match+"</span>"));
 }); 
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
