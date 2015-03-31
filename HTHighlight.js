@@ -53,7 +53,7 @@ function HTHighlight() {
         html.replace(att, '<span id="att">$1</span>'),
         html.replace(val, '<span id="val">$1</span>'),
         html.replace(com, '<span id="com">$1</span>'),
-        html.replace(all, '<span id="com">$1</span>')
+        html.replace(all, '<span id="com">$1$2$3$4$5$6</span>')
       ];
     });
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
