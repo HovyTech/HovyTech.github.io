@@ -40,16 +40,19 @@ function HTHighlight() {
     //var pre = $('textarea').eq(a).html();
     //alert(pre)
     //code.push(pre);
-    $('pre').html(function(_, html) {
-      return [
-        html.replace(txt, '<span id="txt">$1</span>'),
-        html.replace(tag, '<span id="tag">$1</span>'),
-        html.replace(elm, '<span id="elm">$1</span>'),
-        html.replace(att, '<span id="att">$1</span>'),
-        html.replace(val, '<span id="val">$1</span>'),
-        html.replace(com, '<span id="com">$1</span>')
-      ];
+    $('pre').each(function() {
+      $(this).html($(this).text().replace(tag, '<span id="tag">$&</span>'));
     });
+    //$('pre').html(function(_, html) {
+      //return [
+        //html.replace(txt, '<span id="txt">$1</span>'),
+        //html.replace(tag, '<span id="tag">$1</span>'),
+        //html.replace(elm, '<span id="elm">$1</span>'),
+        //html.replace(att, '<span id="att">$1</span>'),
+        //html.replace(val, '<span id="val">$1</span>'),
+        //html.replace(com, '<span id="com">$1</span>')
+      //];
+    //});
     //code[a] = code[a].replace(tag, '<span id="tag">$1</span>');
     //code[a] = code[a].replace(att, '<font color="' + attCol + '">' + code[a].match(att) + '</font>');
     //code[a] = code[a].replace(val, '<font color="' + valCol + '">' + code[a].match(val) + '</font>');
