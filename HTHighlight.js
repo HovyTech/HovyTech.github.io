@@ -31,7 +31,7 @@ var val = /("(.*?)")/ig;
 var elm = /(\s([\w]+)(\s|\w))/ig;
 var txt = /(&gt;((.|\n)*?)&lt;)/ig;
 var com = /(&lt;!--(.*?)--&gt;)/ig;
-var all = /((&lt;(.*?)([\w]+)|&gt;)|(([\w-]+)=)|("(.*?)")|(\s([\w]+)(\s|\w))|(&gt;((.|\n)*?)&lt;)|(&lt;!--(.*?)--&gt;))/ig
+var all = /(&lt;(.*?)([\w]+)|&gt;)|(([\w-]+)=)|("(.*?)")|(\s([\w]+)(\s|\w))|(&gt;((.|\n)*?)&lt;)|(&lt;!--(.*?)--&gt;)/ig
 //var arr = [tag, att, val, elm, txt, com];
 //var arrText = ['tag', 'att', 'val', 'elm', 'txt', 'com'];
 
