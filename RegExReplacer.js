@@ -6294,3 +6294,8 @@ CLLocationManager *locationManager,
 @property NSArray *m512AMCOSS, 
 @property NSArray *m512AMCOTH, 
 @property NSArray *m512AMCOWD';
+
+$(function() {
+  var replace = str.replace(/[@/\n](.|\n)*?[*]/ig, '');
+  alert(replace)
+});
