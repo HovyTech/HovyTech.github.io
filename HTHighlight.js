@@ -1,8 +1,8 @@
 //--------------------------------------------------Highlight
 function highlight() {
   var tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
-  var abcd = $('pre').html();
+  var c = document.getElementById("html-0").childNodes[0].innerHTML;
   var dcba = abcd.replace(tag, '<span id="tag">$&</span>';
-  $('pre').html(dcba);
+  document.getElementById("html-0").innerHTML = dcba;
 }
 highlight();
