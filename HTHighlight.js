@@ -44,9 +44,11 @@ var js-comment = /\/\/([\s\S]*?)\n/ig;
 //--------------------------------------------------Highlight
 function HTHighlight() {
   for (a = 0; a < total; a++) {
+alert(html)
     //-------------------------HTML
-    if (document.getElementById('html' + a + 1) != undefined || null) {
+    if (document.getElementById('html-' + a) != undefined || null) {
       html = getElementById('html').childNodes[a].innerHTML;
+alert(html)
       //Clean
       for (b = 0; b < html-clean.length; b++) {
         html = html.replace(html-clean[b], html-cleanRep[b]);
