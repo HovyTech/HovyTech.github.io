@@ -43,6 +43,7 @@ var js-comment = /\/\/([\s\S]*?)\n/ig;
 
 //--------------------------------------------------Highlight
 function HTHighlight() {
+alert('')
   for (a = 0; a < total; a++) {
 alert(html)
     //-------------------------HTML
