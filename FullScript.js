@@ -136,9 +136,9 @@ getRRVS();
 //--------------------------------------------------Highlight
 function highlight() {
   //Doctype
-  //var html-doctype = /&lt;\!DOCTYPE([\s\S]*?)&gt;/ig;
+  //var html-doctype = /&lt;!DOCTYPE([\s\S]*?)&gt;/ig;
   //Comment
-  var htmlComment = /&lt;\!--([\s\S]*?)--&gt;/ig;
+  var htmlComment = /&lt;!--([\s\S]*?)--&gt;/ig;
   //Tag
   //var html-tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
   //Attribute
@@ -148,7 +148,7 @@ function highlight() {
   //Replace
   var htmlStr = document.getElementById('html-pre').innerHTML;
   //html-pre-str = html-pre-str.replace(html-doctype, '<span id="doctype">$&</span>');
-  var htmlNew = htmlStr.replace(htmlComment, '<span id="comment">$&</span>');
+  var htmlNew = htmlStr.replace(htmlComment, '<span id="com">$&</span>');
   //html-pre-str = html-pre-str.replace(html-tag, '<span id="tag">$&</span>');
   //html-pre-str = html-pre-str.replace(html-att, '<span id="att">$&</span>');
   //html-pre-str = html-pre-str.replace(html-val, '<span id="val">$&</span>');
