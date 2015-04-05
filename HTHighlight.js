@@ -43,7 +43,7 @@ var cleanRep = ['&lt;', '&gt;', '&frasl;', '&quot;', '&amp;'];
 var js-comment = /\/\/([\s\S]*?)\n/ig;
 
 //--------------------------------------------------Highlight
-function HTHighlight() {
+function highlight() {
 alert('')
   for (a = 0; a < total; a++) {
 alert(html)
@@ -102,4 +102,4 @@ alert(html)
     }
   }
 }
-HTHighlight();
+highlight();
