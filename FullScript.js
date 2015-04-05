@@ -135,9 +135,23 @@ getRRVS();
 
 //--------------------------------------------------Highlight
 function highlight() {
-  var tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
-  var abcd = document.getElementById('html-pre').innerHTML;
-  var dcba = abcd.replace(tag, '<span id="tag">$&</span>');
-  document.getElementById('html-pre').innerHTML = dcba;
+  //Doctype
+  var html-doctype = /&lt;\!DOCTYPE([\s\S]*?)&gt;/ig;
+  //Comment
+  var html-comment = /&lt;\!--([\s\S]*?)--&gt;/ig;
+  //Tag
+  var html-tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
+  //Attribute
+  var html-att = /([\w\W]+)=/ig;
+  //Value
+  var html-val = /&quot;([\s\S]*?)&quot;/ig;
+  //Replace
+  var htmp-pre-str = document.getElementById('html-pre').innerHTML;
+  html-pre-str = html-pre-str.replace(html-doctype, '<span id="tag">$&</span>');
+  html-pre-str = html-pre-str.replace(html-comment, '<span id="tag">$&</span>');
+  html-pre-str = html-pre-str.replace(html-tag, '<span id="tag">$&</span>');
+  html-pre-str = html-pre-str.replace(html-att, '<span id="tag">$&</span>');
+  html-pre-str = html-pre-str.replace(html-val, '<span id="tag">$&</span>');
+  document.getElementById('html-pre').innerHTML = html-pre-str;
 }
 highlight();
