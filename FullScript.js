@@ -136,17 +136,17 @@ getRRVS();
 //--------------------------------------------------Highlight
 function highlight() {
   //Doctype
-  var html-doctype = /&lt;\!DOCTYPE([\s\S]*?)&gt;/ig;
+  //var html-doctype = /&lt;\!DOCTYPE([\s\S]*?)&gt;/ig;
   //Comment
   var html-comment = /&lt;\!--([\s\S]*?)--&gt;/ig;
   //Tag
-  var html-tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
+  //var html-tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
   //Attribute
-  var html-att = /([\w\W]+)=/ig;
+  //var html-att = /([\w\W]+)=/ig;
   //Value
-  var html-val = /&quot;([\s\S]*?)&quot;/ig;
+  //var html-val = /&quot;([\s\S]*?)&quot;/ig;
   //Replace
-  var htmp-pre-str = document.getElementById('html-pre').innerHTML;
+  var html-pre-str = document.getElementById('html-pre').innerHTML;
   //html-pre-str = html-pre-str.replace(html-doctype, '<span id="doctype">$&</span>');
   html-pre-new = html-pre-str.replace(html-comment, '<span id="comment">$&</span>');
   //html-pre-str = html-pre-str.replace(html-tag, '<span id="tag">$&</span>');
