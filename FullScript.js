@@ -136,22 +136,22 @@ getRRVS();
 //--------------------------------------------------Highlight
 function highlight() {
   //Doctype
-  //var html-doctype = /&lt;!DOCTYPE([\s\S]*?)&gt;/ig;
+  var htmlDoctype = /&lt;!DOCTYPE([\s\S]*?)&gt;/ig;
   //Comment
   var htmlComment = /&lt;!--([\s\S]*?)--&gt;/ig;
   //Tag
-  //var html-tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
+  var htmlTag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
   //Attribute
-  //var html-att = /([\w\W]+)=/ig;
+  var htmlAtt = /([\w\W]+)=/ig;
   //Value
-  //var html-val = /&quot;([\s\S]*?)&quot;/ig;
+  var htmlVal = /&quot;([\s\S]*?)&quot;/ig;
   //Replace
   var htmlStr = document.getElementById('html-pre').innerHTML;
-  //html-pre-str = html-pre-str.replace(html-doctype, '<span id="doctype">$&</span>');
-  var htmlNew = htmlStr.replace(htmlComment, '<span id="com">$&</span>');
-  //html-pre-str = html-pre-str.replace(html-tag, '<span id="tag">$&</span>');
-  //html-pre-str = html-pre-str.replace(html-att, '<span id="att">$&</span>');
-  //html-pre-str = html-pre-str.replace(html-val, '<span id="val">$&</span>');
-  document.getElementById('html-pre').innerHTML = htmlNew;
+  htmlStr = htmlStr.replace(htmlDoctype, '<span id="doctype">$&</span>');
+  htmlStr = htmlStr.replace(htmlComment, '<span id="com">$&</span>');
+  htmlStr = htmlStr.replace(htmlTag, '<span id="tag">$&</span>');
+  htmlStr = htmlStr.replace(htmlAtt, '<span id="att">$&</span>');
+  htmlStr = htmlStr.replace(htmlVal, '<span id="val">$&</span>');
+  document.getElementById('html-pre').innerHTML = htmlStr;
 }
 highlight();
