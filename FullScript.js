@@ -148,7 +148,7 @@ function highlight() {
   //Replace
   var html-pre-str = document.getElementById('html-pre').innerHTML;
   //html-pre-str = html-pre-str.replace(html-doctype, '<span id="doctype">$&</span>');
-  html-pre-new = html-pre-str.replace(html-comment, '<span id="comment">$&</span>');
+  var html-pre-new = html-pre-str.replace(html-comment, '<span id="comment">$&</span>');
   //html-pre-str = html-pre-str.replace(html-tag, '<span id="tag">$&</span>');
   //html-pre-str = html-pre-str.replace(html-att, '<span id="att">$&</span>');
   //html-pre-str = html-pre-str.replace(html-val, '<span id="val">$&</span>');
