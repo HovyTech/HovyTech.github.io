@@ -15,7 +15,7 @@ var html-doctype = /&lt;\!DOCTYPE([\s\S]*?)&gt;/ig;
 //Comment
 var html-comment = /&lt;\!--([\s\S]*?)--&gt;/ig;
 //Tag
-var html-tag = /&lt;(([\w]+)|&gt;/ig;
+var html-tag = /&lt;([\w]+)|&gt;/ig;
 //Attribute
 var html-att = /([\w\W]+)=/ig;
 //Value
