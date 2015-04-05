@@ -3,7 +3,7 @@ alert('')
 //Total pre tags
 var total = 1;
 //Text for pre tags
-var html = '';
+var html-pre = '';
 var css = '';
 var js = '';
 //-------------------------HTML
@@ -46,25 +46,25 @@ var js-comment = /\/\/([\s\S]*?)\n/ig;
 function highlight() {
 alert('')
   for (a = 0; a < total; a++) {
-alert(html)
+alert(html-pre)
     //-------------------------HTML
     if (document.getElementById('html-' + a) != undefined || null) {
-      html = getElementById('html').childNodes[a].innerHTML;
-alert(html)
+      html-pre = getElementById('html-' + a).childNodes[a].innerHTML;
+alert(html-pre)
       //Clean
       for (b = 0; b < html-clean.length; b++) {
-        html = html.replace(html-clean[b], html-cleanRep[b]);
+        html-pre = html-pre.replace(html-clean[b], html-cleanRep[b]);
       }
       //DOCTYPE
-      html = html.replace(html-doctype, '<span id="html-doctype">$&</span>');
+      html-pre = html-pre.replace(html-doctype, '<span id="html-doctype">$&</span>');
       //Comment
-      html = html.replace(html-comment, '<span id="html-comment">$&</span>');
+      html-pre = html-pre.replace(html-comment, '<span id="html-comment">$&</span>');
       //Tag
-      html = html.replace(html-tag, '<span id="html-tag">$&</span>');
+      html-pre = html-pre.replace(html-tag, '<span id="html-tag">$&</span>');
       //Attribute
-      html = html.replace(html-att, '<span id="html-att">$&</span>');
+      html-pre = html-pre.replace(html-att, '<span id="html-att">$&</span>');
       //Value
-      html = html.replace(html-val, '<span id="html-val">$&</span>');
+      html-pre = html-pre.replace(html-val, '<span id="html-val">$&</span>');
     }
 alert(html)
     //-------------------------CSS
