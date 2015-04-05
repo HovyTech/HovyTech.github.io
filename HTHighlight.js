@@ -1,3 +1,4 @@
+alert('')
 //--------------------------------------------------Highlight
 function highlight() {
   var tag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
