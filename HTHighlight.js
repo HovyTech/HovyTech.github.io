@@ -1,3 +1,4 @@
+alert('')
 //--------------------------------------------------Global Variables
 //Total pre tags
 var total = 1;
