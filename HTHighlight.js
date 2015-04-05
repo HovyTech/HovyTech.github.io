@@ -62,6 +62,7 @@ function HTHighlight() {
       //Value
       html = html.replace(html-val, '<span id="html-val">$&</span>');
     }
+alert(html)
     //-------------------------CSS
     if (document.getElementById('css' + a + 1) != undefined || null) {
       css = getElementById('css').childNodes[a].innerHTML;
