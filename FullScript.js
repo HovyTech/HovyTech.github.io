@@ -138,10 +138,11 @@ function highlight() {
   //Clean
   var htmlClean = [/&lt;/ig, /&gt;/ig, /[/]/ig, /[=]/ig, /["]/ig, /[!]/ig, /[-]/ig];
   var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#45;'];
+  var htmlFix = /<span id="html-tag">&#62;<\/span>/ig;
   //Comment
   var htmlCom = /(&#60;&#33;DOCTYPE|&#60;&#33;&#45;&#45;)([\s\S]*?)(&#45;&#45;&#62;|&#62;)/ig;
   //Tag
-  var htmlTag = /(&#60;|&#60;&#47;)([\w]+)|&#62;|&#60;&#33;/ig;
+  var htmlTag = /(&#60;|&#60;&#47;)([\w]+)|&#62;/ig;
   //Attribute
   var htmlAtt = /([\w]+)&#61;/ig;
   //Value
@@ -156,6 +157,7 @@ function highlight() {
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
   htmlStr = htmlStr.replace(htmlVal, '<span id="html-val">$&</span>');
+  htmlStr = htmlStr.replace(htmlFix, '&#62;');
   document.getElementById('html-pre').innerHTML = htmlStr;
 }
 highlight();
