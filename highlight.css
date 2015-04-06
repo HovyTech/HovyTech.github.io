@@ -1,5 +1,6 @@
 pre {
   background-color: rgb(89, 87, 86);
+  color: rgb(255, 255, 255);
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   font-style: bold;
@@ -13,22 +14,20 @@ pre {
   width: 60%;
   z-index: 100;
 }
-#tag {
-  color: rgb(255, 147, 141);
-}
-#att {
-  color: rgb(102, 150, 255);
-}
-#val {
-  color: rgb(201, 151, 255);
-}
-#elm {
-  color: rgb(251, 255, 132);
-}
-#txt {
-  color: rgb(0, 0, 0);
-}
-#com {
+#html-doc {
   color: rgb(104, 255, 162);
   font-style: italic;
+}
+#html-com {
+  color: rgb(104, 255, 162);
+  font-style: italic;
+}
+#html-tag {
+  color: rgb(255, 147, 141);
+}
+#html-att {
+  color: rgb(102, 150, 255);
+}
+#html-val {
+  color: rgb(201, 151, 255);
 }
