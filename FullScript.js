@@ -158,7 +158,7 @@ function highlight() {
   var numLine = htmlStr.split(/\n/ig).length;
   var count = 1;
   for (b = 0; b < numLine + 1; b++) {
-    htmlStr = htmlStr.replace(num, '<span id="line-num">' + count + '</span>$&');
+    htmlStr = htmlStr.replace(num, '<span id="line-num">' + count.toString() + '</span>$&');
     count = count + 1;
   }
   htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
