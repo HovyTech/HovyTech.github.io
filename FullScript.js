@@ -145,7 +145,7 @@ function highlight() {
   //Tag
   var htmlTag = /(&#60;|&#60;&#47;)([\w]+)|&#62;/ig;
   //Attribute
-  var htmlAtt = /\s([\s\S]*?)&#61;/ig;
+  var htmlAtt = /([\w]+)&#61;/ig;
   //Value
   var htmlVal = /&#34;([\s\S]*?)&#34;/ig;
   //Replace
