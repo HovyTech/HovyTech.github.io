@@ -139,9 +139,9 @@ function highlight() {
   var htmlClean = [/&lt;/ig, /&gt;/ig, /[/]/ig, /[=]/ig, /["]/ig, /[!]/ig, /[-]/ig];
   var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#45;'];
   //Comment
-  var htmlCom = /(&#60;&#33;DOCTYPE|&#60;&#33;&#150;&#150;)([\s\S]*?)(&#150;&#150;&#62;|&#62;)/ig;
+  var htmlCom = /(&#60;&#33;DOCTYPE|&#60;&#33;&#45;&#45;)([\s\S]*?)(&#45;&#45;&#62;|&#62;)/ig;
   //Tag
-  var htmlTag = /(&#60;|&#60;&#47;)([\w]+)|&#62;/ig;
+  var htmlTag = /(&#60;|&#60;&#47;)([\w]+)|&#62;|&#60;&#33;/ig;
   //Attribute
   var htmlAtt = /([\w]+)&#61;/ig;
   //Value
@@ -152,10 +152,10 @@ function highlight() {
   for (a = 0; a < htmlClean.length; a++) {
     htmlStr = htmlStr.replace(htmlClean[a], htmlReplace[a]);
   }
+  htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
   htmlStr = htmlStr.replace(htmlVal, '<span id="html-val">$&</span>');
-  htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   document.getElementById('html-pre').innerHTML = htmlStr;
 }
 highlight();
