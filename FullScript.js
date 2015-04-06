@@ -161,7 +161,7 @@ function highlight() {
   htmlStr = htmlStr.replace(/^/ig, '<li id="html-num">$&');
   htmlStr = htmlStr.replace(/$/ig, '$&</li>');
   htmlStr = htmlStr.replace(/^/i, '<ol>$&');
-  htmlStr = htmlStr.replace(/$[^\n]/ig, '$&</ol>');
+  htmlStr = htmlStr.replace(/([\s\S]+)/ig, '$&</ol>');
   document.getElementById('html-pre').innerHTML = htmlStr;
 }
 highlight();
