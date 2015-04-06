@@ -144,17 +144,17 @@ function highlight() {
   //Tag
   var htmlTag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
   //Attribute
-  var htmlAtt = /([\w\W]+)=/ig;
+  var htmlAtt = /([\w]+)=/ig;
   //Value
   var htmlVal = /&quot;([\s\S]*?)&quot;/ig;
   //Replace
   var htmlStr = document.getElementById('html-pre').innerHTML;
   htmlStr = htmlStr.replace(htmlClean, '&quot;');
-  htmlStr = htmlStr.replace(htmlDoc, '<span id="html-doc">$&</span>');
-  htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
   htmlStr = htmlStr.replace(htmlVal, '<span id="html-val">$&</span>');
+  htmlStr = htmlStr.replace(htmlDoc, '<span id="html-doc">$&</span>');
+  htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   document.getElementById('html-pre').innerHTML = htmlStr;
 }
 highlight();
