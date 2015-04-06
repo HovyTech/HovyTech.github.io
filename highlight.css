@@ -12,8 +12,8 @@ pre {
 }
 code {
   color: rgb(255, 255, 255);
-  font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 18px;
   font-style: bold;
 }
 #html-com {
@@ -21,14 +21,11 @@ code {
   font-style: italic;
 }
 #html-tag {
-  color: rgb(121, 119, 224);
+  color: rgb(123, 160, 224);
 }
 #html-att {
-  color: rgb(164, 104, 171);
+  color: rgb(255, 127, 115);
 }
 #html-val {
   color: rgb(255, 222, 149);
-}
-#html-elm {
-  color: rgb(255, 127, 115);
 }
