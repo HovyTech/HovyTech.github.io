@@ -135,8 +135,6 @@ getRRVS();
 
 //--------------------------------------------------Highlight
 function highlight() {
-  //Number
-  var num = /([\s\S]*?)\n/ig;
   //Clean
   var htmlClean = [/&lt;/ig, /&gt;/ig, /[/]/ig, /[=]/ig, /["]/ig, /[!]/ig, /[-]/ig];
   var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#45;'];
@@ -155,17 +153,15 @@ function highlight() {
   for (a = 0; a < htmlClean.length; a++) {
     htmlStr = htmlStr.replace(htmlClean[a], htmlReplace[a]);
   }
-  var numLine = htmlStr.split(/\n/ig).length;
-  var count = 1;
-  for (b = 0; b < numLine + 1; b++) {
-    htmlStr = htmlStr.replace(num, '<span id="line-num">' + count.toString() + '</span>$&');
-    count = count + 1;
-  }
   htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
   htmlStr = htmlStr.replace(htmlVal, '<span id="html-val">$&</span>');
   htmlStr = htmlStr.replace(htmlFix, '&#62;</span>');
+  htmlStr = htmlStr.replace(/^/ig, '<li id="html-num">$&');
+  htmlStr = htmlStr.replace(/$/ig, '$&</li>');
+  htmlStr = htmlStr.replace(/^/i, '<ol>$&');
+  htmlStr = htmlStr.replace(/$[^\n]/ig, '$&</ol>');
   document.getElementById('html-pre').innerHTML = htmlStr;
 }
 highlight();
