@@ -136,12 +136,10 @@ getRRVS();
 //--------------------------------------------------Highlight
 function highlight() {
   //Clean
-  var htmlClean = [/&lt;/ig, /&gt;/ig, /\//ig, /=/ig, /"/ig, /!/ig, /-/ig];
+  var htmlClean = [/&lt;/ig, /&gt;/ig, /[/]/ig, /[=]/ig, /["]/ig, /[!]/ig, /[-]/ig];
   var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#150;'];
-  //Doctype
-  var htmlDoc = /&#60;&#33;DOCTYPE([\s\S]*?)&#62;/ig;
   //Comment
-  var htmlCom = /&#60;&#33;&#150;&#150;([\s\S]*?)&#150;&#150;&#62;/ig;
+  var htmlCom = /(&#60;&#33;DOCTYPE|&#60;&#33;&#150;&#150;)([\s\S]*?)(&#150;&#150;&#62;|&#62;)/ig;
   //Tag
   var htmlTag = /(&#60;|&#60;&#47;)([\w]+)|&#62;/ig;
   //Attribute
@@ -157,7 +155,6 @@ function highlight() {
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
   htmlStr = htmlStr.replace(htmlVal, '<span id="html-val">$&</span>');
-  htmlStr = htmlStr.replace(htmlDoc, '<span id="html-doc">$&</span>');
   htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   document.getElementById('html-pre').innerHTML = htmlStr;
 }
