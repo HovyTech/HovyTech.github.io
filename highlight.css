@@ -16,20 +16,19 @@ code {
   font-size: 15px;
   font-style: bold;
 }
-#html-doc {
-  color: rgb(104, 255, 162);
-  font-style: italic;
-}
 #html-com {
-  color: rgb(104, 255, 162);
+  color: rgb(163, 255, 163);
   font-style: italic;
 }
 #html-tag {
-  color: rgb(255, 147, 141);
+  color: rgb(121, 119, 224);
 }
 #html-att {
-  color: rgb(102, 150, 255);
+  color: rgb(164, 104, 171);
 }
 #html-val {
-  color: rgb(201, 151, 255);
+  color: rgb(255, 222, 149);
+}
+#html-elm {
+  color: rgb(255, 127, 115);
 }
