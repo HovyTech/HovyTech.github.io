@@ -137,7 +137,7 @@ getRRVS();
 function highlight() {
   //Clean
   var htmlClean = [/&lt;/ig, /&gt;/ig, /[/]/ig, /[=]/ig, /["]/ig, /[!]/ig, /[-]/ig];
-  var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#150;'];
+  var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#45;'];
   //Comment
   var htmlCom = /(&#60;&#33;DOCTYPE|&#60;&#33;&#150;&#150;)([\s\S]*?)(&#150;&#150;&#62;|&#62;)/ig;
   //Tag
