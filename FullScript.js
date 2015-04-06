@@ -135,6 +135,8 @@ getRRVS();
 
 //--------------------------------------------------Highlight
 function highlight() {
+  //Number
+  var num = /([\s\S]*?)\n/ig;
   //Clean
   var htmlClean = [/&lt;/ig, /&gt;/ig, /[/]/ig, /[=]/ig, /["]/ig, /[!]/ig, /[-]/ig];
   var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#45;'];
@@ -153,6 +155,8 @@ function highlight() {
   for (a = 0; a < htmlClean.length; a++) {
     htmlStr = htmlStr.replace(htmlClean[a], htmlReplace[a]);
   }
+  var numLine = htmlStr.split(/\n/ig).length;
+  alert(numLine)
   htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
