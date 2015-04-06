@@ -156,8 +156,10 @@ function highlight() {
     htmlStr = htmlStr.replace(htmlClean[a], htmlReplace[a]);
   }
   var numLine = htmlStr.split(/\n/ig).length;
-  for (b = 0; b < numLine; b++) {
-    htmlStr = htmlStr.replace(num, '<span id="line-num">' + b + '</span>$&');
+  var count = 1;
+  for (b = 0; b < numLine + 1; b++) {
+    htmlStr = htmlStr.replace(num, '<span id="line-num">' + count + '</span>$&');
+    count = count + 1;
   }
   htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
