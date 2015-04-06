@@ -136,20 +136,24 @@ getRRVS();
 //--------------------------------------------------Highlight
 function highlight() {
   //Clean
-  var htmlClean = /"/ig;
+  var htmlClean = [/</ig, />/ig, /\//ig, /=/ig, /"/ig, /!/ig, /-/ig];
+  var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#150;'];
   //Doctype
-  var htmlDoc = /&lt;!DOCTYPE([\s\S]*?)&gt;/ig;
+  var htmlDoc = /&#60;&#33;DOCTYPE([\s\S]*?)&#62;/ig;
   //Comment
-  var htmlCom = /&lt;!--([\s\S]*?)--&gt;/ig;
+  var htmlCom = /&#60;&#33;&#150;&#150;([\s\S]*?)&#150;&#150;&#62;/ig;
   //Tag
-  var htmlTag = /(&lt;|&lt;\/)([\w]+)|&gt;/ig;
+  var htmlTag = /(&#60;|&#60;&#47;)([\w]+)|&#62;/ig;
   //Attribute
-  var htmlAtt = /([\w]+)=/ig;
+  var htmlAtt = /\s([\s\S]*?)&#61;/ig;
   //Value
-  var htmlVal = /&quot;([\s\S]*?)&quot;/ig;
+  var htmlVal = /&#34;([\s\S]*?)&#34;/ig;
   //Replace
   var htmlStr = document.getElementById('html-pre').innerHTML;
-  htmlStr = htmlStr.replace(htmlClean, '&quot;');
+  //Clean
+  for (a = 0; a < htmlClean.length; a++) {
+    htmlStr = htmlStr.replace(htmlClean[a], htmlReplace[a]);
+  }
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
   htmlStr = htmlStr.replace(htmlVal, '<span id="html-val">$&</span>');
