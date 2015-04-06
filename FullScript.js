@@ -146,6 +146,8 @@ function highlight() {
   var htmlAtt = /([\w]+)&#61;/ig;
   //Value
   var htmlVal = /&#34;([\s\S]*?)&#34;/ig;
+  //Elements
+  var htmlElm = /(&#60;(.*?)\s|\s)([\w]+)(&#62;|\s(.*?)&#62;)/ig;
   //Replace
   var htmlStr = document.getElementById('html-pre').innerHTML;
   //Clean
@@ -155,6 +157,7 @@ function highlight() {
   htmlStr = htmlStr.replace(htmlTag, '<span id="html-tag">$&</span>');
   htmlStr = htmlStr.replace(htmlAtt, '<span id="html-att">$&</span>');
   htmlStr = htmlStr.replace(htmlVal, '<span id="html-val">$&</span>');
+  htmlStr = htmlStr.replace(htmlElm, '<span id="html-elm">$&</span>');
   htmlStr = htmlStr.replace(htmlCom, '<span id="html-com">$&</span>');
   document.getElementById('html-pre').innerHTML = htmlStr;
 }
