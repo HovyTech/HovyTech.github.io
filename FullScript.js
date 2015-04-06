@@ -136,7 +136,7 @@ getRRVS();
 //--------------------------------------------------Highlight
 function highlight() {
   //Clean
-  var htmlClean = [/</ig, />/ig, /\//ig, /=/ig, /"/ig, /!/ig, /-/ig];
+  var htmlClean = [/&lt;/ig, /&gt;/ig, /\//ig, /=/ig, /"/ig, /!/ig, /-/ig];
   var htmlReplace = ['&#60;', '&#62;', '&#47;', '&#61;', '&#34;', '&#33;', '&#150;'];
   //Doctype
   var htmlDoc = /&#60;&#33;DOCTYPE([\s\S]*?)&#62;/ig;
