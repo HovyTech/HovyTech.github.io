@@ -74,9 +74,9 @@ function getRRVS() {
     var digit = rating.substring(0, 1);
     var decimal = rating.substring(2, 3);
     if (decimal >= 5) {
-      $('#starImage').append('<img id="star" src="HovyTech/Images/Star' + digit + '-5.png"></img>');
+      $('#starImage').append('<img id="star" src="Images/Star' + digit + '-5.png"></img>');
     } else {
-      $('#starImage').append('<img id="star" src="HovyTech/Images/Star' + digit + '.png"></img>');
+      $('#starImage').append('<img id="star" src="Images/Star' + digit + '.png"></img>');
     }
   });
 };
