@@ -12,33 +12,27 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no, minimum-scale = 1.0, maximum-scale = 1.0">
     <meta name="google-site-verification" content="FFG84IO5zVrRpU64TEV5fusuVuGc21KIiIaQR4Earps">
     <meta name="author" content="Alexander Hovy">
-    <link rel="shortcut icon" href="Images/favicon.ico">
-    <link rel="apple-touch-icon" href="Images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="HovyTech/Images/favicon.ico">
+    <link rel="apple-touch-icon" href="HovyTech/Images/apple-touch-icon.png">
     <a href="https://plus.google.com/108801816675888352655" rel="publisher"></a>
-<!--<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 479px)" href="Highlighter.css">-->
-    <noscript><link rel="stylesheet" type="text/css" media="screen and (max-device-width: 479px)" href="mobile.css"></noscript>
-    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 480px) and (max-device-width: 719px)" href="phablet.css"></noscript>
-    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 720px) and (max-device-width: 1023px)" href="tablet.css"></noscript>
-    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1024px)" href="desktop.css"></noscript>
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (max-device-width: 479px)" href="HovyTech/mobile.css"></noscript>
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 480px) and (max-device-width: 719px)" href="HovyTech/phablet.css"></noscript>
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 720px) and (max-device-width: 1023px)" href="HovyTech/tablet.css"></noscript>
+    <noscript><link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1024px)" href="HovyTech/desktop.css"></noscript>
     <script type="text/javascript">
       //--------------------------------------------------LOAD GOOGLE ANALYTICS
       !function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-60758503-1","auto"),ga("send","pageview");
       //--------------------------------------------------LOAD JS
       function loadJS(e,t){"use strict";var n=window.document.getElementsByTagName("script")[0],o=window.document.createElement("script");return o.src=e,o.async=!0,n.parentNode.insertBefore(o,n),t&&"function"==typeof t&&(o.onload=t),o}
-      loadJS("script.js");
+      loadJS("HovyTech/script.js");
       //--------------------------------------------------LOAD CSS
       function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],s=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(n){for(var o,t=0;t<s.length;t++)s[t].href&&s[t].href.indexOf(e)>-1&&(o=!0);o?n():setTimeout(function(){d.onloadcssdefined(n)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
-      screen.width<480&&loadCSS("mobile.css"),screen.width>=480&&screen.width<720&&loadCSS("phablet.css"),screen.width>=720&&screen.width<1024&&loadCSS("tablet.css"),screen.width>=1024&&loadCSS("desktop.css");
-      //function preload(){for(i=0;i<preload.arguments.length;i++)images[i]=new Image,images[i].src=preload.arguments[i]}var images=new Array;preload("Images/HovyTech.png","Images/Play.png","Images/Facebook.png","Images/Twitter.png","Images/YouTube.png","Images/Star0.png","Images/Star0-5.png","Images/Star1.png","Images/Star1-5.png","Images/Star2.png","Images/Star2-5.png","Images/Star3.png","Images/Star3-5.png","Images/Star4.png","Images/Star4-5.png","Images/Star5.png");
+      screen.width<480&&loadCSS("HovyTech/mobile.css"),screen.width>=480&&screen.width<720&&loadCSS("HovyTech/phablet.css"),screen.width>=720&&screen.width<1024&&loadCSS("HovyTech/tablet.css"),screen.width>=1024&&loadCSS("HovyTech/desktop.css");
     </script>
   </head>
   <body onLoad="loadBody()">
-    <div itemscope itemtype="http://schema.org/Product">
-      <span itemprop="name">HovyTech</span>
-      <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><span itemprop="ratingValue">4.6</span> / <span itemprop="bestRating">5</span> Rating - <span itemprop="reviewCount">9</span> Reviews</div>
-    </div>
     <header class="show">
-      <img id="logo" src="Images/HovyTech.png"></img>
+      <img id="logo" src="HovyTech/Images/HovyTech.png"></img>
     </header>
     <main>
       <table id="box">
@@ -188,19 +182,19 @@
                   <text id="share-count">
                     <span id="facebook-count"></span>
                   </text>
-                  <img id="social-image" src="Images/Facebook.png"></img>
+                  <img id="social-image" src="HovyTech/Images/Facebook.png"></img>
                 </td>
                 <td id="share-twitter" onclick="window.open('https://twitter.com/home?status=http://hovytech.github.io', '_blank')">
                   <text id="share-count">
                     <span id="twitter-count"></span>
                   </text>
-                  <img id="social-image" src="Images/Twitter.png"></img>
+                  <img id="social-image" src="HovyTech/Images/Twitter.png"></img>
                 </td>
                 <td id="share-youtube" onclick="window.open('http://www.youtube.com/user/hovytech?sub_confirmation=1', '_blank')">
                   <text id="share-count">
                     <span id="youtube-count"></span>
                   </text>
-                  <img id="social-image" src="Images/YouTube.png"></img>
+                  <img id="social-image" src="HovyTech/Images/YouTube.png"></img>
                 </td>
               </tr>
             </table>
