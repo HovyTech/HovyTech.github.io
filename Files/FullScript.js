@@ -8,7 +8,9 @@ var submitted=!1;!function(e,t){"function"==typeof define&&define.amd?define(t):
 
 //--------------------------------------------------LOAD BODY CONTENT
 function loadBody() {
-  
+  if (screen.width < 480) {
+    loadHeader();
+  }
 }
 //--------------------------------------------------HIDE SHOW HEADER
 function loadHeader() {
