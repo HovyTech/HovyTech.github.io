@@ -18,7 +18,7 @@ footer{height:auto;left:0px;position:relative;right:0px;top:100px;width:auto;z-i
 #share-youtube{background-color:rgb(229, 45, 39);height:50px;left:0px;position:relative;top:0px;width:33%;z-index:23;}
 #share-count{color:rgb(255, 255, 240);font-family:"Arial", Sans-serif;font-size:20px;height:50px;left:5px;padding:2px;position:absolute;top:12px;width:auto;z-index:24;}
 #social-image{height:auto;position:absolute;right:5px;top:5px;width:40px;z-index:24;}
-#footerBody{background-color:rgb(255, 255, 240);box-shadow:inset 0px 5px 5px 0px rgb(46, 46, 46);height:auto;position:relative;top:0px;width:100%;z-index:23;}
+#footerBody{background-color:rgb(255, 255, 255);box-shadow:inset 0px 5px 5px 0px rgb(46, 46, 46);height:auto;position:relative;top:0px;width:100%;z-index:23;}
 #rrvTitle{color:rgb(214, 119, 125);font-family:"Arial", Sans-serif;font-size:25px;z-index:24;}
 #rrvInfo{color:rgb(145, 140, 141);font-family:"Arial", Sans-serif;font-size:13px;z-index:24;}
 #footerMain{height:auto;left:2%;margin-bottom:20px;position:relative;top:0px;width:96%;z-index:24;}
