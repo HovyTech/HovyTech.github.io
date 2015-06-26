@@ -31,17 +31,17 @@ function loadCSS(href, before, media, callback) {
   return ss;
 }
 if (screen.width < 480) {
-  loadCSS('mobile.css');
+  loadCSS('Files/mobile.css');
   loadHeader();
 }
 if ((screen.width >= 480) && (screen.width < 720)) {
-  loadCSS('phablet.css');
+  loadCSS('Files/phablet.css');
 }
 if ((screen.width >= 720) && (screen.width < 1024)) {
-  loadCSS('tablet.css');
+  loadCSS('Files/tablet.css');
 }
 if (screen.width >= 1024) {
-  loadCSS('desktop.css');
+  loadCSS('Files/desktop.css');
 }
 //Use this in <head></head>
 //loadCSS('style.css');
