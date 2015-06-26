@@ -32,6 +32,7 @@ function loadCSS(href, before, media, callback) {
 }
 if (screen.width < 480) {
   loadCSS('mobile.css');
+  loadHeader();
 }
 if ((screen.width >= 480) && (screen.width < 720)) {
   loadCSS('phablet.css');
