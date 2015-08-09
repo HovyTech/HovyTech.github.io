@@ -1,5 +1,8 @@
 <html>
   <body>
-    <?php include "index.php"; ?>
+    <?php
+      $ip = $_SERVER['REMOTE_ADDR'];
+      echo '<script type="text/javascript">alert("' . $ip . '")</script>';
+    ?>
   </body>
 </html>
