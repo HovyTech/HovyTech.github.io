@@ -23,7 +23,7 @@
     //Blur Image
     blur = $(window).scrollTop() / 30;
     
-    if ($(window).scrollTop() > 0) {
+    if (blur > 2) {
       $('#parallax').css({
         '-webkit-filter': 'blur(' + blur + 'px)',
         '-moz-filter': 'blur(' + blur + 'px)',
@@ -33,11 +33,11 @@
       });
     } else {
       $('#parallax').css({
-        '-webkit-filter': 'blur(1px)',
-        '-moz-filter': 'blur(1px)',
-        '-ms-filter': 'blur(1px)',
-        '-o-filter': 'blur(1px)',
-        'filter': 'blur(1px)'
+        '-webkit-filter': 'blur(2px)',
+        '-moz-filter': 'blur(2px)',
+        '-ms-filter': 'blur(2px)',
+        '-o-filter': 'blur(2px)',
+        'filter': 'blur(2px)'
       });
     }
       
