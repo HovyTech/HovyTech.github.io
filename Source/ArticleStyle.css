@@ -6,7 +6,7 @@ body{height:auto;left:0px;margin:0;padding:0;position:relative;right:0px;top:0px
 header{left:0px;margin:0;padding:0;position:relative;right:0px;top:0px;width:100%;z-index:21;}
 main{background-color:rgb(60, 60, 65);height:auto;left:0px;position:relative;right:0px;top:0px;width:100%;z-index:21;}
 footer{background-color:rgb(220, 220, 220);height:200px;left:0px;position:relative;right:0px;top:0px;width:100%;z-index:21;}
-#parallax{background-image:url("https://farm2.staticflickr.com/1538/26676418452_c8cab2399d.jpg");background-repeat:no-repeat;background-size:100% auto;left:0px;position:fixed;top:0px;width:100%;z-index:-20;-webkit-filter:blur(2px);-moz-filter:blur(2px);-ms-filter:blur(2px);-o-filter:blur(2px);filter:blur(2px);}
+#parallax{background-image:url("https://farm2.staticflickr.com/1538/26676418452_c8cab2399d.jpg");background-position:center 0px;background-repeat:no-repeat;background-size:100% auto;left:0px;position:fixed;top:0px;width:100%;z-index:-20;-webkit-filter:blur(2px);-moz-filter:blur(2px);-ms-filter:blur(2px);-o-filter:blur(2px);filter:blur(2px);}
 #title{background-color:rgba(0, 0, 0, 0.3);height:100%;left:0px;margin:0px;position:fixed;right:0px;text-align:center;top:0px;width:100%;z-index:22;}
 #intro{height:auto;left:0px;margin:0px;position:relative;right:0px;top:0px;width:100%;z-index:22;}
 #paragraph{height:auto;left:0px;margin:0px;position:relative;right:0px;top:0px;width:100%;z-index:22;}
