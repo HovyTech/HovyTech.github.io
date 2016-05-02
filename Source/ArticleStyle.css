@@ -19,7 +19,7 @@ footer{background-color:rgb(220, 220, 220);height:200px;left:0px;position:relati
   #section{background-color:rgb(220, 220, 220);border-radius:10px;height:auto;left:20%;margin-bottom:10%;position:relative;right:20%;top:0px;width:60%;z-index:22;}
   h1{color:rgb(220, 220, 220);font-family:"Arial", Sans-serif;font-size:60px;z-index:23;}
   h2{font-family:"Arial", Sans-serif;font-size:40px;z-index:23;}
-  p{font-family:"Arial", Sans-serif;font-size:30px;text-align:justify;z-index:23;}
+  p{font-size:30px;text-align:justify;z-index:23;}
 }
 /*------------------------------------------------------------------------------------*/
 /*---------------------------------------Tablet---------------------------------------*/
