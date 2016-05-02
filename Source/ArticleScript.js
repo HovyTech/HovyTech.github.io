@@ -6,15 +6,13 @@
     //Parallax Image
     position = ($(window).scrollTop() / 3) * -1;
     
-    if ($(window).scrollTop() > 0) {
-      $('#parallax').css({
-        'background-position': 'center ' + (position - 100) + 'px'
-      });
-    } else {
-      $('#parallax').css({
-        'background-position': 'center -100px'
-      });
-    }
+    $('#parallax').css({
+      'background-position': 'center ' + (position - 100) + 'px'
+    });
+    
+    $('#title').css({
+      'top': position + 'px'
+    });
     
     //Title Opacity
     opacity = $(window).scrollTop() / 400;
