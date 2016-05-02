@@ -14,10 +14,6 @@
     'height': header + 'px'
   });
   
-  $('#parallax').css({
-    'height': (header * 2) + 'px'
-  });
-  
   $('#title-parent').css({
     'height': header + 'px'
   });
