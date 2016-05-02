@@ -167,6 +167,15 @@
           <p>
             <b>RegEx: <span language="text">(?:(?!.*?[x]))y</span></b>
           </p>
+          <p>
+            <b>Explain:</b><br />
+            <pre>(?:        Containt the following
+  (?!     Start of 'Not Followed'
+    .*?   All Occurrances
+    [\:]   Not Followed by ':'
+  )     End of 'Not Followed'
+)Hello        Searching for the word, 'Hello'</pre>
+          </p>
         </div>
       </div>
     </main>
