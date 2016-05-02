@@ -1,5 +1,5 @@
 //--------------------------------------------------LOADING MAIN
-(function(position, opacity, blur, header) {
+(function(position, opacity, header) {
   if (screen.width < 480) {
     header = 150;
   } else if (screen.width >= 480 && screen.width < 720) {
@@ -56,27 +56,6 @@
     } else {
       $('#title-child').css({
         'opacity': '0'
-      });
-    }
-    
-    //Blur Image
-    blur = $(window).scrollTop() / 30;
-    
-    if (blur > 2) {
-      $('#parallax').css({
-        '-webkit-filter': 'blur(' + blur + 'px)',
-        '-moz-filter': 'blur(' + blur + 'px)',
-        '-ms-filter': 'blur(' + blur + 'px)',
-        '-o-filter': 'blur(' + blur + 'px)',
-        'filter': 'blur(' + blur + 'px)'
-      });
-    } else {
-      $('#parallax').css({
-        '-webkit-filter': 'blur(2px)',
-        '-moz-filter': 'blur(2px)',
-        '-ms-filter': 'blur(2px)',
-        '-o-filter': 'blur(2px)',
-        'filter': 'blur(2px)'
       });
     }
       
