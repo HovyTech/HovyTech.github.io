@@ -6,7 +6,7 @@
     //Parallax Image
     position = ($(window).scrollTop() / 3) * -1;
     
-    if ($(window).scrollTop() < 0) {
+    if ($(window).scrollTop() > 0) {
       $('#parallax').css({
         'background-position': 'center ' + (position - 100) + 'px'
       });
