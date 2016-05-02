@@ -1,9 +1,5 @@
 //--------------------------------------------------LOADING MAIN
 (function(position, blur) {
-  $('header').css({
-    'height': (screen.availHeight / 2) + 'px'
-  });
-  
   $('#cover').css({
     'height': (screen.availHeight / 2) + 'px'
   });
