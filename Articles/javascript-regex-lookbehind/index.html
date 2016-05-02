@@ -61,7 +61,7 @@
             - Negative Behind
           </p>
           <p>
-            <i>We'll be focusing on the Positive- & Negative Behind's.</i>
+            <i>We'll be focusing on the Positive- & Negative Lookbehind's.</i>
           </p>
         </div>
         <div id="section">
@@ -69,7 +69,84 @@
             <b>Positive Behind</b>
           </h2>
           <hr />
-          <p>The positive lookbehind, <span language="text">(?<=[...])</span> is not supported in JavaScript.</p>
+          <p><i>The positive lookbehind, <span language="text">(?<=[...])</span> is not supported in JavaScript.</i></p>
+          <p>Regex has tons of features to utilise from. We'll be taking advantage of:</p>
+          <table>
+            <tr>
+              <td>Character</td>
+              <td>Description</td>
+            </tr>
+            <tr>
+              <td><span language="text">.</span></td>
+              <td>
+                (The decimal point) matches any single character except the newline character.
+                <br /><br />
+                For example, /.n/ matches 'an' and 'on' in "nay, an apple is on the tree", but not 'nay'.
+              </td>
+            </tr>
+            <tr>
+              <td><span language="text">*</span></td>
+              <td>
+                Matches the preceding expression 0 or more times. Equivalent to {0,}.
+                <br /><br />
+                For example, /bo*/ matches 'boooo' in "A ghost booooed" and 'b' in "A bird warbled", but nothing in "A goat grunted".
+              </td>
+            </tr>
+            <tr>
+              <td><span language="text">?</span></td>
+              <td>
+                Matches the preceding expression 0 or 1 time. Equivalent to {0,1}.
+                <br /><br />
+                For example, /e?le?/ matches the 'el' in "angel" and the 'le' in "angle" and also the 'l' in "oslo".
+                <br /><br />
+                If used immediately after any of the quantifiers *, +, ?, or {}, makes the quantifier non-greedy (matching the fewest possible characters), as opposed to the default, which is greedy (matching as many characters as possible). For example, applying /\d+/ to "123abc" matches "123". But applying /\d+?/ to that same string matches only the "1".
+                <br /><br />
+                Also used in lookahead assertions, as described in the x(?=y) and x(?!y) entries of this table.
+              </td>
+            </tr>
+            <tr>
+              <td><span language="text">[xyz]</span></td>
+              <td>
+                Character set. This pattern type matches any one of the characters in the brackets, including escape sequences. Special characters like the dot(.) and asterisk (*) are not special inside a character set, so they don't need to be escaped. You can specify a range of characters by using a hyphen, as the following examples illustrate.
+                <br /><br />
+                The pattern [a-d], which performs the same match as [abcd], matches the 'b' in "brisket" and the 'c' in "city". The patterns /[a-z.]+/ and /[\w.]+/ match the entire string "test.i.ng".
+              </td>
+            </tr>
+            <tr>
+              <td><span language="text">\</span></td>
+              <td>
+                Matches according to the following rules:
+                <br /><br />
+                A backslash that precedes a non-special character indicates that the next character is special and is not to be interpreted literally. For example, a 'b' without a preceding '\' generally matches lowercase 'b's wherever they occur. But a '\b' by itself doesn't match any character; it forms the special word boundary character.
+                <br /><br />
+                A backslash that precedes a special character indicates that the next character is not special and should be interpreted literally. For example, the pattern /a*/ relies on the special character '*' to match 0 or more a's. By contrast, the pattern /a\*/ removes the specialness of the '*' to enable matches with strings like 'a*'.
+                <br /><br />
+                Do not forget to escape \ itself while using the RegExp("pattern") notation because \ is also an escape character in strings.
+              </td>
+            </tr>
+            <tr>
+              <td><span language="text">(?:x)</span></td>
+              <td>
+                Matches 'x' but does not remember the match. The parentheses are called non-capturing parentheses, and let you define subexpressions for regular expression operators to work with. Consider the sample expression /(?:foo){1,2}/. If the expression was /foo{1,2}/, the {1,2} characters would apply only to the last 'o' in 'foo'. With the non-capturing parentheses, the {1,2} applies to the entire word 'foo'.
+              </td>
+            </tr>
+            <tr>
+              <td><span language="text">x(?=y)</span></td>
+              <td>
+                Matches 'x' only if 'x' is followed by 'y'. This is called a lookahead.
+                <br /><br />
+                For example, /Jack(?=Sprat)/ matches 'Jack' only if it is followed by 'Sprat'. /Jack(?=Sprat|Frost)/ matches 'Jack' only if it is followed by 'Sprat' or 'Frost'. However, neither 'Sprat' nor 'Frost' is part of the match results.
+              </td>
+            </tr>
+            <tr>
+              <td><span language="text">x(?!y)</span></td>
+              <td>
+                Matches 'x' only if 'x' is not followed by 'y'. This is called a negated lookahead.
+                <br /><br />
+                For example, /\d+(?!\.)/ matches a number only if it is not followed by a decimal point. The regular expression /\d+(?!\.)/.exec("3.141") matches '141' but not '3.141'.
+              </td>
+            </tr>
+          </table>
         </div>
         <div id="section">
           <h2>
