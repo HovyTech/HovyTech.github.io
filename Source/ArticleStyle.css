@@ -14,11 +14,11 @@ div{display:inline-block;height:auto;position:relative;top:0px;}
 #title-child{height:auto;text-align:center;vertical-align:middle;width:auto;z-index:23;}
 #paragraph{background-color:rgb(220, 220, 220);left:0px;margin:auto 0px auto 0px;width:100%;z-index:22;}
 
-table{border-collapse:collapse;color:rgb(220, 220, 220);height:auto;left:0px;margin:auto auto auto auto;width:100%;z-index:24;}
+table{border-collapse:collapse;border-radius:5px;color:rgb(220, 220, 220);height:auto;left:0px;margin:auto auto auto auto;width:100%;z-index:24;}
 th,td{border-bottom:1px solid rgb(220, 220, 220);font-size:15px;padding:8px;text-align:justify;}
-th{background-color:rgb(40, 40, 45);}
-tr:nth-child(even){background-color:rgb(50, 50, 55);}
-tr:nth-child(odd){background-color:rgb(60, 60, 65);}
+th{background-color:rgb(40, 40, 45);font-size:20px;}
+tr:nth-child(odd){background-color:rgb(50, 50, 55);}
+tr:nth-child(even){background-color:rgb(60, 60, 65);}
 /*------------------------------------------------------------------------------------*/
 /*--------------------------------------Desktop---------------------------------------*/
 /*------------------------------------------------------------------------------------*/
