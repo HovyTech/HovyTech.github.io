@@ -12,8 +12,7 @@
       });
       
       $('#title').css({
-        'position': 'fixed',
-        'top': (position * -1) + 'px'
+        'top': position + 'px'
       });
     } else {
       $('#parallax').css({
@@ -21,7 +20,6 @@
       });
       
       $('#title').css({
-        'position': 'fixed',
         'top': '0px'
       });
     }
