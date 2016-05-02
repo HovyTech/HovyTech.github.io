@@ -1,5 +1,5 @@
 //--------------------------------------------------LOADING MAIN
-(function(position, blur) {
+(function(position, opacity, blur) {
   $(window).scrollTop(0);
 
   $(window).scroll(function() {
@@ -8,11 +8,24 @@
     
     if ($(window).scrollTop() > 0) {
       $('#parallax').css({
-        'background-position': 'center ' + position + 'px'
+        'background-position': 'center ' + (position - 100) + 'px'
       });
     } else {
       $('#parallax').css({
         'background-position': 'center 0px'
+      });
+    }
+    
+    //Title Opacity
+    opacity = $(window).scrollTop() / 400;
+    
+    if ($(window).scrollTop() < 400) {
+      $('#title').css({
+        'opacity': (1 - opacity) + '%'
+      });
+    } else {
+      $('#title').css({
+        'opacity': '0%'
       });
     }
     
