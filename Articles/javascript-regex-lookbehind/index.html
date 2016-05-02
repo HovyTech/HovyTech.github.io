@@ -56,14 +56,14 @@
           </h2>
           <hr />
           <p>Regex has tons of features to utilise from. We'll be taking advantage of:</p>
-          <p><i>This is NOT the full list: <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">Full List</a></i></p>
+          <p><i>This is NOT the full list: [Full List](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions)</i></p>
           <table id="article">
             <tr>
               <th>Character</th>
               <th>Description</th>
             </tr>
             <tr>
-              <td><span language="text">.</span></td>
+              <td><code class="language-none">.</code></td>
               <td>
                 (The decimal point) matches any single character except the newline character.
                 <br /><br />
@@ -71,7 +71,7 @@
               </td>
             </tr>
             <tr>
-              <td><span language="text">*</span></td>
+              <td><code class="language-none">*</code></td>
               <td>
                 Matches the preceding expression 0 or more times. Equivalent to {0,}.
                 <br /><br />
@@ -79,7 +79,7 @@
               </td>
             </tr>
             <tr>
-              <td><span language="text">?</span></td>
+              <td><code class="language-none">?</code></td>
               <td>
                 Matches the preceding expression 0 or 1 time. Equivalent to {0,1}.
                 <br /><br />
@@ -91,7 +91,7 @@
               </td>
             </tr>
             <tr>
-              <td><span language="text">[xyz]</span></td>
+              <td><code class="language-none">[xyz]</code></td>
               <td>
                 Character set. This pattern type matches any one of the characters in the brackets, including escape sequences. Special characters like the dot(.) and asterisk (*) are not special inside a character set, so they don't need to be escaped. You can specify a range of characters by using a hyphen, as the following examples illustrate.
                 <br /><br />
@@ -99,7 +99,7 @@
               </td>
             </tr>
             <tr>
-              <td><span language="text">\</span></td>
+              <td><code class="language-none">\</code></td>
               <td>
                 Matches according to the following rules:
                 <br /><br />
@@ -111,13 +111,13 @@
               </td>
             </tr>
             <tr>
-              <td><span language="text">(?:x)</span></td>
+              <td><code class="language-none">(?:x)</code></td>
               <td>
                 Matches 'x' but does not remember the match. The parentheses are called non-capturing parentheses, and let you define subexpressions for regular expression operators to work with. Consider the sample expression /(?:foo){1,2}/. If the expression was /foo{1,2}/, the {1,2} characters would apply only to the last 'o' in 'foo'. With the non-capturing parentheses, the {1,2} applies to the entire word 'foo'.
               </td>
             </tr>
             <tr>
-              <td><span language="text">x(?=y)</span></td>
+              <td><code class="language-none">x(?=y)</code></td>
               <td>
                 Matches 'x' only if 'x' is followed by 'y'. This is called a lookahead.
                 <br /><br />
@@ -125,7 +125,7 @@
               </td>
             </tr>
             <tr>
-              <td><span language="text">x(?!y)</span></td>
+              <td><code class="language-none">x(?!y)</code></td>
               <td>
                 Matches 'x' only if 'x' is not followed by 'y'. This is called a negated lookahead.
                 <br /><br />
@@ -148,7 +148,7 @@
           <p>
             <i>We'll be focusing on the Positive- & Negative Lookbehind's.</i>
             <br />
-            <i>The positive-, <span language="text">(?&lt;=[x])y</span> and negative lookbehind, <span language="text">(?&lt;![x])y</span> are not supported in JavaScript.</i>
+            <i>The positive-, <code class="language-none">(?&lt;=[x])y</code> and negative lookbehind, <code class="language-none">(?&lt;![x])y</code> are not supported in JavaScript.</i>
           </p>
         </div>
         <div id="section">
@@ -157,11 +157,11 @@
           </h2>
           <hr />
           <p>
-            <b>RegEx: <span language="text">(?:(?=.*?[\:]))Hello</span></b>
+            <b>RegEx: <code class="language-none">(?:(?=.*?[\:]))Hello</code></b>
           </p>
           <p>
             <b>Explain:</b><br />
-            <pre><code class="javascript">(?:         Containt the following
+            <pre><code class="language-none">(?:         Containt the following
   (?!       Start of 'Followed'
     .*?     All Occurrences
     [\:]    Followed by ':'
@@ -175,11 +175,11 @@
           </h2>
           <hr />
           <p>
-            <b>RegEx: <span language="text">(?:(?!.*?[\:]))Hello</span></b>
+            <b>RegEx: <code class="language-none">(?:(?!.*?[\:]))Hello</code></b>
           </p>
           <p>
             <b>Explain:</b><br />
-            <pre><code class="javascript">(?:         Containt the following
+            <pre><code class="language-none">(?:         Containt the following
   (?!       Start of 'Not Followed'
     .*?     All Occurrences
     [\:]    Not Followed by ':'
