@@ -33,11 +33,11 @@
       });
     } else {
       $('#parallax').css({
-        '-webkit-filter': 'blur(0px)',
-        '-moz-filter': 'blur(0px)',
-        '-ms-filter': 'blur(0px)',
-        '-o-filter': 'blur(0px)',
-        'filter': 'blur(0px)'
+        '-webkit-filter': 'blur(1px)',
+        '-moz-filter': 'blur(1px)',
+        '-ms-filter': 'blur(1px)',
+        '-o-filter': 'blur(1px)',
+        'filter': 'blur(1px)'
       });
     }
       
