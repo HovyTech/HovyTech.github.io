@@ -1,17 +1,13 @@
 //--------------------------------------------------LOADING MAIN
-(function(position, opacity, blur, header, offset) {
+(function(position, opacity, blur, header) {
   if (screen.width < 480) {
     header = 150;
-    offset = 10;
   } else if (screen.width >= 480 && screen.width < 720) {
     header = 250;
-    offset = 20;
   } else if (screen.width >= 720 && screen.width < 1024) {
     header = 250;
-    offset = 50;
   } else {
     header = 400;
-    offset = 100;
   }
 
   $('header').css({
@@ -19,13 +15,8 @@
   });
   
   $('#parallax').css({
-    'background-position': 'center -' + offset + 'px',
-    'height': (header + (offset * 2)) + 'px'
+    'height': (header * 2) + 'px'
   });
-  
-  //$('#title').css({
-    //'line-height': header + 'px'
-  //});
 
   $(window).scrollTop(0);
 
@@ -35,7 +26,7 @@
     
     if ($(window).scrollTop() > 0) {
       $('#parallax').css({
-        'background-position': 'center ' + (position - offset) + 'px'
+        'background-position': 'center ' + position + 'px'
       });
       
       $('#title').css({
@@ -43,7 +34,7 @@
       });
     } else {
       $('#parallax').css({
-        'background-position': 'center -' + offset + 'px'
+        'background-position': 'center 0px'
       });
       
       $('#title').css({
