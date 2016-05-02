@@ -23,10 +23,9 @@
     'height': (header + (offset * 2)) + 'px'
   });
   
-  $('#title').css({
-    'line-height': header + 'px'
-  });
-
+  //$('#title').css({
+    //'line-height': header + 'px'
+  //});
 
   $(window).scrollTop(0);
 
