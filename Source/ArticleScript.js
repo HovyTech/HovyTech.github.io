@@ -15,7 +15,7 @@
   });
   
   $('#parallax').css({
-    'height': (header * 2) + 'px'
+    'height': header + 'px'
   });
 
   $(window).scrollTop(0);
