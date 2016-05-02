@@ -21,11 +21,11 @@
     
     if ($(window).scrollTop() < 400) {
       $('#title').css({
-        'opacity': (1 - opacity) + '%'
+        'opacity': (1 - opacity)
       });
     } else {
       $('#title').css({
-        'opacity': '0%'
+        'opacity': '0'
       });
     }
     
