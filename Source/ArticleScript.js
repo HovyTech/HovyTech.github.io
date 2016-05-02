@@ -43,9 +43,9 @@
     }
     
     //Title Opacity
-    opacity = $(window).scrollTop() / header;
+    opacity = $(window).scrollTop() / (header - (header / 4));
     
-    if ($(window).scrollTop() < header) {
+    if ($(window).scrollTop() < (header - (header / 4))) {
       $('#title-child').css({
         'opacity': (1 - opacity)
       });
