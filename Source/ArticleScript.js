@@ -1,11 +1,11 @@
 //--------------------------------------------------LOADING MAIN
 (function(position, blur) {
   $('header').css({
-    'height': '50%'
+    'height': (screen.availHeight / 2) + 'px'
   });
   
   $('#cover').css({
-    'height': '50%'
+    'height': (screen.availHeight / 2) + 'px'
   });
   
   $(window).scrollTop(0);
@@ -40,11 +40,11 @@
     }
       
     //Hide Image
-    if ($(window).scrollTop() > screen.height) {
+    if ($(window).scrollTop() > screen.availHeight) {
       $('#parallax').css({
         'visibility': 'hidden'
       });
-    } else if ($(window).scrollTop() < screen.height) {
+    } else if ($(window).scrollTop() < screen.availHeight) {
       $('#parallax').css({
         'visibility': 'visible'
       });
