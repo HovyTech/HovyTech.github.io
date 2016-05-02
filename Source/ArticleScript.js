@@ -1,5 +1,33 @@
 //--------------------------------------------------LOADING MAIN
-(function(position, opacity, blur) {
+(function(position, opacity, blur, header, offset) {
+  if (screen.width < 480) {
+    header = 150;
+    offset = 170;
+  } else if (screen.width >= 480 && screen.width < 720) {
+    header = 250;
+    offset = 140;
+  } else if (screen.width >= 720 && screen.width < 1024) {
+    header = 250;
+    offset = 120;
+  } else {
+    header = 400;
+    offset = 100;
+  }
+
+  $('header').css({
+    'height': header + 'px'
+  });
+  
+  $('#parallax').css({
+    'background-position': 'center -' + offset + 'px',
+    'height': (header + (offset * 2)) + 'px'
+  });
+  
+  $('#title').css({
+    'line-height': header + 'px'
+  });
+
+
   $(window).scrollTop(0);
 
   $(window).scroll(function() {
@@ -8,7 +36,7 @@
     
     if ($(window).scrollTop() > 0) {
       $('#parallax').css({
-        'background-position': 'center ' + (position - 100) + 'px'
+        'background-position': 'center ' + (position - offset) + 'px'
       });
       
       $('#title').css({
@@ -16,7 +44,7 @@
       });
     } else {
       $('#parallax').css({
-        'background-position': 'center -100px'
+        'background-position': 'center -' + offset + 'px'
       });
       
       $('#title').css({
@@ -25,9 +53,9 @@
     }
     
     //Title Opacity
-    opacity = $(window).scrollTop() / 400;
+    opacity = $(window).scrollTop() / header;
     
-    if ($(window).scrollTop() < 400) {
+    if ($(window).scrollTop() < header) {
       $('#title').css({
         'opacity': (1 - opacity)
       });
@@ -59,11 +87,11 @@
     }
       
     //Hide Image
-    if ($(window).scrollTop() > 400) {
+    if ($(window).scrollTop() > header) {
       $('#parallax').css({
         'visibility': 'hidden'
       });
-    } else {//else if ($(window).scrollTop() < screen.availHeight) {
+    } else {
       $('#parallax').css({
         'visibility': 'visible'
       });
