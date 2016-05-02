@@ -1,15 +1,5 @@
 //--------------------------------------------------LOADING MAIN
-(function(scale, position, size, factor) {
-  if (screen.width < 480) {
-    scale = 170;
-  } else if (screen.width >= 480 && screen.width < 720) {
-    scale = 140;
-  } else if (screen.width >= 720 && screen.width < 1024) {
-    scale = 120;
-  } else {
-    scale = 100;
-  }
-  
+(function(position, blur) {
   $('header').css({
     'height': (screen.height / 2) + 'px'
   });
@@ -18,23 +8,37 @@
     'height': (screen.height / 2) + 'px'
   });
   
-  factor = 3;
-
   $(window).scrollTop(0);
 
   $(window).scroll(function() {
-    //Parallax
-    if ($(window).scrollTop() >= 0) {
-      position = ($(window).scrollTop() / factor) * -1;
+    //Parallax Image
+    position = ($(window).scrollTop() / 3) * -1;
+    
+    $('#parallax').css({
+      'background-position': 'center ' + position + 'px'
+    });
+    
+    //Blur Image
+    blur = $(window).scrollTop() / 30;
+    
+    if ($(window).scrollTop() > 0) {
       $('#parallax').css({
-        'background-position': 'center ' + position + 'px'
+        '-webkit-filter': 'blur(' + blur + 'px)',
+        '-moz-filter': 'blur(' + blur + 'px)',
+        '-ms-filter': 'blur(' + blur + 'px)',
+        '-o-filter': 'blur(' + blur + 'px)',
+        'filter': 'blur(' + blur + 'px)'
       });
     } else {
-      size = scale - ($(window).scrollTop() / factor);
       $('#parallax').css({
-        'background-size': size + '%'
+        '-webkit-filter': 'blur(0px)',
+        '-moz-filter': 'blur(0px)',
+        '-ms-filter': 'blur(0px)',
+        '-o-filter': 'blur(0px)',
+        'filter': 'blur(0px)'
       });
     }
+      
     //Hide Image
     if ($(window).scrollTop() > screen.height) {
       $('#parallax').css({
