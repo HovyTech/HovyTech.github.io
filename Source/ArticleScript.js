@@ -1,5 +1,5 @@
 //--------------------------------------------------LOADING MAIN
-(function(position, blur, factor) {
+(function(position, blur) {
   $('header').css({
     'height': (screen.height / 2) + 'px'
   });
@@ -8,20 +8,18 @@
     'height': (screen.height / 2) + 'px'
   });
   
-  factor = 3;
-
   $(window).scrollTop(0);
 
   $(window).scroll(function() {
     //Parallax Image
-    position = ($(window).scrollTop() / factor) * -1;
+    position = ($(window).scrollTop() / 3) * -1;
     
     $('#parallax').css({
       'background-position': 'center ' + position + 'px'
     });
     
     //Blur Image
-    blur = $(window).scrollTop() / factor;
+    blur = $(window).scrollTop() / 5;
     
     if ($(window).scrollTop() > 0) {
       $('#parallax').css({
