@@ -1,11 +1,11 @@
 //--------------------------------------------------LOADING MAIN
 (function(position, blur) {
   $('header').css({
-    'height': (screen.height / 2) + 'px'
+    'height': '50%'
   });
   
   $('#cover').css({
-    'height': (screen.height / 2) + 'px'
+    'height': '50%'
   });
   
   $(window).scrollTop(0);
