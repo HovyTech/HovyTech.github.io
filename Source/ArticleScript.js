@@ -2,13 +2,13 @@
 (function(position, opacity, blur, header, offset) {
   if (screen.width < 480) {
     header = 150;
-    offset = 25;
+    offset = 10;
   } else if (screen.width >= 480 && screen.width < 720) {
     header = 250;
-    offset = 50;
+    offset = 20;
   } else if (screen.width >= 720 && screen.width < 1024) {
     header = 250;
-    offset = 75;
+    offset = 50;
   } else {
     header = 400;
     offset = 100;
