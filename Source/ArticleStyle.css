@@ -10,14 +10,13 @@ footer{background-color:rgb(220, 220, 220);height:200px;left:0px;position:relati
 #layer{background-color:rgba(0, 0, 0, 0.4);height:100%;left:0px;opacity:1.0;position:relative;top:0px;width:100%;z-index:22;}
 #title-parent{left:0px;position:fixed;top:0px;width:100%;z-index:22;}
 #title-child{height:auto;text-align:center;vertical-align:middle;width:auto;z-index:23;}
-#intro{height:auto;left:0px;position:relative;top:0px;width:100%;z-index:22;}
-#paragraph{height:auto;left:0px;position:relative;top:0px;width:100%;z-index:22;}
-#closure{height:auto;left:0px;position:relative;top:0px;width:100%;z-index:22;}
+#intro{color:rgb(220, 220, 220);height:auto;left:0px;position:relative;top:0px;width:100%;z-index:22;}
+#paragraph{color:rgb(40, 40, 45);height:auto;left:0px;position:relative;top:0px;width:100%;z-index:22;}
 /*------------------------------------------------------------------------------------*/
 /*--------------------------------------Desktop---------------------------------------*/
 /*------------------------------------------------------------------------------------*/
 @media all and (min-width: 1024px) {
-  #section{background-color:rgb(220, 220, 220);height:auto;left:20%;margin-bottom:10%;position:relative;right:20%;top:0px;width:60%;z-index:22;}
+  #section{background-color:rgb(220, 220, 220);border-radius:10px;height:auto;left:20%;margin-bottom:10%;position:relative;right:20%;top:0px;width:60%;z-index:22;}
   h1{color:rgb(220, 220, 220);font-family:"Arial", Sans-serif;font-size:60px;z-index:23;}
   h2{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:40px;z-index:23;}
   p{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:30px;text-align:justify;z-index:23;}
@@ -26,7 +25,7 @@ footer{background-color:rgb(220, 220, 220);height:200px;left:0px;position:relati
 /*---------------------------------------Tablet---------------------------------------*/
 /*------------------------------------------------------------------------------------*/
 @media all and (min-width: 720px) and (max-width: 1023px) {
-  #section{background-color:rgb(220, 220, 220);height:auto;left:10%;margin-bottom:10%;position:relative;right:10%;top:0px;width:80%;z-index:22;}
+  #section{background-color:rgb(220, 220, 220);border-radius:8px;height:auto;left:10%;margin-bottom:10%;position:relative;right:10%;top:0px;width:80%;z-index:22;}
   h1{color:rgb(220, 220, 220);font-family:"Arial", Sans-serif;font-size:50px;z-index:23;}
   h2{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:30px;z-index:23;}
   p{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:20px;text-align:justify;z-index:23;}
@@ -35,16 +34,16 @@ footer{background-color:rgb(220, 220, 220);height:200px;left:0px;position:relati
 /*--------------------------------------Phablet---------------------------------------*/
 /*------------------------------------------------------------------------------------*/
 @media all and (min-width: 480px) and (max-width: 719px) {
-  #section{background-color:rgb(220, 220, 220);height:auto;left:5%;margin-bottom:5%;position:relative;right:5%;top:0px;width:90%;z-index:22;}
+  #section{background-color:rgb(220, 220, 220);border-radius:6px;height:auto;left:5%;margin-bottom:5%;position:relative;right:5%;top:0px;width:90%;z-index:22;}
   h1{color:rgb(220, 220, 220);font-family:"Arial", Sans-serif;font-size:30px;z-index:23;}
-  h2{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:20px;z-index:23;}
-  p{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:15px;text-align:justify;z-index:23;}
+  h2{font-family:"Arial", Sans-serif;font-size:20px;z-index:23;}
+  p{font-family:"Arial", Sans-serif;font-size:15px;text-align:justify;z-index:23;}
 }
 /*------------------------------------------------------------------------------------*/
 /*---------------------------------------Mobile---------------------------------------*/
 /*------------------------------------------------------------------------------------*/
 @media all and (max-width: 479px) {
-  #section{background-color:rgb(220, 220, 220);height:auto;left:2%;margin-bottom:4%;position:relative;right:2%;top:0px;width:96%;z-index:22;}
+  #section{background-color:rgb(220, 220, 220);border-radius:4px;height:auto;left:2%;margin-bottom:4%;position:relative;right:2%;top:0px;width:96%;z-index:22;}
   h1{color:rgb(220, 220, 220);font-family:"Arial", Sans-serif;font-size:30px;z-index:23;}
   h2{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:20px;z-index:23;}
   p{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:15px;text-align:justify;z-index:23;}
