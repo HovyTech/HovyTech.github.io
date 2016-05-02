@@ -12,7 +12,7 @@
       });
     } else {
       $('#parallax').css({
-        'background-position': 'center 0px'
+        'background-position': 'center -100px'
       });
     }
     
