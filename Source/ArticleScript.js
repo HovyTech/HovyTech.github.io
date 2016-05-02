@@ -1,9 +1,5 @@
 //--------------------------------------------------LOADING MAIN
 (function(position, blur) {
-  $('#cover').css({
-    'height': (screen.availHeight / 2) + 'px'
-  });
-  
   $(window).scrollTop(0);
 
   $(window).scroll(function() {
