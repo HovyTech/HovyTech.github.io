@@ -51,11 +51,11 @@
     }
       
     //Hide Image
-    if ($(window).scrollTop() > screen.availHeight) {
+    if ($(window).scrollTop() > 400) {
       $('#parallax').css({
         'visibility': 'hidden'
       });
-    } else if ($(window).scrollTop() < screen.availHeight) {
+    } else {//else if ($(window).scrollTop() < screen.availHeight) {
       $('#parallax').css({
         'visibility': 'visible'
       });
