@@ -156,7 +156,16 @@
           </h2>
           <hr />
           <p>
-            <b>RegEx: <span language="text">(?:(?=.*?[x]))y</span></b>
+            <b>RegEx: <span language="text">(?:(?=.*?[\:]))Hello</span></b>
+          </p>
+          <p>
+            <b>Explain:</b><br />
+            <pre language="none">(?:         Containt the following
+  (?!       Start of 'Followed'
+    .*?     All Occurrences
+    [\:]    Followed by ':'
+  )         End of 'Followed'
+)Hello      Searching for the word, 'Hello'</pre>
           </p>
         </div>
         <div id="section">
@@ -165,7 +174,7 @@
           </h2>
           <hr />
           <p>
-            <b>RegEx: <span language="text">(?:(?!.*?[x]))y</span></b>
+            <b>RegEx: <span language="text">(?:(?!.*?[\:]))Hello</span></b>
           </p>
           <p>
             <b>Explain:</b><br />
