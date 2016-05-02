@@ -24,7 +24,7 @@ hr{background-color:rgb(35, 49, 56);border:0px solid;height:3px;margin-top:0px;}
 /*--------------------------------------Desktop---------------------------------------*/
 /*------------------------------------------------------------------------------------*/
 @media all and (min-width: 1024px) {
-  #section{background-color:rgb(220, 220, 220);height:auto;left:20%;margin-bottom:10%;position:relative;right:20%;top:0px;width:60%;z-index:22;}
+  #section{background-color:rgb(220, 220, 220);height:auto;left:20%;margin-bottom:10%;position:relative;right:20%;top:0px;vertical-align:middle;width:60%;z-index:22;}
   h1{color:rgb(220, 220, 220);font-family:"Arial", Sans-serif;font-size:60px;z-index:23;}
   h2{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:40px;z-index:23;}
   p{color:rgb(40, 40, 45);font-family:"Arial", Sans-serif;font-size:30px;text-align:justify;z-index:23;}
