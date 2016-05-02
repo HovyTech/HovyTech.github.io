@@ -14,9 +14,15 @@
     //Parallax Image
     position = ($(window).scrollTop() / 3) * -1;
     
-    $('#parallax').css({
-      'background-position': 'center ' + position + 'px'
-    });
+    if ($(window).scrollTop() > 0) {
+      $('#parallax').css({
+        'background-position': 'center ' + position + 'px'
+      });
+    } else {
+      $('#parallax').css({
+        'background-position': 'center 0px'
+      });
+    }
     
     //Blur Image
     blur = $(window).scrollTop() / 30;
