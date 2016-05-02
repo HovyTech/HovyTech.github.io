@@ -17,7 +17,7 @@ div{display:inline-block;height:auto;margin:0px;padding:0px;position:relative;to
 /*------------------------------------------------------------------------------------*/
 @media all and (min-width: 1024px) {
   #intro{color:rgb(220, 220, 220);height:auto;left:20%;margin-bottom:3%;margin-top:6%;position:relative;right:20%;top:0px;width:60%;z-index:22;}
-  #section{display:inline-block;height:auto;left:0px;margin:auto 20% auto 20%;position:relative;top:0px;width:auto;z-index:23;}
+  #section{display:inline-block;height:auto;left:0px;margin:auto 20% auto 20%;position:relative;top:0px;width:60%;z-index:23;}
   h1{color:rgb(220, 220, 220);font-family:"Arial", Sans-serif;font-size:60px;z-index:24;}
   h2{font-size:40px;z-index:24;}
   p{font-size:25px;text-align:justify;z-index:24;}
