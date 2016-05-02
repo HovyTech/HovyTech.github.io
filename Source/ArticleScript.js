@@ -78,11 +78,11 @@
       
     //Hide Image
     if ($(window).scrollTop() > header) {
-      $('#parallax').css({
+      $('header').css({
         'visibility': 'hidden'
       });
     } else {
-      $('#parallax').css({
+      $('header').css({
         'visibility': 'visible'
       });
     }
