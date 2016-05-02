@@ -12,14 +12,16 @@
       });
       
       $('#title').css({
+        'position': 'fixed',
         'top': (position * -1) + 'px'
       });
     } else {
       $('#parallax').css({
-        'background-position': 'center 0px'
+        'background-position': 'center -100px'
       });
       
       $('#title').css({
+        'position': 'fixed',
         'top': '0px'
       });
     }
