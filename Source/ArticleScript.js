@@ -29,7 +29,7 @@
         'background-position': 'center ' + position + 'px'
       });
       
-      $('#title').css({
+      $('#title-parent').css({
         'top': position + 'px'
       });
     } else {
@@ -37,7 +37,7 @@
         'background-position': 'center 0px'
       });
       
-      $('#title').css({
+      $('#title-parent').css({
         'top': '0px'
       });
     }
@@ -46,11 +46,11 @@
     opacity = $(window).scrollTop() / header;
     
     if ($(window).scrollTop() < header) {
-      $('#title').css({
+      $('#title-child').css({
         'opacity': (1 - opacity)
       });
     } else {
-      $('#title').css({
+      $('#title-child').css({
         'opacity': '0'
       });
     }
