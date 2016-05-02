@@ -19,7 +19,7 @@
     });
     
     //Blur Image
-    blur = $(window).scrollTop() / 10;
+    blur = $(window).scrollTop() / 50;
     
     if ($(window).scrollTop() > 0) {
       $('#parallax').css({
